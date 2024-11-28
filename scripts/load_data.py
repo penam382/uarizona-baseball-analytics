@@ -1,17 +1,28 @@
-# Script to load CSV into SQL database
-
 import sqlite3
 import pandas as pd
 
-# Read the CSV
-df = pd.read_csv('raw/fall_data.csv')
+# Path to the downloaded CSV file
+csv_path = '/Users/marcopena/Documents/GitHub/uarizona-baseball-analytics/data/raw/fall_data.csv'
 
-# Connect to SQLite
-conn = sqlite3.connect('baseball_analytics.db')
+try:
+    # Load the CSV
+    print("Loading CSV from local path...")
+    df = pd.read_csv(csv_path)
+    print("CSV loaded successfully.")
 
-# Save to SQL table
-df.to_sql('pitches', conn, if_exists='replace', index=False)
+    # Connect to SQLite database
+    print("Connecting to SQLite database...")
+    conn = sqlite3.connect('baseball_analytics.db')
 
-conn.close()
+    # Save the data to an SQL table
+    print("Saving data to SQLite table...")
+    df.to_sql('pitches', conn, if_exists='replace', index=False)
+    print("Data saved successfully.")
 
+except Exception as e:
+    print(f"An error occurred: {e}")
 
+finally:
+    if conn:
+        conn.close()
+    print("Database connection closed.")
