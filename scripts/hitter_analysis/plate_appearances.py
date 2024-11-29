@@ -26,13 +26,22 @@ for i, row in df.iterrows():
     strike = row['Strikes']
     ball = row['Balls']
 
+    korbb = row['KorBB']
+
     # process pitch
     # location = (PlateLocHeight, PlateLocSide) 
     plate_loc_height = row['PlateLocHeight']
     plate_loc_side = row['PlateLocSide']
     location = (plate_loc_height, plate_loc_side)
 
-    pitch_type = row['']
+    pitch_type = row['TaggedPitchType']
+
+    play_result = row['PlayResult']
+    hit_type = row['TaggedHitType']
+
+    angle = row['Angle']
+    direction = row['Direction']
+
 
 
     # Detect the start of a new plate appearance
@@ -50,16 +59,28 @@ for i, row in df.iterrows():
         print(f"Error: No Hitter instance found for Plate Appearance {current_pa_id}")
         continue
 
+    current_hitter.balls = ball
+    current_hitter.strikes = strike
+
+    count_type = current_hitter.type_of_count()
+    current_hitter.count()
+    current_hitter.process_pitch(location, pitch_type, pitch_of_pa, ball, strike)
+
+    play_result_and_hit_type = (play_result, hit_type)
+    angle_direction = (angle, direction)
+
+    current_hitter.outcome_of_PA(play_result_and_hit_type, angle_direction, korbb)
+
+    current_hitter.log_tendency(count_type, pitch_type, location)
+
 # Save the final plate appearance
 if current_hitter is not None:
     plate_appearances[current_pa_id] = current_hitter
 
-Hitter.type_of_count(ball, strike)
-Hitter.count(ball, strike)
-Hitter.process_pitch(location, pitch_type, pitch_of_pa)
-Hitter.log_tendency(count_type, pitch_type, outcome, location)
-
-
 # Output the plate appearances
 for pa_id, hitter in plate_appearances.items():
     print(f"Plate Appearance {pa_id}: {hitter}")
+
+print(current_hitter.get_strikeout_walk_total())
+
+
