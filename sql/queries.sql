@@ -8,6 +8,17 @@ WHERE Batter = 'Caulfield, Garen'
 GROUP BY TaggedPitchType
 ORDER BY Total DESC;
 
+-- caulfield_pitches_per_at_bat
+SELECT PitchofPA
+FROM pitches
+WHERE Batter = 'Caulfield, Garen';
+
+
+
+
+
+
+
 -- distinct_batters
 SELECT DISTINCT Batter
 FROM pitches;
