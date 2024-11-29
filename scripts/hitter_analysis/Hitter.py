@@ -39,17 +39,16 @@ class Hitter:
         """
         return len(self.pitches)
     
-    def outcome_of_PA(self, play_result_and_hit_type, angle_direction, korbb):
+    def outcome_of_PA(self, play_result_and_hit_type, angle_direction_distance, korbb):
 
         play_result, hit_type = play_result_and_hit_type
 
         if play_result != 'Undefined' and hit_type != 'Undefined':
             self.outcome["PA_result"] = play_result_and_hit_type
-            self.outcome["angle_direction"] = angle_direction
+            self.outcome["angle_direction_distance"] = angle_direction_distance
         if korbb != 'Undefined':
             self.outcome["PA_result"] = korbb
-            self.strikeouts += 1
-            self.walks += 1
+            
             
             
 
@@ -74,11 +73,42 @@ class Hitter:
         else:
             self.tendencies[count_type].append([(pitch_type, self.outcome, location)])
 
-    def get_strikeout_walk_total(self):
-        return (f"Total Strikouts: {self.strikeouts}, Total Walks: {self.walks}")
-
-
+    def get_tendencies(self):
+        return self.tendencies
     
+    
+    def calculate_hit_position(self, angle, distance):
+        if distance < 90:  # Infield
+            if -45 <= angle <= -15:
+                return "Third Base"
+            elif -15 < angle < 0:
+                return "Up The Middle"
+            elif 0 <= angle < 15:
+                return "Second Base"
+            elif 15 <= angle <= 45:
+                return "First Base"
+            elif -90 <= angle < -45:
+                return "Shortstop"
+            elif 45 < angle <= 90:
+                return "Second Base"
+        elif distance >= 90:  # Outfield
+            if -45 <= angle <= -15:
+                return "Left Field"
+            elif -15 < angle < 15:
+                return "Center Field"
+            elif 15 <= angle <= 45:
+                return "Right Field"
+            elif -90 <= angle < -45:
+                return "Left-Center Field"
+            elif 45 < angle <= 90:
+                return "Right-Center Field"
+        elif distance is None:
+            return "No hit_position"
+        
+        return "Foul Territory"
+
+
+
     def to_tabular_data(self):
         """
         Returns a list of dictionaries, where each dictionary represents a pitch.
