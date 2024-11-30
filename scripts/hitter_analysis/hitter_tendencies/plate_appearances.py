@@ -1,9 +1,9 @@
 import sqlite3
 import pandas as pd
 
-from Hitter import Hitter
-from HitterTendencies import HitterTendencies
-from CountAnalysis import CountAnalysis
+from scripts.hitter_analysis.hitter_tendencies.Hitter import Hitter
+from scripts.hitter_analysis.hitter_tendencies.HitterTendencies import HitterTendencies
+from scripts.hitter_analysis.hitter_tendencies.CountAnalysis import CountAnalysis
 
 # Connect to the database
 conn = sqlite3.connect('/Users/marcopena/Documents/GitHub/uarizona-baseball-analytics/baseball_analytics.db')
