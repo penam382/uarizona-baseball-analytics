@@ -1,4 +1,4 @@
-class Tendencies:
+class HitterTendencies:
     def __init__(self):
         self.tendencies = {}
 
