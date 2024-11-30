@@ -22,7 +22,7 @@ class Hitter:
             return "Full Count"
         if (self.balls == 3 and self.strikes <= 1) or (self.balls == 2 and self.strikes == 1) or (self.balls == 2 and self.strikes == 0):
             return "Hitter's Count"
-        if (self.strikes >= 2) or (self.balls <= 1 and self.strikes == 1):
+        if (self.strikes >= 2 and self.balls != 3):
             return "Pitcher's Count"
         return "Neutral Count"
 
@@ -106,30 +106,6 @@ class Hitter:
             return "No hit_position"
         
         return "Foul Territory"
-
-
-
-    def to_tabular_data(self):
-        """
-        Returns a list of dictionaries, where each dictionary represents a pitch.
-        """
-        tabular_data = []
-        for pitch_num, pitch_type in self.pitch_type.items():
-            tabular_data.append({
-                "Plate Appearance ID": self.plate_appearance_id,
-                "Batter Name": self.batter_name,
-                "Pitch Number": pitch_num,
-                "Pitch Type": pitch_type,
-                "Balls": self.balls,
-                "Strikes": self.strikes,
-                "PlateLocHeight": self.location_of_pitch[pitch_num - 1][0],
-                "PlateLocSide": self.location_of_pitch[pitch_num - 1][1],
-                "Outcome": self.outcome[-1] if self.outcome else None,
-                "Count Type": self.type_of_count()
-                
-            })
-        return tabular_data
-
 
 
     def __repr__(self):

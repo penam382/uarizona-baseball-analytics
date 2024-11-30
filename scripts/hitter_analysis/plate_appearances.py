@@ -4,6 +4,9 @@ import pandas as pd
 from Hitter import Hitter
 from Tendencies import Tendencies
 from count_analysis.hitters_count.Hitters_Count import Hitters_Count
+from count_analysis.CountAnalysis import CountAnalysis
+
+from count_analysis.generate_csv import write_to_csv
 
 # Connect to the database
 conn = sqlite3.connect('/Users/marcopena/Documents/GitHub/uarizona-baseball-analytics/baseball_analytics.db')
@@ -58,6 +61,10 @@ for i, row in df.iterrows():
     play_result = row['PlayResult']
     hit_type = row['TaggedHitType']
 
+    if play_result == "Undefined":
+        if korbb != "Undefined":
+            play_result = korbb
+
     angle = row['Angle']
     direction = row['Direction']
     distance = row['Distance']
@@ -87,7 +94,7 @@ for i, row in df.iterrows():
     count = current_hitter.count()
 
     # Add tendency to the Tendencies instance
-    tendencies.add_tendency(count_type, count, pitch_type, current_hitter.outcome, location)
+    tendencies.add_tendency(count_type, count, pitch_type, play_result, hit_type, angle, direction, distance, location)
     # Add the pitch to hitters_count as well
     hitters_count.add_pitch_to_count(count_type, (pitch_type, current_hitter.outcome, location))
 
@@ -117,25 +124,51 @@ if current_hitter is not None:
 # print("Tendencies across all Plate Appearances:", tendencies.get_tendencies())
 # print(tendencies.tendencies)
 
-print("print")
-if hasattr(tendencies, 'tendencies'):  # Make sure the 'tendencies' attribute exists
-    for key, value in tendencies.tendencies.items():
-        print(key)
-        # if key == "Hitter's Count 2-0":
-        #     for j in value:
-        #         print("hitters count - ", j)
-        # elif key == "Pitcher's Count":
-        #     for j in value:
-        #         print("pitchers count - ", j)
-        # elif key == "Neutral Count":
-        #     for j in value:
-        #         print("neutral count - ", j)
-        # elif key == "Full Count":
-        #     for j in value:
-        #         print("full count - ", j)
-        # else:
-        #     for j in value:
-        #         print("0-0 count - ", j)
+
+
+print("print")# Assuming 'tendencies' is already defined and has various count types
+processor = CountAnalysis(tendencies)
+
+
+# Get data for all counts
+all_counts_data = processor.get_all_counts()
+# print(all_counts_data)
+
+analysis = CountAnalysis(tendencies)
+analysis.write_data_to_csv('count_data.csv')
+
+
+"""
+keys = 0-0 Count
+       Neutral Count
+       Pitcher's Count
+       Hitter's Count
+       Full Count
+value = (count, pitch_type, outcome, location)
+"""
+# pitch_type = []
+# outcome_lst = []
+# location_lst = []
+# if hasattr(tendencies, 'tendencies'):  # Make sure the 'tendencies' attribute exists
+#     for key, value in tendencies.tendencies.items():
+#         # print(key)
+#         if key == "0x-0 Count":
+#             for val in value:
+#                 pitch_type.append(val[1])
+#                 outcome_lst.append(val[2])
+#                 location_lst.append(val[3])
+
+# pitch_counter= {}
+# for i in pitch_type:
+#     if i not in pitch_counter:
+#         pitch_counter[i] = 1
+#     else:
+#         pitch_counter[i] += 1
+
+# print(pitch_counter)
+
+
+
 
             
 
