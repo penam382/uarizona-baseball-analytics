@@ -1,123 +1,190 @@
 import sqlite3
 import pandas as pd
+import csv
 
-from scripts.hitter_analysis.hitter_tendencies.Hitter import Hitter
-from scripts.hitter_analysis.hitter_tendencies.HitterTendencies import HitterTendencies
-from scripts.hitter_analysis.hitter_tendencies.CountAnalysis import CountAnalysis
+from Hitter import Hitter
+from HitterTendencies import HitterTendencies
+from CountAnalysis import CountAnalysis
 
 # Connect to the database
 conn = sqlite3.connect('/Users/marcopena/Documents/GitHub/uarizona-baseball-analytics/baseball_analytics.db')
 
-# Query only relevant data for "Caulfield, Garen"
-query = "SELECT * FROM pitches WHERE Batter = 'Caulfield, Garen';"
+# Query relevant data for "Caulfield, Garen"
+query = """
+    SELECT 
+        PA, PitchofPA, Batter, Strikes, Balls, KorBB, TaggedPitchType, PlayResult, 
+        Angle, Direction, Distance, PlateLocHeight, PlateLocSide, PitchCall, TaggedHitType,
+        AVG, OBP, SLG, swing, whiff, StadiumID, "2B", "3B", HR, chase, OutsOnPlay, GameID,
+        PitcherThrows, ExitSpeed, RelSpeed
+    FROM pitches
+    WHERE Batter = 'Caulfield, Garen';
+"""
 df = pd.read_sql_query(query, conn)
 
 # Close the database connection
 conn.close()
 
-# Process the data to create Hitter instances
+# Initialize containers for data
 plate_appearances = {}
-
-# Create a Tendencies instance to track tendencies
 tendencies = HitterTendencies()
+player_stats = {}
 
-current_pa_id = 0  # Initialize a counter for plate appearance IDs
-current_hitter = None
+# Track plate appearance ID
+current_pa_id = 0  # Start with 0, increment whenever PA == 1
 
-strikeouts = 0
-walks = 0
+# Helper functions
+def update_stats(stats, pa, play_result, korbb, obp, slg, avg):
+    """Update stats dynamically for lefties or righties."""
+    # Increment the plate appearance counter when PA == 1
+    if pa == 1:
+        stats['plate_appearances'] += 1
+    
+    if obp == 1:
+        stats['on_base_percentage'] += obp
 
+    if avg == 1:
+        stats['batting_average'] += 1
+        stats['hits'] += 1
+    elif avg >= 0:
+        stats['at_bats'] += 1
+
+    if slg >= 1:
+        stats['slugging'] += slg
+
+    if play_result != "Undefined" and play_result is not None:
+        
+        if play_result not in ["Sacrifice"]:
+            
+            if play_result in ["Single", "Double", "Triple", "HomeRun"]:
+                
+                if play_result == "Single":
+                    stats['singles'] += 1
+                elif play_result == "Double":
+                    stats['doubles'] += 1
+                elif play_result == "Triple":
+                    stats['triples'] += 1
+                elif play_result == "HomeRun":
+                    stats['homeruns'] += 1
+            print("plaresult", stats['at_bats'], play_result, stats['hits'])
+    elif korbb != "Undefined":
+        if korbb not in ['Walk']:
+            print("korbb", stats['at_bats'], korbb, stats['strikeouts'])
+    
+    
+
+def calculate_rates(stats):
+    """Calculate batting average, OBP, and SLG."""
+    return 
+
+# Process the data
 for i, row in df.iterrows():
-    pitch_of_pa = row['PitchofPA']
+    pa = row['PA']  # Indicates start of a new plate appearance
     batter = row['Batter']
+
+    obp = row['OBP']
+    avg = row['AVG']
+    slg = row['SLG']
     
-    # Retrieve strike and ball counts for the current pitch
-    strike = row['Strikes']
-    ball = row['Balls']
-
-    korbb = row['KorBB']
-    
-
-    if korbb == 'Strikeout':
-        strikeouts += 1
-    elif korbb == 'Walk':
-        walks += 1
-
-    # process pitch
-    # location = (PlateLocHeight, PlateLocSide) 
-    plate_loc_height = row['PlateLocHeight']
-    plate_loc_side = row['PlateLocSide']
-    location = (plate_loc_height, plate_loc_side)
-
-    pitch_type = row['TaggedPitchType']
-
-    play_result = row['PlayResult']
-    hit_type = row['TaggedHitType']
-
-    if play_result == "Undefined":
-        if korbb != "Undefined":
-            play_result = korbb
-
-    angle = row['Angle']
-    direction = row['Direction']
-    distance = row['Distance']
-
-
-    # Detect the start of a new plate appearance
-    if pitch_of_pa == 1:
-        # Save the current hitter instance if it exists
-        if current_hitter is not None:
-            plate_appearances[current_pa_id] = current_hitter
-
-        # Increment the plate appearance ID and create a new Hitter instance
+    # Increment the plate appearance counter when PA == 1
+    if pa == 1:
         current_pa_id += 1
-        current_hitter = Hitter(current_pa_id, batter)
 
-    # Ensure current_hitter is initialized
-    if current_hitter is None:
-        print(f"Error: No Hitter instance found for Plate Appearance {current_pa_id}")
-        continue
+    # Initialize hitter stats if not already present
+    if batter not in player_stats:
+        player_stats[batter] = {
+            'plate_appearances': 0,
+            'hits': 0, 'walks': 0, 'strikeouts': 0,
+            'homeruns': 0, 'doubles': 0, 'triples': 0, 'singles': 0,
+            'at_bats': 0, 'batting_average': 0, 'on_base_percentage': 0, 'slugging': 0,
+            'stats_vs_left': {
+                'plate_appearances': 0, 'hits': 0, 'walks': 0, 'strikeouts': 0,
+                'homeruns': 0, 'doubles': 0, 'triples': 0, 'singles': 0,
+                'at_bats': 0, 'batting_average': 0, 'on_base_percentage': 0, 'slugging': 0
+            },
+            'stats_vs_right': {
+                'plate_appearances': 0, 'hits': 0, 'walks': 0, 'strikeouts': 0,
+                'homeruns': 0, 'doubles': 0, 'triples': 0, 'singles': 0,
+                'at_bats': 0, 'batting_average': 0, 'on_base_percentage': 0, 'slugging': 0
+            }
+        }
 
-    current_hitter.balls = ball
-    current_hitter.strikes = strike
+    # Update or create a new Hitter instance for this PA
+    if current_pa_id not in plate_appearances:
+        plate_appearances[current_pa_id] = Hitter(current_pa_id, batter)
+    current_hitter = plate_appearances[current_pa_id]
 
-    current_hitter.process_pitch(location, pitch_type, pitch_of_pa, ball, strike)
+    # Process the current pitch
+    location = (row['PlateLocHeight'], row['PlateLocSide'])
+    current_hitter.process_pitch(location, row['TaggedPitchType'], row['PitchofPA'], row['Balls'], row['Strikes'])
+    tendencies.add_tendency(
+        current_hitter.type_of_count(),
+        current_hitter.count(),
+        row['TaggedPitchType'], row['PlayResult'], row['TaggedHitType'], row['PitchCall'],
+        row['Angle'], row['Direction'], row['Distance'], location
+    )
 
-    count_type = current_hitter.type_of_count()
-    count = current_hitter.count()
+    # Update player-level stats
+    if row['KorBB'] == 'Strikeout':
+        player_stats[batter]['strikeouts'] += 1
+    elif row['KorBB'] == 'Walk':
+        player_stats[batter]['walks'] += 1
 
-    # Add tendency to the Tendencies instance
-    tendencies.add_tendency(count_type, count, pitch_type, play_result, hit_type, angle, direction, distance, location)
+
     
-    play_result_and_hit_type = (play_result, hit_type)
-    angle_direction_distance = (angle, direction, distance)
 
-    current_hitter.outcome_of_PA(play_result_and_hit_type, angle_direction_distance, korbb)
-    
+    update_stats(player_stats[batter], row['PA'], row['PlayResult'], row['KorBB'], row['OBP'], row['SLG'], row['AVG'])
+    if row['PitcherThrows'] == 'Left':
+        update_stats(player_stats[batter]['stats_vs_left'], row['PA'], row['PlayResult'], row['KorBB'], row['OBP'], row['SLG'], row['AVG'])
+    elif row['PitcherThrows'] == 'Right':
+        update_stats(player_stats[batter]['stats_vs_right'], row['PA'], row['PlayResult'], row['KorBB'], row['OBP'], row['SLG'], row['AVG'])
 
-    # print("calculate_hit_position", current_hitter.calculate_hit_position(angle, distance))
+# Calculate rates
+for batter, stats in player_stats.items():
+    calculate_rates(stats)
+    calculate_rates(stats['stats_vs_left'])
+    calculate_rates(stats['stats_vs_right'])
 
+# Write Full Stats CSV
+df.to_csv('full_stats.csv', index=False)
 
-# Save the final plate appearance
-if current_hitter is not None:
-    plate_appearances[current_pa_id] = current_hitter
+# Write Hitter Stats CSV
+with open('hitter_stats.csv', mode='w', newline='') as file:
+    writer = csv.writer(file)
+    writer.writerow([
+        'Batter', 'Plate Appearances', 'Hits', 'Walks', 'Strikeouts',
+        'Homeruns', 'Doubles', 'Triples', 'Singles', 'At-Bats',
+        'Batting Average', 'On-Base Percentage', 'Slugging Percentage',
+        'Plate Appearances vs Left', 'Hits vs Left', 'Walks vs Left', 'Strikeouts vs Left',
+        'Homeruns vs Left', 'Doubles vs Left', 'Triples vs Left', 'Singles vs Left', 
+        'Batting Average vs Left', 'On-Base Percentage vs Left', 'Slugging Percentage vs Left',
+        'Plate Appearances vs Right', 'Hits vs Right', 'Walks vs Right', 'Strikeouts vs Right',
+        'Homeruns vs Right', 'Doubles vs Right', 'Triples vs Right', 'Singles vs Right',
+        'Batting Average vs Right', 'On-Base Percentage vs Right', 'Slugging Percentage vs Right'
+    ])
+    for batter, stats in player_stats.items():
+        writer.writerow([
+            batter,
+            stats['plate_appearances'], stats['hits'], stats['walks'], stats['strikeouts'],
+            stats['homeruns'], stats['doubles'], stats['triples'], stats['singles'], 
+            stats['at_bats'], stats['batting_average'], stats['on_base_percentage'], stats['slugging'],
+            stats['stats_vs_left']['plate_appearances'], stats['stats_vs_left']['hits'], 
+            stats['stats_vs_left']['walks'], stats['stats_vs_left']['strikeouts'], 
+            stats['stats_vs_left']['homeruns'], stats['stats_vs_left']['doubles'], 
+            stats['stats_vs_left']['triples'], stats['stats_vs_left']['singles'], 
+            stats['stats_vs_left']['batting_average'], stats['stats_vs_left']['on_base_percentage'], 
+            stats['stats_vs_left']['slugging'],
+            stats['stats_vs_right']['plate_appearances'], stats['stats_vs_right']['hits'], 
+            stats['stats_vs_right']['walks'], stats['stats_vs_right']['strikeouts'], 
+            stats['stats_vs_right']['homeruns'], stats['stats_vs_right']['doubles'], 
+            stats['stats_vs_right']['triples'], stats['stats_vs_right']['singles'], 
+            stats['stats_vs_right']['batting_average'], stats['stats_vs_right']['on_base_percentage'], 
+            stats['stats_vs_right']['slugging']
+        ])
 
-print("print")# Assuming 'tendencies' is already defined and has various count types
+# Write Hitter Tendencies CSV
 processor = CountAnalysis(tendencies)
+processor.write_data_to_csv('hitter_tendencies.csv')
 
-
-# Get data for all counts
-all_counts_data = processor.get_all_counts()
-print(all_counts_data)
-
-processor.write_data_to_csv('count_data.csv')
-
-
-"""
-keys = 0-0 Count
-       Neutral Count
-       Pitcher's Count
-       Hitter's Count
-       Full Count
-value = (count, pitch_type, outcome, location)
-"""
+print("CSV files created: full_stats.csv, hitter_stats.csv, hitter_tendencies.csv")
+print(player_stats)
+# print(plate_appearances)

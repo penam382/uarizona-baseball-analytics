@@ -1,206 +1,411 @@
 Count Type,Pitch Type,PA_Result_Type,PA_Result_Outcome,Angle,Direction,Distance,Location
-0-0 Count,Curveball,Undefined,Undefined,nan,nan,nan,"(2.40854, 0.35897)"
-0-0 Count,Slider,Undefined,Undefined,38.200174,71.170101,nan,"(2.67013, -0.10775)"
-0-0 Count,Slider,Undefined,Undefined,nan,nan,nan,"(3.10314, -1.05275)"
-0-0 Count,Slider,Undefined,Undefined,nan,nan,nan,"(2.15715, -0.22272)"
-0-0 Count,Fastball,Undefined,Undefined,nan,nan,nan,"(1.23226, -0.46597)"
-0-0 Count,Slider,Undefined,Undefined,nan,nan,nan,"(1.03823, -1.08696)"
-0-0 Count,Fastball,Undefined,Undefined,nan,nan,nan,"(3.92558, -0.85027)"
-0-0 Count,Slider,Undefined,Undefined,nan,nan,nan,"(2.21406, -2.41982)"
-0-0 Count,Slider,Undefined,Undefined,nan,nan,nan,"(0.15311, -0.91278)"
-0-0 Count,Curveball,Undefined,Undefined,nan,nan,nan,"(1.0805, -0.36865)"
-0-0 Count,Fastball,Undefined,Undefined,46.457071,136.513516,nan,"(2.71457, -0.31698)"
-0-0 Count,Slider,Undefined,Undefined,nan,nan,nan,"(4.06313, 0.5949)"
-0-0 Count,Sinker,Undefined,Undefined,nan,nan,nan,"(3.0632, 1.27958)"
-0-0 Count,Slider,Undefined,Undefined,nan,nan,nan,"(0.67304, -0.99031)"
-0-0 Count,Fastball,Undefined,Undefined,nan,nan,nan,"(1.15258, 0.01942)"
-0-0 Count,Slider,Undefined,Undefined,nan,nan,nan,"(1.91208, -1.37192)"
-0-0 Count,ChangeUp,Undefined,Undefined,nan,nan,nan,"(-0.11519, -1.04516)"
-0-0 Count,Slider,Undefined,Undefined,nan,nan,nan,"(1.08855, -2.40522)"
-0-0 Count,Slider,Undefined,Undefined,nan,nan,nan,"(1.61833, -1.40048)"
-0-0 Count,Fastball,Undefined,Undefined,7.358149,165.821667,nan,"(2.76751, 0.18663)"
-0-0 Count,Sinker,Undefined,Undefined,nan,nan,nan,"(2.80339, 1.91744)"
-0-0 Count,Fastball,Undefined,Undefined,nan,nan,nan,"(1.08571, 0.13202)"
-0-0 Count,Fastball,Single,LineDrive,11.610955,10.427969,219.476,"(3.06867, -0.20889)"
-0-0 Count,Slider,Undefined,Undefined,nan,nan,nan,"(2.86499, -0.76484)"
-0-0 Count,ChangeUp,Undefined,Undefined,nan,nan,nan,"(0.88671, -1.433)"
-0-0 Count,Curveball,Undefined,Undefined,nan,nan,nan,"(1.27323, -0.23427)"
-0-0 Count,ChangeUp,Undefined,Undefined,nan,nan,nan,"(0.95819, -1.07456)"
-0-0 Count,Sinker,Undefined,Undefined,nan,nan,nan,"(4.0397, 1.97773)"
-0-0 Count,Sinker,Undefined,Undefined,nan,nan,nan,"(3.03771, -2.12385)"
-0-0 Count,Slider,Undefined,Undefined,nan,nan,nan,"(1.57876, 0.63736)"
-0-0 Count,Sinker,Undefined,Undefined,nan,nan,nan,"(1.01184, -1.03382)"
-0-0 Count,Slider,Undefined,Undefined,nan,nan,nan,"(0.42486, -2.00857)"
-0-0 Count,Fastball,Undefined,Undefined,nan,nan,nan,"(4.32906, 1.76597)"
-0-0 Count,Curveball,Double,FlyBall,25.842998,-0.749129,402.8061,"(2.11856, 0.15141)"
-0-0 Count,Fastball,Undefined,Undefined,nan,nan,nan,"(1.75306, -2.39984)"
-0-0 Count,Fastball,Undefined,Undefined,nan,nan,nan,"(1.14173, -1.64926)"
-0-0 Count,Cutter,Undefined,Undefined,nan,nan,nan,"(3.58293, -0.76972)"
-0-0 Count,Fastball,Undefined,Undefined,50.411522,34.245944,nan,"(1.97822, 0.00625)"
-0-0 Count,Slider,Undefined,Undefined,nan,nan,nan,"(1.30022, 0.04325)"
-0-0 Count,Fastball,Triple,LineDrive,18.574014,22.504314,309.74517,"(3.21546, -0.79375)"
-0-0 Count,Fastball,Undefined,Undefined,nan,nan,nan,"(2.73254, 0.27037)"
-0-0 Count,Fastball,Undefined,Undefined,nan,nan,nan,"(2.40383, -0.34662)"
-0-0 Count,Slider,Undefined,Undefined,nan,nan,nan,"(1.80345, -0.19084)"
-0-0 Count,Slider,Undefined,Undefined,nan,nan,nan,"(-0.86785, -2.85209)"
-0-0 Count,Fastball,Undefined,Undefined,nan,nan,nan,"(2.27851, 0.02497)"
-0-0 Count,Curveball,Undefined,Undefined,nan,nan,nan,"(2.12273, 1.34028)"
-0-0 Count,Slider,Undefined,Undefined,nan,nan,nan,"(1.53553, -0.72809)"
-0-0 Count,Sinker,Undefined,Undefined,nan,nan,nan,"(2.01693, 2.01136)"
-0-0 Count,Fastball,Out,GroundBall,nan,nan,nan,"(1.91504, 0.31448)"
-0-0 Count,Curveball,Undefined,Undefined,nan,nan,nan,"(0.65928, 0.14722)"
-Neutral Count,Fastball,Undefined,Undefined,nan,nan,nan,"(1.25844, -0.16313)"
-Neutral Count,Fastball,Undefined,Undefined,nan,nan,nan,"(2.0257, -0.2498)"
-Neutral Count,Sinker,Out,FlyBall,25.479566,-14.381635,326.62236,"(2.29577, -0.46867)"
-Neutral Count,Fastball,Undefined,Undefined,20.121002,63.950752,236.6583,"(1.97086, 0.50312)"
-Neutral Count,Fastball,Undefined,Undefined,nan,nan,nan,"(1.63845, -1.74221)"
-Neutral Count,Fastball,Undefined,Undefined,nan,nan,nan,"(1.36699, -0.91048)"
-Neutral Count,Slider,Undefined,Undefined,nan,nan,nan,"(3.46995, -0.70266)"
-Neutral Count,Fastball,Undefined,Undefined,nan,nan,nan,"(3.72111, -0.55872)"
-Neutral Count,Fastball,Undefined,Undefined,nan,nan,nan,"(2.47915, -0.34786)"
-Neutral Count,Fastball,Undefined,Undefined,nan,nan,nan,"(3.6719, 1.06299)"
-Neutral Count,Curveball,Undefined,Undefined,nan,nan,nan,"(2.1575, 1.40032)"
-Neutral Count,Fastball,Undefined,Undefined,nan,nan,nan,"(1.68142, -0.18071)"
-Neutral Count,Fastball,Undefined,Undefined,nan,nan,nan,"(1.54935, -0.04556)"
-Neutral Count,Slider,Undefined,Undefined,nan,nan,nan,"(3.20889, -0.09895)"
-Neutral Count,Sinker,Undefined,Undefined,nan,nan,nan,"(3.32858, 0.95031)"
-Neutral Count,Slider,Undefined,Undefined,nan,nan,nan,"(1.87495, -1.00715)"
-Neutral Count,Slider,Undefined,Undefined,nan,nan,nan,"(3.12213, 0.8602)"
-Neutral Count,Slider,Undefined,Undefined,nan,nan,nan,"(3.77616, 0.69478)"
-Neutral Count,Fastball,Single,GroundBall,5.253385,-4.434775,98.41474,"(2.00761, 0.62219)"
-Neutral Count,Fastball,Undefined,Undefined,nan,nan,nan,"(2.67985, 0.93455)"
-Neutral Count,Fastball,HomeRun,FlyBall,24.016997,24.306914,366.25133,"(3.17909, -0.57019)"
-Neutral Count,Sinker,Undefined,Undefined,nan,nan,nan,"(2.70187, 1.28465)"
-Neutral Count,Curveball,Undefined,Undefined,50.355736,146.182628,nan,"(2.70598, 0.97327)"
-Neutral Count,Sinker,Undefined,Undefined,58.639839,145.652064,nan,"(2.3954, 0.37815)"
-Neutral Count,Cutter,Undefined,Undefined,nan,nan,nan,"(0.97644, -0.91396)"
-Neutral Count,Fastball,Undefined,Undefined,nan,nan,nan,"(2.73161, 1.57424)"
-Neutral Count,Slider,Undefined,Undefined,nan,nan,nan,"(1.38292, -0.59226)"
-Neutral Count,Fastball,Out,GroundBall,-1.047471,24.76262,47.02909,"(2.93441, -0.00011)"
-Neutral Count,ChangeUp,Undefined,Undefined,nan,nan,nan,"(1.64097, -0.87547)"
-Neutral Count,Fastball,Undefined,Undefined,nan,nan,nan,"(1.2215, -1.31217)"
-Neutral Count,Fastball,Undefined,Undefined,nan,nan,nan,"(4.51228, 0.12692)"
-Neutral Count,Fastball,Undefined,Undefined,nan,nan,nan,"(3.68157, -0.49386)"
-Neutral Count,Slider,Undefined,Undefined,nan,nan,nan,"(2.83697, -3.46608)"
-Neutral Count,Sinker,HomeRun,FlyBall,26.488065,27.29772,372.51379,"(2.42922, -0.86455)"
-Neutral Count,Sinker,Undefined,Undefined,nan,nan,nan,"(1.25976, -0.76762)"
-Neutral Count,Fastball,Undefined,Undefined,nan,nan,nan,"(3.34202, -0.13425)"
-Neutral Count,Fastball,Undefined,Undefined,nan,nan,nan,"(1.88666, -1.64316)"
-Neutral Count,Slider,Out,Popup,42.69481,2.061732,282.2932,"(3.11539, 0.21182)"
-Neutral Count,Fastball,Undefined,Undefined,nan,nan,nan,"(1.9638, -1.62563)"
-Neutral Count,Fastball,Undefined,Undefined,nan,nan,nan,"(2.4984, -0.59318)"
-Neutral Count,Slider,Undefined,Undefined,nan,nan,nan,"(-0.19364, -1.30276)"
-Neutral Count,Fastball,Out,FlyBall,47.145041,5.085462,170.85413,"(2.57991, 0.17083)"
-Neutral Count,Slider,Undefined,Undefined,nan,nan,nan,"(3.45782, -0.87538)"
-Neutral Count,Fastball,Undefined,Undefined,nan,nan,nan,"(3.54592, 0.31096)"
-Neutral Count,Fastball,Undefined,Undefined,nan,nan,nan,"(0.47169, -0.84474)"
-Neutral Count,Fastball,Undefined,Undefined,nan,nan,nan,"(3.45663, -1.06954)"
-Neutral Count,Slider,Undefined,Undefined,nan,nan,nan,"(0.68941, -1.66424)"
-Neutral Count,Fastball,Undefined,Undefined,nan,nan,nan,"(4.9494, 0.03156)"
-Neutral Count,Curveball,Undefined,Undefined,nan,nan,nan,"(0.60275, 0.25019)"
-Neutral Count,Slider,Out,LineDrive,25.113325,13.212199,341.75475,"(1.59021, -0.14269)"
-Neutral Count,Cutter,Undefined,Undefined,nan,nan,nan,"(2.05908, 0.75324)"
-Neutral Count,Fastball,Undefined,Undefined,nan,nan,nan,"(3.0859, -0.18628)"
-Neutral Count,Fastball,Undefined,Undefined,nan,nan,nan,"(0.03659, -0.55868)"
-Neutral Count,Slider,Undefined,Undefined,nan,nan,nan,"(1.9799, -0.82155)"
-Neutral Count,Slider,Undefined,Undefined,nan,nan,nan,"(1.38992, -2.03022)"
-Neutral Count,Fastball,Undefined,Undefined,nan,nan,nan,"(4.1934, -0.43192)"
-Neutral Count,Fastball,Undefined,Undefined,nan,nan,nan,"(2.27061, -0.07149)"
-Neutral Count,Sinker,Undefined,Undefined,nan,nan,nan,"(2.32541, -2.21092)"
-Neutral Count,Fastball,Undefined,Undefined,nan,nan,nan,"(3.35008, -0.36453)"
-Neutral Count,Fastball,Undefined,Undefined,nan,nan,nan,"(2.50045, -0.02903)"
-Neutral Count,,,,nan,nan,nan,"(nan, nan)"
-Neutral Count,,,,nan,nan,nan,"(nan, nan)"
-Neutral Count,,,,nan,nan,nan,"(nan, nan)"
-Pitcher's Count,Curveball,Out,GroundBall,-18.385955,-21.31345,5.33365,"(1.18312, -0.17887)"
-Pitcher's Count,Slider,Out,GroundBall,nan,nan,nan,"(1.33677, -1.17234)"
-Pitcher's Count,Slider,Strikeout,Undefined,nan,nan,nan,"(1.88485, -0.99276)"
-Pitcher's Count,ChangeUp,Undefined,Undefined,37.149886,61.431252,217.12255,"(2.11449, 0.50664)"
-Pitcher's Count,Fastball,Undefined,Undefined,nan,nan,nan,"(2.46125, 0.5204)"
-Pitcher's Count,Slider,Undefined,Undefined,38.722631,165.27103,nan,"(2.237, -0.3177)"
-Pitcher's Count,Fastball,HomeRun,FlyBall,26.906398,2.192136,427.63012,"(2.8528, -0.22635)"
-Pitcher's Count,Fastball,Strikeout,Undefined,nan,nan,nan,"(2.80933, -1.26695)"
-Pitcher's Count,Slider,Undefined,Undefined,nan,nan,nan,"(0.49343, -0.65157)"
-Pitcher's Count,Fastball,Single,LineDrive,12.722509,-20.077304,283.35727,"(2.50412, 0.45039)"
-Pitcher's Count,Slider,Undefined,Undefined,nan,nan,nan,"(3.50654, -1.36386)"
-Pitcher's Count,Slider,Undefined,Undefined,nan,nan,nan,"(2.45583, -1.51144)"
-Pitcher's Count,Sinker,Undefined,Undefined,nan,nan,nan,"(3.81932, -0.78151)"
-Pitcher's Count,Sinker,Undefined,Undefined,nan,nan,nan,"(1.56641, -0.04075)"
-Pitcher's Count,Fastball,Undefined,Undefined,nan,nan,nan,"(5.09659, 0.92736)"
-Pitcher's Count,Curveball,HomeRun,FlyBall,30.511815,-24.742441,427.53962,"(2.21621, 0.39373)"
-Pitcher's Count,Slider,Single,LineDrive,18.258283,-28.868481,285.26713,"(3.39514, 0.00302)"
-Pitcher's Count,Slider,Single,GroundBall,-2.227883,-3.108514,36.7328,"(2.8812, -0.58426)"
-Pitcher's Count,Slider,Undefined,Undefined,nan,nan,nan,"(3.46211, 1.2338)"
-Pitcher's Count,Cutter,Undefined,Undefined,nan,nan,nan,"(0.31027, -1.80555)"
-Pitcher's Count,Fastball,Undefined,Undefined,nan,nan,nan,"(3.79209, -0.43982)"
-Pitcher's Count,Fastball,Undefined,Undefined,39.769024,166.727864,nan,"(3.32402, -0.11313)"
-Pitcher's Count,Curveball,Strikeout,Undefined,nan,nan,nan,"(2.86711, 0.36281)"
-Pitcher's Count,Slider,Undefined,Undefined,nan,nan,nan,"(2.22123, -1.47051)"
-Pitcher's Count,Slider,Single,GroundBall,-6.849058,-5.035543,15.74348,"(2.09943, -1.07516)"
-Pitcher's Count,ChangeUp,Undefined,Undefined,-7.656464,-75.650618,15.40965,"(2.23602, 0.71851)"
-Pitcher's Count,Slider,Undefined,Undefined,nan,nan,nan,"(2.22479, -1.84397)"
-Pitcher's Count,ChangeUp,Strikeout,Undefined,nan,nan,nan,"(0.94282, -0.26653)"
-Pitcher's Count,Slider,Strikeout,Undefined,nan,nan,nan,"(1.38276, -0.79619)"
-Pitcher's Count,Curveball,Undefined,Undefined,nan,nan,nan,"(1.37962, -0.87493)"
-Pitcher's Count,Curveball,Undefined,Undefined,nan,nan,nan,"(-0.02974, -1.09659)"
-Hitter's Count,Fastball,Undefined,Undefined,nan,nan,nan,"(3.81208, 0.25157)"
-Hitter's Count,Fastball,Walk,Undefined,nan,nan,nan,"(1.58639, -0.92815)"
-Hitter's Count,Fastball,Undefined,Undefined,nan,nan,nan,"(2.67621, 0.54732)"
-Hitter's Count,Fastball,Single,GroundBall,6.41766,7.086193,136.40016,"(2.36602, 0.42448)"
-Hitter's Count,Fastball,Undefined,Undefined,62.872808,77.71044,nan,"(1.60285, 0.3146)"
-Hitter's Count,Slider,Undefined,Undefined,nan,nan,nan,"(3.00158, 0.27553)"
-Hitter's Count,ChangeUp,Undefined,Undefined,nan,nan,nan,"(6.14162, 1.99944)"
-Hitter's Count,Fastball,Undefined,Undefined,nan,nan,nan,"(1.71625, -0.92581)"
-Hitter's Count,Fastball,Walk,Undefined,nan,nan,nan,"(0.85362, -1.58232)"
-Hitter's Count,Slider,Undefined,Undefined,nan,nan,nan,"(2.29927, 0.90363)"
-Hitter's Count,Fastball,Undefined,Undefined,nan,nan,nan,"(2.09603, -1.76395)"
-Hitter's Count,Fastball,Walk,Undefined,nan,nan,nan,"(4.15014, 0.9676)"
-Hitter's Count,Sinker,Out,GroundBall,-7.022008,4.67719,11.64526,"(1.3857, 0.01039)"
-Hitter's Count,Sinker,Undefined,Undefined,35.282533,161.573359,nan,"(2.92623, -0.42907)"
-Hitter's Count,Fastball,Undefined,Undefined,nan,nan,nan,"(2.64503, -0.20731)"
-Hitter's Count,Fastball,Undefined,Undefined,nan,nan,nan,"(2.04963, 0.85981)"
-Hitter's Count,Fastball,Undefined,Undefined,60.437063,87.320722,nan,"(2.51873, -0.19177)"
-Hitter's Count,Sinker,Undefined,Undefined,nan,nan,nan,"(3.14061, -1.45738)"
-Hitter's Count,Sinker,Out,LineDrive,15.086581,-0.18962,294.8359,"(1.33581, 0.37858)"
-Hitter's Count,Sinker,Undefined,Undefined,nan,nan,nan,"(2.90479, 1.54199)"
-Hitter's Count,Sinker,Undefined,Undefined,nan,nan,nan,"(2.2878, -0.99062)"
-Hitter's Count,Sinker,Out,GroundBall,-2.849359,-14.035957,22.46751,"(1.7081, 0.43846)"
-Hitter's Count,Sinker,Undefined,Undefined,61.985013,126.851201,nan,"(1.90426, 0.36068)"
-Hitter's Count,Fastball,Undefined,Undefined,nan,nan,nan,"(2.18677, -1.4149)"
-Hitter's Count,Fastball,Out,Popup,62.569429,15.419469,nan,"(1.98274, 0.04633)"
-Hitter's Count,Fastball,Out,GroundBall,nan,nan,nan,"(3.0436, -0.01351)"
-Hitter's Count,Slider,Undefined,Undefined,nan,nan,nan,"(3.34617, -0.04861)"
-Hitter's Count,Slider,Undefined,Undefined,nan,nan,nan,"(2.69338, -0.97952)"
-Hitter's Count,Slider,Undefined,Undefined,nan,nan,nan,"(1.5344, 0.52376)"
-Hitter's Count,ChangeUp,Undefined,Undefined,nan,nan,nan,"(3.52438, -1.63552)"
-Hitter's Count,Fastball,Undefined,Undefined,nan,nan,nan,"(1.75328, -1.19396)"
-Hitter's Count,Sinker,Undefined,Undefined,nan,nan,nan,"(3.36898, -2.66407)"
-Hitter's Count,Sinker,Undefined,Undefined,nan,nan,nan,"(2.24695, 0.13209)"
-Hitter's Count,Sinker,Walk,Undefined,nan,nan,nan,"(1.85014, 1.02198)"
-Hitter's Count,Sinker,Out,LineDrive,17.191498,-14.595218,334.45955,"(2.09097, 0.66155)"
-Hitter's Count,Sinker,Out,GroundBall,-13.057653,11.901112,7.92667,"(1.64094, -1.12165)"
-Hitter's Count,ChangeUp,Undefined,Undefined,nan,nan,nan,"(3.38766, 0.852)"
-Hitter's Count,Fastball,Undefined,Undefined,nan,nan,nan,"(1.46595, -0.75675)"
-Hitter's Count,Fastball,Undefined,Undefined,nan,nan,nan,"(3.1192, -0.2211)"
-Hitter's Count,Fastball,Out,LineDrive,18.322016,22.906783,304.86746,"(1.96203, -0.62373)"
-Hitter's Count,Fastball,Undefined,Undefined,nan,nan,nan,"(2.44231, -0.40323)"
-Hitter's Count,Curveball,Undefined,Undefined,62.581275,32.747408,nan,"(2.72603, 0.41145)"
-Hitter's Count,Fastball,Undefined,Undefined,nan,nan,nan,"(1.58993, -1.01264)"
-Hitter's Count,Fastball,Undefined,Undefined,nan,nan,nan,"(1.28763, -0.58851)"
-Hitter's Count,Fastball,Walk,Undefined,nan,nan,nan,"(2.13523, -1.71722)"
-Hitter's Count,Slider,Undefined,Undefined,nan,nan,nan,"(1.2035, -2.0405)"
-Hitter's Count,Curveball,Undefined,Undefined,nan,nan,nan,"(3.1326, 0.31048)"
-Hitter's Count,Slider,Walk,Undefined,nan,nan,nan,"(0.80305, -1.63863)"
-Hitter's Count,Sinker,Undefined,Undefined,nan,nan,nan,"(3.58178, 2.05282)"
-Full Count,Fastball,Out,Popup,32.980962,3.154226,383.24845,"(2.17638, -0.53825)"
-Full Count,Sinker,Undefined,Undefined,34.118563,54.487454,nan,"(1.62631, -0.18192)"
-Full Count,Slider,Strikeout,Undefined,nan,nan,nan,"(2.66105, 0.06714)"
-Full Count,Fastball,Undefined,Undefined,56.231876,36.725778,210.12825,"(2.11605, 0.39053)"
-Full Count,Curveball,Walk,Undefined,nan,nan,nan,"(3.31997, 0.87573)"
-Full Count,Slider,Double,LineDrive,18.674736,-17.312827,399.28208,"(1.106, -0.02532)"
-Full Count,ChangeUp,Undefined,Undefined,nan,nan,nan,"(1.06938, 0.33791)"
-Full Count,Fastball,Walk,Undefined,nan,nan,nan,"(3.3223, 1.2547)"
-Full Count,Slider,Walk,Undefined,nan,nan,nan,"(1.00443, -0.64105)"
-Full Count,Slider,Single,GroundBall,-2.723317,-3.683551,23.45922,"(1.52457, -0.26226)"
-Full Count,Curveball,Undefined,Undefined,14.598157,175.418737,112.92815,"(3.78144, -0.55163)"
-Full Count,Fastball,Strikeout,Undefined,nan,nan,nan,"(1.73118, -0.40988)"
+0-0 Count,Curveball,Undefined,Undefined,StrikeCalled,nan,nan,nan
+0-0 Count,Curveball,Undefined,Undefined,StrikeCalled,nan,nan,nan
+0-0 Count,Slider,Undefined,Undefined,FoulBallNotFieldable,38.200174,71.170101,nan
+0-0 Count,Slider,Undefined,Undefined,FoulBallNotFieldable,38.200174,71.170101,nan
+0-0 Count,Slider,Undefined,Undefined,BallCalled,nan,nan,nan
+0-0 Count,Slider,Undefined,Undefined,BallCalled,nan,nan,nan
+0-0 Count,Slider,Undefined,Undefined,StrikeCalled,nan,nan,nan
+0-0 Count,Slider,Undefined,Undefined,StrikeCalled,nan,nan,nan
+0-0 Count,Fastball,Undefined,Undefined,BallCalled,nan,nan,nan
+0-0 Count,Fastball,Undefined,Undefined,BallCalled,nan,nan,nan
+0-0 Count,Slider,Undefined,Undefined,BallCalled,nan,nan,nan
+0-0 Count,Slider,Undefined,Undefined,BallCalled,nan,nan,nan
+0-0 Count,Fastball,Undefined,Undefined,BallCalled,nan,nan,nan
+0-0 Count,Fastball,Undefined,Undefined,BallCalled,nan,nan,nan
+0-0 Count,Slider,Undefined,Undefined,BallCalled,nan,nan,nan
+0-0 Count,Slider,Undefined,Undefined,BallCalled,nan,nan,nan
+0-0 Count,Slider,Undefined,Undefined,BallCalled,nan,nan,nan
+0-0 Count,Slider,Undefined,Undefined,BallCalled,nan,nan,nan
+0-0 Count,Curveball,Undefined,Undefined,BallCalled,nan,nan,nan
+0-0 Count,Curveball,Undefined,Undefined,BallCalled,nan,nan,nan
+0-0 Count,Fastball,Undefined,Undefined,FoulBallNotFieldable,46.457071,136.513516,nan
+0-0 Count,Fastball,Undefined,Undefined,FoulBallNotFieldable,46.457071,136.513516,nan
+0-0 Count,Slider,Undefined,Undefined,BallCalled,nan,nan,nan
+0-0 Count,Slider,Undefined,Undefined,BallCalled,nan,nan,nan
+0-0 Count,Sinker,Undefined,Undefined,BallCalled,nan,nan,nan
+0-0 Count,Sinker,Undefined,Undefined,BallCalled,nan,nan,nan
+0-0 Count,Slider,Undefined,Undefined,BallCalled,nan,nan,nan
+0-0 Count,Slider,Undefined,Undefined,BallCalled,nan,nan,nan
+0-0 Count,Fastball,Undefined,Undefined,BallCalled,nan,nan,nan
+0-0 Count,Fastball,Undefined,Undefined,BallCalled,nan,nan,nan
+0-0 Count,Slider,Undefined,Undefined,BallCalled,nan,nan,nan
+0-0 Count,Slider,Undefined,Undefined,BallCalled,nan,nan,nan
+0-0 Count,ChangeUp,Undefined,Undefined,BallCalled,nan,nan,nan
+0-0 Count,ChangeUp,Undefined,Undefined,BallCalled,nan,nan,nan
+0-0 Count,Slider,Undefined,Undefined,BallCalled,nan,nan,nan
+0-0 Count,Slider,Undefined,Undefined,BallCalled,nan,nan,nan
+0-0 Count,Slider,Undefined,Undefined,BallCalled,nan,nan,nan
+0-0 Count,Slider,Undefined,Undefined,BallCalled,nan,nan,nan
+0-0 Count,Fastball,Undefined,Undefined,FoulBallNotFieldable,7.358149,165.821667,nan
+0-0 Count,Fastball,Undefined,Undefined,FoulBallNotFieldable,7.358149,165.821667,nan
+0-0 Count,Sinker,Undefined,Undefined,BallCalled,nan,nan,nan
+0-0 Count,Sinker,Undefined,Undefined,BallCalled,nan,nan,nan
+0-0 Count,Fastball,Undefined,Undefined,StrikeCalled,nan,nan,nan
+0-0 Count,Fastball,Undefined,Undefined,StrikeCalled,nan,nan,nan
+0-0 Count,Fastball,Single,LineDrive,InPlay,11.610955,10.427969,219.476
+0-0 Count,Fastball,Single,LineDrive,InPlay,11.610955,10.427969,219.476
+0-0 Count,Slider,Undefined,Undefined,StrikeSwinging,nan,nan,nan
+0-0 Count,Slider,Undefined,Undefined,StrikeSwinging,nan,nan,nan
+0-0 Count,ChangeUp,Undefined,Undefined,BallCalled,nan,nan,nan
+0-0 Count,ChangeUp,Undefined,Undefined,BallCalled,nan,nan,nan
+0-0 Count,Curveball,Undefined,Undefined,BallCalled,nan,nan,nan
+0-0 Count,Curveball,Undefined,Undefined,BallCalled,nan,nan,nan
+0-0 Count,ChangeUp,Undefined,Undefined,BallCalled,nan,nan,nan
+0-0 Count,ChangeUp,Undefined,Undefined,BallCalled,nan,nan,nan
+0-0 Count,Sinker,Undefined,Undefined,HitByPitch,nan,nan,nan
+0-0 Count,Sinker,Undefined,Undefined,HitByPitch,nan,nan,nan
+0-0 Count,Sinker,Undefined,Undefined,BallCalled,nan,nan,nan
+0-0 Count,Sinker,Undefined,Undefined,BallCalled,nan,nan,nan
+0-0 Count,Slider,Undefined,Undefined,BallCalled,nan,nan,nan
+0-0 Count,Slider,Undefined,Undefined,BallCalled,nan,nan,nan
+0-0 Count,Sinker,Undefined,Undefined,BallCalled,nan,nan,nan
+0-0 Count,Sinker,Undefined,Undefined,BallCalled,nan,nan,nan
+0-0 Count,Slider,Undefined,Undefined,BallCalled,nan,nan,nan
+0-0 Count,Slider,Undefined,Undefined,BallCalled,nan,nan,nan
+0-0 Count,Fastball,Undefined,Undefined,BallCalled,nan,nan,nan
+0-0 Count,Fastball,Undefined,Undefined,BallCalled,nan,nan,nan
+0-0 Count,Curveball,Double,FlyBall,InPlay,25.842998,-0.749129,402.8061
+0-0 Count,Curveball,Double,FlyBall,InPlay,25.842998,-0.749129,402.8061
+0-0 Count,Fastball,Undefined,Undefined,BallCalled,nan,nan,nan
+0-0 Count,Fastball,Undefined,Undefined,BallCalled,nan,nan,nan
+0-0 Count,Fastball,Undefined,Undefined,BallCalled,nan,nan,nan
+0-0 Count,Fastball,Undefined,Undefined,BallCalled,nan,nan,nan
+0-0 Count,Cutter,Undefined,Undefined,StrikeCalled,nan,nan,nan
+0-0 Count,Cutter,Undefined,Undefined,StrikeCalled,nan,nan,nan
+0-0 Count,Fastball,Undefined,Undefined,FoulBallNotFieldable,50.411522,34.245944,nan
+0-0 Count,Fastball,Undefined,Undefined,FoulBallNotFieldable,50.411522,34.245944,nan
+0-0 Count,Slider,Undefined,Undefined,StrikeCalled,nan,nan,nan
+0-0 Count,Slider,Undefined,Undefined,StrikeCalled,nan,nan,nan
+0-0 Count,Fastball,Triple,LineDrive,InPlay,18.574014,22.504314,309.74517
+0-0 Count,Fastball,Triple,LineDrive,InPlay,18.574014,22.504314,309.74517
+0-0 Count,Fastball,Undefined,Undefined,StrikeCalled,nan,nan,nan
+0-0 Count,Fastball,Undefined,Undefined,StrikeCalled,nan,nan,nan
+0-0 Count,Fastball,Undefined,Undefined,StrikeCalled,nan,nan,nan
+0-0 Count,Fastball,Undefined,Undefined,StrikeCalled,nan,nan,nan
+0-0 Count,Slider,Undefined,Undefined,StrikeCalled,nan,nan,nan
+0-0 Count,Slider,Undefined,Undefined,StrikeCalled,nan,nan,nan
+0-0 Count,Slider,Undefined,Undefined,BallCalled,nan,nan,nan
+0-0 Count,Slider,Undefined,Undefined,BallCalled,nan,nan,nan
+0-0 Count,Fastball,Undefined,Undefined,StrikeCalled,nan,nan,nan
+0-0 Count,Fastball,Undefined,Undefined,StrikeCalled,nan,nan,nan
+0-0 Count,Curveball,Undefined,Undefined,BallCalled,nan,nan,nan
+0-0 Count,Curveball,Undefined,Undefined,BallCalled,nan,nan,nan
+0-0 Count,Slider,Undefined,Undefined,StrikeCalled,nan,nan,nan
+0-0 Count,Slider,Undefined,Undefined,StrikeCalled,nan,nan,nan
+0-0 Count,Sinker,Undefined,Undefined,BallCalled,nan,nan,nan
+0-0 Count,Sinker,Undefined,Undefined,BallCalled,nan,nan,nan
+0-0 Count,Fastball,Out,GroundBall,InPlay,nan,nan,nan
+0-0 Count,Fastball,Out,GroundBall,InPlay,nan,nan,nan
+0-0 Count,Curveball,Undefined,Undefined,BallCalled,nan,nan,nan
+0-0 Count,Curveball,Undefined,Undefined,BallCalled,nan,nan,nan
+Neutral Count,Fastball,Undefined,Undefined,StrikeCalled,nan,nan,nan
+Neutral Count,Fastball,Undefined,Undefined,StrikeCalled,nan,nan,nan
+Neutral Count,Fastball,Undefined,Undefined,StrikeCalled,nan,nan,nan
+Neutral Count,Fastball,Undefined,Undefined,StrikeCalled,nan,nan,nan
+Neutral Count,Sinker,Out,FlyBall,InPlay,25.479566,-14.381635,326.62236
+Neutral Count,Sinker,Out,FlyBall,InPlay,25.479566,-14.381635,326.62236
+Neutral Count,Fastball,Undefined,Undefined,FoulBallNotFieldable,20.121002,63.950752,236.6583
+Neutral Count,Fastball,Undefined,Undefined,FoulBallNotFieldable,20.121002,63.950752,236.6583
+Neutral Count,Fastball,Undefined,Undefined,BallCalled,nan,nan,nan
+Neutral Count,Fastball,Undefined,Undefined,BallCalled,nan,nan,nan
+Neutral Count,Fastball,Undefined,Undefined,BallCalled,nan,nan,nan
+Neutral Count,Fastball,Undefined,Undefined,BallCalled,nan,nan,nan
+Neutral Count,Slider,Undefined,Undefined,BallCalled,nan,nan,nan
+Neutral Count,Slider,Undefined,Undefined,BallCalled,nan,nan,nan
+Neutral Count,Fastball,Undefined,Undefined,BallCalled,nan,nan,nan
+Neutral Count,Fastball,Undefined,Undefined,BallCalled,nan,nan,nan
+Neutral Count,Fastball,Undefined,Undefined,FoulBallNotFieldable,nan,nan,nan
+Neutral Count,Fastball,Undefined,Undefined,FoulBallNotFieldable,nan,nan,nan
+Neutral Count,Fastball,Undefined,Undefined,BallCalled,nan,nan,nan
+Neutral Count,Fastball,Undefined,Undefined,BallCalled,nan,nan,nan
+Neutral Count,Curveball,Undefined,Undefined,BallCalled,nan,nan,nan
+Neutral Count,Curveball,Undefined,Undefined,BallCalled,nan,nan,nan
+Neutral Count,Fastball,Undefined,Undefined,StrikeCalled,nan,nan,nan
+Neutral Count,Fastball,Undefined,Undefined,StrikeCalled,nan,nan,nan
+Neutral Count,Fastball,Undefined,Undefined,StrikeSwinging,nan,nan,nan
+Neutral Count,Fastball,Undefined,Undefined,StrikeSwinging,nan,nan,nan
+Neutral Count,Slider,Undefined,Undefined,StrikeSwinging,nan,nan,nan
+Neutral Count,Slider,Undefined,Undefined,StrikeSwinging,nan,nan,nan
+Neutral Count,Sinker,Undefined,Undefined,BallCalled,nan,nan,nan
+Neutral Count,Sinker,Undefined,Undefined,BallCalled,nan,nan,nan
+Neutral Count,Slider,Undefined,Undefined,StrikeSwinging,nan,nan,nan
+Neutral Count,Slider,Undefined,Undefined,StrikeSwinging,nan,nan,nan
+Neutral Count,Slider,Undefined,Undefined,StrikeCalled,nan,nan,nan
+Neutral Count,Slider,Undefined,Undefined,StrikeCalled,nan,nan,nan
+Neutral Count,Slider,Undefined,Undefined,BallCalled,nan,nan,nan
+Neutral Count,Slider,Undefined,Undefined,BallCalled,nan,nan,nan
+Neutral Count,Fastball,Single,GroundBall,InPlay,5.253385,-4.434775,98.41474
+Neutral Count,Fastball,Single,GroundBall,InPlay,5.253385,-4.434775,98.41474
+Neutral Count,Fastball,Undefined,Undefined,BallCalled,nan,nan,nan
+Neutral Count,Fastball,Undefined,Undefined,BallCalled,nan,nan,nan
+Neutral Count,Fastball,HomeRun,FlyBall,InPlay,24.016997,24.306914,366.25133
+Neutral Count,Fastball,HomeRun,FlyBall,InPlay,24.016997,24.306914,366.25133
+Neutral Count,Sinker,Undefined,Undefined,BallCalled,nan,nan,nan
+Neutral Count,Sinker,Undefined,Undefined,BallCalled,nan,nan,nan
+Neutral Count,Curveball,Undefined,Undefined,FoulBallNotFieldable,50.355736,146.182628,nan
+Neutral Count,Curveball,Undefined,Undefined,FoulBallNotFieldable,50.355736,146.182628,nan
+Neutral Count,Sinker,Undefined,Undefined,FoulBallNotFieldable,58.639839,145.652064,nan
+Neutral Count,Sinker,Undefined,Undefined,FoulBallNotFieldable,58.639839,145.652064,nan
+Neutral Count,Cutter,Undefined,Undefined,BallCalled,nan,nan,nan
+Neutral Count,Cutter,Undefined,Undefined,BallCalled,nan,nan,nan
+Neutral Count,Fastball,Undefined,Undefined,BallCalled,nan,nan,nan
+Neutral Count,Fastball,Undefined,Undefined,BallCalled,nan,nan,nan
+Neutral Count,Slider,Undefined,Undefined,BallCalled,nan,nan,nan
+Neutral Count,Slider,Undefined,Undefined,BallCalled,nan,nan,nan
+Neutral Count,Fastball,Out,GroundBall,InPlay,-1.047471,24.76262,47.02909
+Neutral Count,Fastball,Out,GroundBall,InPlay,-1.047471,24.76262,47.02909
+Neutral Count,ChangeUp,Undefined,Undefined,StrikeCalled,nan,nan,nan
+Neutral Count,ChangeUp,Undefined,Undefined,StrikeCalled,nan,nan,nan
+Neutral Count,Fastball,Undefined,Undefined,BallCalled,nan,nan,nan
+Neutral Count,Fastball,Undefined,Undefined,BallCalled,nan,nan,nan
+Neutral Count,Fastball,Undefined,Undefined,BallCalled,nan,nan,nan
+Neutral Count,Fastball,Undefined,Undefined,BallCalled,nan,nan,nan
+Neutral Count,Fastball,Undefined,Undefined,BallCalled,nan,nan,nan
+Neutral Count,Fastball,Undefined,Undefined,BallCalled,nan,nan,nan
+Neutral Count,Slider,Undefined,Undefined,BallCalled,nan,nan,nan
+Neutral Count,Slider,Undefined,Undefined,BallCalled,nan,nan,nan
+Neutral Count,Sinker,HomeRun,FlyBall,InPlay,26.488065,27.29772,372.51379
+Neutral Count,Sinker,HomeRun,FlyBall,InPlay,26.488065,27.29772,372.51379
+Neutral Count,Sinker,Undefined,Undefined,BallCalled,nan,nan,nan
+Neutral Count,Sinker,Undefined,Undefined,BallCalled,nan,nan,nan
+Neutral Count,Fastball,Undefined,Undefined,StrikeSwinging,nan,nan,nan
+Neutral Count,Fastball,Undefined,Undefined,StrikeSwinging,nan,nan,nan
+Neutral Count,Fastball,Undefined,Undefined,BallCalled,nan,nan,nan
+Neutral Count,Fastball,Undefined,Undefined,BallCalled,nan,nan,nan
+Neutral Count,Slider,Out,Popup,InPlay,42.69481,2.061732,282.2932
+Neutral Count,Slider,Out,Popup,InPlay,42.69481,2.061732,282.2932
+Neutral Count,Fastball,Undefined,Undefined,BallCalled,nan,nan,nan
+Neutral Count,Fastball,Undefined,Undefined,BallCalled,nan,nan,nan
+Neutral Count,Fastball,Undefined,Undefined,StrikeCalled,nan,nan,nan
+Neutral Count,Fastball,Undefined,Undefined,StrikeCalled,nan,nan,nan
+Neutral Count,Slider,Undefined,Undefined,BallCalled,nan,nan,nan
+Neutral Count,Slider,Undefined,Undefined,BallCalled,nan,nan,nan
+Neutral Count,Fastball,Out,FlyBall,InPlay,47.145041,5.085462,170.85413
+Neutral Count,Fastball,Out,FlyBall,InPlay,47.145041,5.085462,170.85413
+Neutral Count,Slider,Undefined,Undefined,BallCalled,nan,nan,nan
+Neutral Count,Slider,Undefined,Undefined,BallCalled,nan,nan,nan
+Neutral Count,Fastball,Undefined,Undefined,FoulBallNotFieldable,nan,nan,nan
+Neutral Count,Fastball,Undefined,Undefined,FoulBallNotFieldable,nan,nan,nan
+Neutral Count,Fastball,Undefined,Undefined,BallCalled,nan,nan,nan
+Neutral Count,Fastball,Undefined,Undefined,BallCalled,nan,nan,nan
+Neutral Count,Fastball,Undefined,Undefined,BallCalled,nan,nan,nan
+Neutral Count,Fastball,Undefined,Undefined,BallCalled,nan,nan,nan
+Neutral Count,Slider,Undefined,Undefined,BallCalled,nan,nan,nan
+Neutral Count,Slider,Undefined,Undefined,BallCalled,nan,nan,nan
+Neutral Count,Fastball,Undefined,Undefined,BallCalled,nan,nan,nan
+Neutral Count,Fastball,Undefined,Undefined,BallCalled,nan,nan,nan
+Neutral Count,Curveball,Undefined,Undefined,BallCalled,nan,nan,nan
+Neutral Count,Curveball,Undefined,Undefined,BallCalled,nan,nan,nan
+Neutral Count,Slider,Out,LineDrive,InPlay,25.113325,13.212199,341.75475
+Neutral Count,Slider,Out,LineDrive,InPlay,25.113325,13.212199,341.75475
+Neutral Count,Cutter,Undefined,Undefined,BallCalled,nan,nan,nan
+Neutral Count,Cutter,Undefined,Undefined,BallCalled,nan,nan,nan
+Neutral Count,Fastball,Undefined,Undefined,FoulBallNotFieldable,nan,nan,nan
+Neutral Count,Fastball,Undefined,Undefined,FoulBallNotFieldable,nan,nan,nan
+Neutral Count,Fastball,Undefined,Undefined,BallCalled,nan,nan,nan
+Neutral Count,Fastball,Undefined,Undefined,BallCalled,nan,nan,nan
+Neutral Count,Slider,Undefined,Undefined,FoulBallNotFieldable,nan,nan,nan
+Neutral Count,Slider,Undefined,Undefined,FoulBallNotFieldable,nan,nan,nan
+Neutral Count,Slider,Undefined,Undefined,BallCalled,nan,nan,nan
+Neutral Count,Slider,Undefined,Undefined,BallCalled,nan,nan,nan
+Neutral Count,Fastball,Undefined,Undefined,BallCalled,nan,nan,nan
+Neutral Count,Fastball,Undefined,Undefined,BallCalled,nan,nan,nan
+Neutral Count,Fastball,Undefined,Undefined,StrikeCalled,nan,nan,nan
+Neutral Count,Fastball,Undefined,Undefined,StrikeCalled,nan,nan,nan
+Neutral Count,Sinker,Undefined,Undefined,BallCalled,nan,nan,nan
+Neutral Count,Sinker,Undefined,Undefined,BallCalled,nan,nan,nan
+Neutral Count,Fastball,Undefined,Undefined,StrikeCalled,nan,nan,nan
+Neutral Count,Fastball,Undefined,Undefined,StrikeCalled,nan,nan,nan
+Neutral Count,Fastball,Undefined,Undefined,StrikeCalled,nan,nan,nan
+Neutral Count,Fastball,Undefined,Undefined,StrikeCalled,nan,nan,nan
+Neutral Count,,,,,nan,nan,nan
+Neutral Count,,,,,nan,nan,nan
+Neutral Count,,,,,nan,nan,nan
+Neutral Count,,,,,nan,nan,nan
+Neutral Count,,,,,nan,nan,nan
+Neutral Count,,,,,nan,nan,nan
+Pitcher's Count,Curveball,Out,GroundBall,InPlay,-18.385955,-21.31345,5.33365
+Pitcher's Count,Curveball,Out,GroundBall,InPlay,-18.385955,-21.31345,5.33365
+Pitcher's Count,Slider,Out,GroundBall,InPlay,nan,nan,nan
+Pitcher's Count,Slider,Out,GroundBall,InPlay,nan,nan,nan
+Pitcher's Count,Slider,Undefined,Undefined,StrikeSwinging,nan,nan,nan
+Pitcher's Count,Slider,Undefined,Undefined,StrikeSwinging,nan,nan,nan
+Pitcher's Count,ChangeUp,Undefined,Undefined,FoulBallNotFieldable,37.149886,61.431252,217.12255
+Pitcher's Count,ChangeUp,Undefined,Undefined,FoulBallNotFieldable,37.149886,61.431252,217.12255
+Pitcher's Count,Fastball,Undefined,Undefined,FoulBallNotFieldable,nan,nan,nan
+Pitcher's Count,Fastball,Undefined,Undefined,FoulBallNotFieldable,nan,nan,nan
+Pitcher's Count,Slider,Undefined,Undefined,FoulBallNotFieldable,38.722631,165.27103,nan
+Pitcher's Count,Slider,Undefined,Undefined,FoulBallNotFieldable,38.722631,165.27103,nan
+Pitcher's Count,Fastball,HomeRun,FlyBall,InPlay,26.906398,2.192136,427.63012
+Pitcher's Count,Fastball,HomeRun,FlyBall,InPlay,26.906398,2.192136,427.63012
+Pitcher's Count,Fastball,Undefined,Undefined,StrikeCalled,nan,nan,nan
+Pitcher's Count,Fastball,Undefined,Undefined,StrikeCalled,nan,nan,nan
+Pitcher's Count,Slider,Undefined,Undefined,BallCalled,nan,nan,nan
+Pitcher's Count,Slider,Undefined,Undefined,BallCalled,nan,nan,nan
+Pitcher's Count,Fastball,Single,LineDrive,InPlay,12.722509,-20.077304,283.35727
+Pitcher's Count,Fastball,Single,LineDrive,InPlay,12.722509,-20.077304,283.35727
+Pitcher's Count,Slider,Undefined,Undefined,BallCalled,nan,nan,nan
+Pitcher's Count,Slider,Undefined,Undefined,BallCalled,nan,nan,nan
+Pitcher's Count,Slider,Undefined,Undefined,BallCalled,nan,nan,nan
+Pitcher's Count,Slider,Undefined,Undefined,BallCalled,nan,nan,nan
+Pitcher's Count,Sinker,Undefined,Undefined,BallCalled,nan,nan,nan
+Pitcher's Count,Sinker,Undefined,Undefined,BallCalled,nan,nan,nan
+Pitcher's Count,Sinker,Undefined,Undefined,BallCalled,nan,nan,nan
+Pitcher's Count,Sinker,Undefined,Undefined,BallCalled,nan,nan,nan
+Pitcher's Count,Fastball,Undefined,Undefined,BallCalled,nan,nan,nan
+Pitcher's Count,Fastball,Undefined,Undefined,BallCalled,nan,nan,nan
+Pitcher's Count,Curveball,HomeRun,FlyBall,InPlay,30.511815,-24.742441,427.53962
+Pitcher's Count,Curveball,HomeRun,FlyBall,InPlay,30.511815,-24.742441,427.53962
+Pitcher's Count,Slider,Single,LineDrive,InPlay,18.258283,-28.868481,285.26713
+Pitcher's Count,Slider,Single,LineDrive,InPlay,18.258283,-28.868481,285.26713
+Pitcher's Count,Slider,Single,GroundBall,InPlay,-2.227883,-3.108514,36.7328
+Pitcher's Count,Slider,Single,GroundBall,InPlay,-2.227883,-3.108514,36.7328
+Pitcher's Count,Slider,Undefined,Undefined,BallCalled,nan,nan,nan
+Pitcher's Count,Slider,Undefined,Undefined,BallCalled,nan,nan,nan
+Pitcher's Count,Cutter,Undefined,Undefined,BallCalled,nan,nan,nan
+Pitcher's Count,Cutter,Undefined,Undefined,BallCalled,nan,nan,nan
+Pitcher's Count,Fastball,Undefined,Undefined,BallCalled,nan,nan,nan
+Pitcher's Count,Fastball,Undefined,Undefined,BallCalled,nan,nan,nan
+Pitcher's Count,Fastball,Undefined,Undefined,FoulBallNotFieldable,39.769024,166.727864,nan
+Pitcher's Count,Fastball,Undefined,Undefined,FoulBallNotFieldable,39.769024,166.727864,nan
+Pitcher's Count,Curveball,Undefined,Undefined,StrikeCalled,nan,nan,nan
+Pitcher's Count,Curveball,Undefined,Undefined,StrikeCalled,nan,nan,nan
+Pitcher's Count,Slider,Undefined,Undefined,BallCalled,nan,nan,nan
+Pitcher's Count,Slider,Undefined,Undefined,BallCalled,nan,nan,nan
+Pitcher's Count,Slider,Single,GroundBall,InPlay,-6.849058,-5.035543,15.74348
+Pitcher's Count,Slider,Single,GroundBall,InPlay,-6.849058,-5.035543,15.74348
+Pitcher's Count,ChangeUp,Undefined,Undefined,FoulBallNotFieldable,-7.656464,-75.650618,15.40965
+Pitcher's Count,ChangeUp,Undefined,Undefined,FoulBallNotFieldable,-7.656464,-75.650618,15.40965
+Pitcher's Count,Slider,Undefined,Undefined,BallCalled,nan,nan,nan
+Pitcher's Count,Slider,Undefined,Undefined,BallCalled,nan,nan,nan
+Pitcher's Count,ChangeUp,Undefined,Undefined,StrikeSwinging,nan,nan,nan
+Pitcher's Count,ChangeUp,Undefined,Undefined,StrikeSwinging,nan,nan,nan
+Pitcher's Count,Slider,Undefined,Undefined,StrikeCalled,nan,nan,nan
+Pitcher's Count,Slider,Undefined,Undefined,StrikeCalled,nan,nan,nan
+Pitcher's Count,Curveball,Undefined,Undefined,BallCalled,nan,nan,nan
+Pitcher's Count,Curveball,Undefined,Undefined,BallCalled,nan,nan,nan
+Pitcher's Count,Curveball,Undefined,Undefined,BallCalled,nan,nan,nan
+Pitcher's Count,Curveball,Undefined,Undefined,BallCalled,nan,nan,nan
+Hitter's Count,Fastball,Undefined,Undefined,BallCalled,nan,nan,nan
+Hitter's Count,Fastball,Undefined,Undefined,BallCalled,nan,nan,nan
+Hitter's Count,Fastball,Undefined,Undefined,BallCalled,nan,nan,nan
+Hitter's Count,Fastball,Undefined,Undefined,BallCalled,nan,nan,nan
+Hitter's Count,Fastball,Undefined,Undefined,StrikeCalled,nan,nan,nan
+Hitter's Count,Fastball,Undefined,Undefined,StrikeCalled,nan,nan,nan
+Hitter's Count,Fastball,Single,GroundBall,InPlay,6.41766,7.086193,136.40016
+Hitter's Count,Fastball,Single,GroundBall,InPlay,6.41766,7.086193,136.40016
+Hitter's Count,Fastball,Undefined,Undefined,FoulBallNotFieldable,62.872808,77.71044,nan
+Hitter's Count,Fastball,Undefined,Undefined,FoulBallNotFieldable,62.872808,77.71044,nan
+Hitter's Count,Slider,Undefined,Undefined,StrikeCalled,nan,nan,nan
+Hitter's Count,Slider,Undefined,Undefined,StrikeCalled,nan,nan,nan
+Hitter's Count,ChangeUp,Undefined,Undefined,BallCalled,nan,nan,nan
+Hitter's Count,ChangeUp,Undefined,Undefined,BallCalled,nan,nan,nan
+Hitter's Count,Fastball,Undefined,Undefined,StrikeCalled,nan,nan,nan
+Hitter's Count,Fastball,Undefined,Undefined,StrikeCalled,nan,nan,nan
+Hitter's Count,Fastball,Undefined,Undefined,BallCalled,nan,nan,nan
+Hitter's Count,Fastball,Undefined,Undefined,BallCalled,nan,nan,nan
+Hitter's Count,Slider,Undefined,Undefined,FoulBallNotFieldable,nan,nan,nan
+Hitter's Count,Slider,Undefined,Undefined,FoulBallNotFieldable,nan,nan,nan
+Hitter's Count,Fastball,Undefined,Undefined,BallCalled,nan,nan,nan
+Hitter's Count,Fastball,Undefined,Undefined,BallCalled,nan,nan,nan
+Hitter's Count,Fastball,Undefined,Undefined,BallCalled,nan,nan,nan
+Hitter's Count,Fastball,Undefined,Undefined,BallCalled,nan,nan,nan
+Hitter's Count,Sinker,Out,GroundBall,InPlay,-7.022008,4.67719,11.64526
+Hitter's Count,Sinker,Out,GroundBall,InPlay,-7.022008,4.67719,11.64526
+Hitter's Count,Sinker,Undefined,Undefined,FoulBallNotFieldable,35.282533,161.573359,nan
+Hitter's Count,Sinker,Undefined,Undefined,FoulBallNotFieldable,35.282533,161.573359,nan
+Hitter's Count,Fastball,Undefined,Undefined,StrikeSwinging,nan,nan,nan
+Hitter's Count,Fastball,Undefined,Undefined,StrikeSwinging,nan,nan,nan
+Hitter's Count,Fastball,Undefined,Undefined,BallCalled,nan,nan,nan
+Hitter's Count,Fastball,Undefined,Undefined,BallCalled,nan,nan,nan
+Hitter's Count,Fastball,Undefined,Undefined,FoulBallNotFieldable,60.437063,87.320722,nan
+Hitter's Count,Fastball,Undefined,Undefined,FoulBallNotFieldable,60.437063,87.320722,nan
+Hitter's Count,Sinker,Undefined,Undefined,BallCalled,nan,nan,nan
+Hitter's Count,Sinker,Undefined,Undefined,BallCalled,nan,nan,nan
+Hitter's Count,Sinker,Out,LineDrive,InPlay,15.086581,-0.18962,294.8359
+Hitter's Count,Sinker,Out,LineDrive,InPlay,15.086581,-0.18962,294.8359
+Hitter's Count,Sinker,Undefined,Undefined,BallCalled,nan,nan,nan
+Hitter's Count,Sinker,Undefined,Undefined,BallCalled,nan,nan,nan
+Hitter's Count,Sinker,Undefined,Undefined,StrikeCalled,nan,nan,nan
+Hitter's Count,Sinker,Undefined,Undefined,StrikeCalled,nan,nan,nan
+Hitter's Count,Sinker,Out,GroundBall,InPlay,-2.849359,-14.035957,22.46751
+Hitter's Count,Sinker,Out,GroundBall,InPlay,-2.849359,-14.035957,22.46751
+Hitter's Count,Sinker,Undefined,Undefined,FoulBallNotFieldable,61.985013,126.851201,nan
+Hitter's Count,Sinker,Undefined,Undefined,FoulBallNotFieldable,61.985013,126.851201,nan
+Hitter's Count,Fastball,Undefined,Undefined,BallCalled,nan,nan,nan
+Hitter's Count,Fastball,Undefined,Undefined,BallCalled,nan,nan,nan
+Hitter's Count,Fastball,Out,Popup,InPlay,62.569429,15.419469,nan
+Hitter's Count,Fastball,Out,Popup,InPlay,62.569429,15.419469,nan
+Hitter's Count,Fastball,Out,GroundBall,InPlay,nan,nan,nan
+Hitter's Count,Fastball,Out,GroundBall,InPlay,nan,nan,nan
+Hitter's Count,Slider,Undefined,Undefined,StrikeCalled,nan,nan,nan
+Hitter's Count,Slider,Undefined,Undefined,StrikeCalled,nan,nan,nan
+Hitter's Count,Slider,Undefined,Undefined,StrikeCalled,nan,nan,nan
+Hitter's Count,Slider,Undefined,Undefined,StrikeCalled,nan,nan,nan
+Hitter's Count,Slider,Undefined,Undefined,StrikeCalled,nan,nan,nan
+Hitter's Count,Slider,Undefined,Undefined,StrikeCalled,nan,nan,nan
+Hitter's Count,ChangeUp,Undefined,Undefined,BallCalled,nan,nan,nan
+Hitter's Count,ChangeUp,Undefined,Undefined,BallCalled,nan,nan,nan
+Hitter's Count,Fastball,Undefined,Undefined,StrikeCalled,nan,nan,nan
+Hitter's Count,Fastball,Undefined,Undefined,StrikeCalled,nan,nan,nan
+Hitter's Count,Sinker,Undefined,Undefined,BallCalled,nan,nan,nan
+Hitter's Count,Sinker,Undefined,Undefined,BallCalled,nan,nan,nan
+Hitter's Count,Sinker,Undefined,Undefined,StrikeCalled,nan,nan,nan
+Hitter's Count,Sinker,Undefined,Undefined,StrikeCalled,nan,nan,nan
+Hitter's Count,Sinker,Undefined,Undefined,BallCalled,nan,nan,nan
+Hitter's Count,Sinker,Undefined,Undefined,BallCalled,nan,nan,nan
+Hitter's Count,Sinker,Out,LineDrive,InPlay,17.191498,-14.595218,334.45955
+Hitter's Count,Sinker,Out,LineDrive,InPlay,17.191498,-14.595218,334.45955
+Hitter's Count,Sinker,Out,GroundBall,InPlay,-13.057653,11.901112,7.92667
+Hitter's Count,Sinker,Out,GroundBall,InPlay,-13.057653,11.901112,7.92667
+Hitter's Count,ChangeUp,Undefined,Undefined,BallCalled,nan,nan,nan
+Hitter's Count,ChangeUp,Undefined,Undefined,BallCalled,nan,nan,nan
+Hitter's Count,Fastball,Undefined,Undefined,StrikeCalled,nan,nan,nan
+Hitter's Count,Fastball,Undefined,Undefined,StrikeCalled,nan,nan,nan
+Hitter's Count,Fastball,Undefined,Undefined,StrikeSwinging,nan,nan,nan
+Hitter's Count,Fastball,Undefined,Undefined,StrikeSwinging,nan,nan,nan
+Hitter's Count,Fastball,Out,LineDrive,InPlay,18.322016,22.906783,304.86746
+Hitter's Count,Fastball,Out,LineDrive,InPlay,18.322016,22.906783,304.86746
+Hitter's Count,Fastball,Undefined,Undefined,StrikeSwinging,nan,nan,nan
+Hitter's Count,Fastball,Undefined,Undefined,StrikeSwinging,nan,nan,nan
+Hitter's Count,Curveball,Undefined,Undefined,FoulBallNotFieldable,62.581275,32.747408,nan
+Hitter's Count,Curveball,Undefined,Undefined,FoulBallNotFieldable,62.581275,32.747408,nan
+Hitter's Count,Fastball,Undefined,Undefined,StrikeCalled,nan,nan,nan
+Hitter's Count,Fastball,Undefined,Undefined,StrikeCalled,nan,nan,nan
+Hitter's Count,Fastball,Undefined,Undefined,BallCalled,nan,nan,nan
+Hitter's Count,Fastball,Undefined,Undefined,BallCalled,nan,nan,nan
+Hitter's Count,Fastball,Undefined,Undefined,BallCalled,nan,nan,nan
+Hitter's Count,Fastball,Undefined,Undefined,BallCalled,nan,nan,nan
+Hitter's Count,Slider,Undefined,Undefined,BallCalled,nan,nan,nan
+Hitter's Count,Slider,Undefined,Undefined,BallCalled,nan,nan,nan
+Hitter's Count,Curveball,Undefined,Undefined,StrikeCalled,nan,nan,nan
+Hitter's Count,Curveball,Undefined,Undefined,StrikeCalled,nan,nan,nan
+Hitter's Count,Slider,Undefined,Undefined,BallCalled,nan,nan,nan
+Hitter's Count,Slider,Undefined,Undefined,BallCalled,nan,nan,nan
+Hitter's Count,Sinker,Undefined,Undefined,HitByPitch,nan,nan,nan
+Hitter's Count,Sinker,Undefined,Undefined,HitByPitch,nan,nan,nan
+Full Count,Fastball,Out,Popup,InPlay,32.980962,3.154226,383.24845
+Full Count,Fastball,Out,Popup,InPlay,32.980962,3.154226,383.24845
+Full Count,Sinker,Undefined,Undefined,FoulBallNotFieldable,34.118563,54.487454,nan
+Full Count,Sinker,Undefined,Undefined,FoulBallNotFieldable,34.118563,54.487454,nan
+Full Count,Slider,Undefined,Undefined,StrikeSwinging,nan,nan,nan
+Full Count,Slider,Undefined,Undefined,StrikeSwinging,nan,nan,nan
+Full Count,Fastball,Undefined,Undefined,FoulBallFieldable,56.231876,36.725778,210.12825
+Full Count,Fastball,Undefined,Undefined,FoulBallFieldable,56.231876,36.725778,210.12825
+Full Count,Curveball,Undefined,Undefined,BallCalled,nan,nan,nan
+Full Count,Curveball,Undefined,Undefined,BallCalled,nan,nan,nan
+Full Count,Slider,Double,LineDrive,InPlay,18.674736,-17.312827,399.28208
+Full Count,Slider,Double,LineDrive,InPlay,18.674736,-17.312827,399.28208
+Full Count,ChangeUp,Undefined,Undefined,FoulBallNotFieldable,nan,nan,nan
+Full Count,ChangeUp,Undefined,Undefined,FoulBallNotFieldable,nan,nan,nan
+Full Count,Fastball,Undefined,Undefined,BallCalled,nan,nan,nan
+Full Count,Fastball,Undefined,Undefined,BallCalled,nan,nan,nan
+Full Count,Slider,Undefined,Undefined,BallCalled,nan,nan,nan
+Full Count,Slider,Undefined,Undefined,BallCalled,nan,nan,nan
+Full Count,Slider,Single,GroundBall,InPlay,-2.723317,-3.683551,23.45922
+Full Count,Slider,Single,GroundBall,InPlay,-2.723317,-3.683551,23.45922
+Full Count,Curveball,Undefined,Undefined,FoulBallNotFieldable,14.598157,175.418737,112.92815
+Full Count,Curveball,Undefined,Undefined,FoulBallNotFieldable,14.598157,175.418737,112.92815
+Full Count,Fastball,Undefined,Undefined,StrikeCalled,nan,nan,nan
+Full Count,Fastball,Undefined,Undefined,StrikeCalled,nan,nan,nan

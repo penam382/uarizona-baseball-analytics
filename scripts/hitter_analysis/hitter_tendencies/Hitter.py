@@ -62,20 +62,7 @@ class Hitter:
             'location': location,
             'pitch_type': pitch_type,
             'count': self.count(),
-        })
-
-
-    def log_tendency(self, count_type, pitch_type, location):
-        # for specific pitch: log what happened and what pitch they got.
-
-        if count_type not in self.tendencies:
-            self.tendencies[count_type] = [(pitch_type, self.outcome, location)]
-        else:
-            self.tendencies[count_type].append([(pitch_type, self.outcome, location)])
-
-    def get_tendencies(self):
-        return self.tendencies
-    
+        })    
     
     def calculate_hit_position(self, angle, distance):
         if distance < 90:  # Infield

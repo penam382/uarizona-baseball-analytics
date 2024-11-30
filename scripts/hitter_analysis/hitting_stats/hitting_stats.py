@@ -11,7 +11,7 @@ df = pd.read_sql_query(query, conn)
 # Close the database connection
 conn.close()
 
-# Player Name, Batting Average, OBP, SLG, HRs, RBIs, specific hitting against lefty or righty
+# Player stats, with separate entries for left-handed and right-handed pitchers
 player_stats = {}
 
 # Loop through each row of data
@@ -33,7 +33,35 @@ for i, row in df.iterrows():
             'batting_average': 0,
             'on_base_percentage': 0,
             'slugging': 0,
-            'games': set()  # Track unique games to avoid counting the same game multiple times
+            'games': set(),  # Track unique games to avoid counting the same game multiple times
+            'stats_vs_left': {
+                'plate_appearances': 0,
+                'hits': 0,
+                'walks': 0,
+                'strikeouts': 0,
+                'homeruns': 0,
+                'doubles': 0,
+                'triples': 0,
+                'singles': 0,
+                'at_bats': 0,
+                'batting_average': 0,
+                'on_base_percentage': 0,
+                'slugging': 0
+            },
+            'stats_vs_right': {
+                'plate_appearances': 0,
+                'hits': 0,
+                'walks': 0,
+                'strikeouts': 0,
+                'homeruns': 0,
+                'doubles': 0,
+                'triples': 0,
+                'singles': 0,
+                'at_bats': 0,
+                'batting_average': 0,
+                'on_base_percentage': 0,
+                'slugging': 0
+            }
         }
 
     plate_appearances = row['PA']
@@ -71,22 +99,60 @@ for i, row in df.iterrows():
         elif play_result == "Homerun":
             player_stats[player_id]['homeruns'] += 1
 
+    # Track stats against lefty or righty pitchers
+    if pitcher_throws == 'Left':  # Left-handed pitcher
+        if play_result != "Undefined":
+            player_stats[player_id]['stats_vs_left']['plate_appearances'] += plate_appearances
+            if korbb not in ['Walk']:
+                player_stats[player_id]['stats_vs_left']['at_bats'] += 1
+            if play_result in ["Single", "Double", "Triple", "Homerun"]:
+                player_stats[player_id]['stats_vs_left']['hits'] += 1
+                if play_result == "Single":
+                    player_stats[player_id]['stats_vs_left']['singles'] += 1
+                elif play_result == "Double":
+                    player_stats[player_id]['stats_vs_left']['doubles'] += 1
+                elif play_result == "Triple":
+                    player_stats[player_id]['stats_vs_left']['triples'] += 1
+                elif play_result == "Homerun":
+                    player_stats[player_id]['stats_vs_left']['homeruns'] += 1
+    elif pitcher_throws == 'Right':  # Right-handed pitcher
+        if play_result != "Undefined":
+            player_stats[player_id]['stats_vs_right']['plate_appearances'] += plate_appearances
+            if korbb not in ['Walk']:
+                player_stats[player_id]['stats_vs_right']['at_bats'] += 1
+            if play_result in ["Single", "Double", "Triple", "Homerun"]:
+                player_stats[player_id]['stats_vs_right']['hits'] += 1
+                if play_result == "Single":
+                    player_stats[player_id]['stats_vs_right']['singles'] += 1
+                elif play_result == "Double":
+                    player_stats[player_id]['stats_vs_right']['doubles'] += 1
+                elif play_result == "Triple":
+                    player_stats[player_id]['stats_vs_right']['triples'] += 1
+                elif play_result == "Homerun":
+                    player_stats[player_id]['stats_vs_right']['homeruns'] += 1
+
     # Track the games to avoid duplicate counts
     player_stats[player_id]['games'].add(games)
 
-# Calculate Batting Average, OBP, and Slugging after the loop
+# Calculate Batting Average, OBP, and Slugging after the loop for both lefty and righty stats
 for player_id, stats in player_stats.items():
     # Batting Average (AVG)
-    if stats['at_bats'] > 0:
-        stats['batting_average'] = stats['hits'] / stats['at_bats']
+    if stats['stats_vs_left']['at_bats'] > 0:
+        stats['stats_vs_left']['batting_average'] = stats['stats_vs_left']['hits'] / stats['stats_vs_left']['at_bats']
+    if stats['stats_vs_right']['at_bats'] > 0:
+        stats['stats_vs_right']['batting_average'] = stats['stats_vs_right']['hits'] / stats['stats_vs_right']['at_bats']
 
     # On-base Percentage (OBP)
-    if stats['plate_appearances'] > 0:
-        stats['on_base_percentage'] = (stats['hits'] + stats['walks']) / stats['plate_appearances']
+    if stats['stats_vs_left']['plate_appearances'] > 0:
+        stats['stats_vs_left']['on_base_percentage'] = (stats['stats_vs_left']['hits'] + stats['stats_vs_left']['walks']) / stats['stats_vs_left']['plate_appearances']
+    if stats['stats_vs_right']['plate_appearances'] > 0:
+        stats['stats_vs_right']['on_base_percentage'] = (stats['stats_vs_right']['hits'] + stats['stats_vs_right']['walks']) / stats['stats_vs_right']['plate_appearances']
 
     # Slugging Percentage (SLG)
-    if stats['at_bats'] > 0:
-        stats['slugging'] = (stats['singles'] + 2 * stats['doubles'] + 3 * stats['triples'] + 4 * stats['homeruns']) / stats['at_bats']
+    if stats['stats_vs_left']['at_bats'] > 0:
+        stats['stats_vs_left']['slugging'] = (stats['stats_vs_left']['singles'] + 2 * stats['stats_vs_left']['doubles'] + 3 * stats['stats_vs_left']['triples'] + 4 * stats['stats_vs_left']['homeruns']) / stats['stats_vs_left']['at_bats']
+    if stats['stats_vs_right']['at_bats'] > 0:
+        stats['stats_vs_right']['slugging'] = (stats['stats_vs_right']['singles'] + 2 * stats['stats_vs_right']['doubles'] + 3 * stats['stats_vs_right']['triples'] + 4 * stats['stats_vs_right']['homeruns']) / stats['stats_vs_right']['at_bats']
 
-# Now you can print or analyze the `player_stats` dictionary for each player's stats
+# Now you can print or analyze the `player_stats` dictionary for each player's stats against lefties and righties
 print(player_stats)
