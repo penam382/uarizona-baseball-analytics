@@ -36,16 +36,15 @@ current_pa_id = 0  # Start with 0, increment whenever PA == 1
 def update_stats(stats, pa, play_result, korbb, obp, slg, avg):
     """Update stats dynamically for lefties or righties."""
     # Increment the plate appearance counter when PA == 1
-    if pa == 1:
-        stats['plate_appearances'] += 1
     
     if obp == 1:
         stats['on_base_percentage'] += obp
+    if obp >= 0:
+        stats['plate_appearances'] += 1
 
     if avg == 1:
-        stats['batting_average'] += 1
         stats['hits'] += 1
-    elif avg >= 0:
+    if avg >= 0:
         stats['at_bats'] += 1
 
     if slg >= 1:
@@ -65,11 +64,6 @@ def update_stats(stats, pa, play_result, korbb, obp, slg, avg):
                     stats['triples'] += 1
                 elif play_result == "HomeRun":
                     stats['homeruns'] += 1
-            print("plaresult", stats['at_bats'], play_result, stats['hits'])
-    elif korbb != "Undefined":
-        if korbb not in ['Walk']:
-            print("korbb", stats['at_bats'], korbb, stats['strikeouts'])
-    
     
 
 def calculate_rates(stats):
@@ -138,6 +132,67 @@ for i, row in df.iterrows():
     elif row['PitcherThrows'] == 'Right':
         update_stats(player_stats[batter]['stats_vs_right'], row['PA'], row['PlayResult'], row['KorBB'], row['OBP'], row['SLG'], row['AVG'])
 
+
+# Calculate final stats (overall and splits)
+for batter, stats in player_stats.items():
+    # Overall Stats
+    if stats['at_bats'] > 0:
+        stats['batting_average'] = stats['hits'] / stats['at_bats']
+    else:
+        stats['batting_average'] = 0
+
+    if stats['plate_appearances'] > 0:
+        stats['on_base_percentage'] = stats['on_base_percentage'] / stats['plate_appearances']
+    else:
+        stats['on_base_percentage'] = 0
+
+    if stats['at_bats'] > 0:
+        stats['slugging'] = stats['slugging'] / stats['at_bats']
+    else:
+        stats['slugging'] = 0
+
+    # Stats vs Left-Handed Pitchers
+    left_stats = stats['stats_vs_left']
+    if left_stats['at_bats'] > 0:
+        left_stats['batting_average'] = left_stats['hits'] / left_stats['at_bats']
+    else:
+        left_stats['batting_average'] = 0
+
+    if left_stats['plate_appearances'] > 0:
+        left_stats['on_base_percentage'] = left_stats['on_base_percentage'] / left_stats['plate_appearances']
+    else:
+        left_stats['on_base_percentage'] = 0
+
+    if left_stats['at_bats'] > 0:
+        left_stats['slugging'] = left_stats['slugging'] / left_stats['at_bats']
+    else:
+        left_stats['slugging'] = 0
+
+    # Stats vs Right-Handed Pitchers
+    right_stats = stats['stats_vs_right']
+    if right_stats['at_bats'] > 0:
+        right_stats['batting_average'] = right_stats['hits'] / right_stats['at_bats']
+    else:
+        right_stats['batting_average'] = 0
+
+    if right_stats['plate_appearances'] > 0:
+        right_stats['on_base_percentage'] = right_stats['on_base_percentage'] / right_stats['plate_appearances']
+    else:
+        right_stats['on_base_percentage'] = 0
+
+    if right_stats['at_bats'] > 0:
+        right_stats['slugging'] = right_stats['slugging'] / right_stats['at_bats']
+    else:
+        right_stats['slugging'] = 0
+
+    # Optional: Print each player's stats for debugging
+    # print(f"Player: {batter}")
+    # print(f"  AVG: {stats['batting_average']:.3f}")
+    # print(f"  OBP: {stats['on_base_percentage']:.3f}")
+    # print(f"  SLG: {stats['slugging']:.3f}")
+
+
+
 # Calculate rates
 for batter, stats in player_stats.items():
     calculate_rates(stats)
@@ -186,5 +241,5 @@ processor = CountAnalysis(tendencies)
 processor.write_data_to_csv('hitter_tendencies.csv')
 
 print("CSV files created: full_stats.csv, hitter_stats.csv, hitter_tendencies.csv")
-print(player_stats)
+# print(player_stats)
 # print(plate_appearances)
