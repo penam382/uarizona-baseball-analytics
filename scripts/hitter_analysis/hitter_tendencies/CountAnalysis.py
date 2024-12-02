@@ -21,8 +21,10 @@ class CountAnalysis:
                         'angle': val[5],
                         'direction': val[6],
                         'distance': val[7],
-                        'location': val[8]
+                        'plate_loc_height': val[8], 
+                        'plate_loc_side' : val[9]
                     })
+        print(self.count_data)
 
     def write_data_to_csv(self, filename):
         """ Write the count data to a CSV file """
@@ -31,7 +33,7 @@ class CountAnalysis:
             # Write headers
             writer.writerow([
                 'Count Type', 'Pitch Type', 'PA_Result_Type', 'PA_Result_Outcome', 'pitch_call',
-                'Angle', 'Direction', 'Distance', 'Location'
+                'Angle', 'Direction', 'Distance', 'PlateLocHeight', 'PlateLocSide'
             ])
             
             # Iterate over each count type and write data
@@ -46,5 +48,6 @@ class CountAnalysis:
                         record['angle'],
                         record['direction'],
                         record['distance'],
-                        record['location']
+                        record['plate_loc_height'],
+                        record['plate_loc_side']
                     ])

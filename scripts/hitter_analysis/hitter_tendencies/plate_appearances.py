@@ -33,9 +33,15 @@ player_stats = {}
 current_pa_id = 0  # Start with 0, increment whenever PA == 1
 
 # Helper functions
-def update_stats(stats, pa, play_result, korbb, obp, slg, avg):
+def update_stats(stats, play_result, obp, slg, avg, game_id):
     """Update stats dynamically for lefties or righties."""
     # Increment the plate appearance counter when PA == 1
+
+    if 'games' not in stats or not isinstance(stats['games'], set):
+        stats['games'] = set()  # Initialize as a set if it doesn't exist
+
+    # Add the game_id to the set
+    stats['games'].add(game_id)
     
     if obp == 1:
         stats['on_base_percentage'] += obp
@@ -66,18 +72,11 @@ def update_stats(stats, pa, play_result, korbb, obp, slg, avg):
                     stats['homeruns'] += 1
     
 
-def calculate_rates(stats):
-    """Calculate batting average, OBP, and SLG."""
-    return 
-
 # Process the data
 for i, row in df.iterrows():
     pa = row['PA']  # Indicates start of a new plate appearance
     batter = row['Batter']
 
-    obp = row['OBP']
-    avg = row['AVG']
-    slg = row['SLG']
     
     # Increment the plate appearance counter when PA == 1
     if pa == 1:
@@ -86,7 +85,7 @@ for i, row in df.iterrows():
     # Initialize hitter stats if not already present
     if batter not in player_stats:
         player_stats[batter] = {
-            'plate_appearances': 0,
+            'plate_appearances': 0, 'games': set(),
             'hits': 0, 'walks': 0, 'strikeouts': 0,
             'homeruns': 0, 'doubles': 0, 'triples': 0, 'singles': 0,
             'at_bats': 0, 'batting_average': 0, 'on_base_percentage': 0, 'slugging': 0,
@@ -108,13 +107,11 @@ for i, row in df.iterrows():
     current_hitter = plate_appearances[current_pa_id]
 
     # Process the current pitch
-    location = (row['PlateLocHeight'], row['PlateLocSide'])
-    current_hitter.process_pitch(location, row['TaggedPitchType'], row['PitchofPA'], row['Balls'], row['Strikes'])
     tendencies.add_tendency(
         current_hitter.type_of_count(),
         current_hitter.count(),
         row['TaggedPitchType'], row['PlayResult'], row['TaggedHitType'], row['PitchCall'],
-        row['Angle'], row['Direction'], row['Distance'], location
+        row['Angle'], row['Direction'], row['Distance'], row['PlateLocHeight'], row['PlateLocSide']
     )
 
     # Update player-level stats
@@ -126,16 +123,18 @@ for i, row in df.iterrows():
 
     
 
-    update_stats(player_stats[batter], row['PA'], row['PlayResult'], row['KorBB'], row['OBP'], row['SLG'], row['AVG'])
+    update_stats(player_stats[batter], row['PlayResult'], row['OBP'], row['SLG'], row['AVG'], row['GameID'])
     if row['PitcherThrows'] == 'Left':
-        update_stats(player_stats[batter]['stats_vs_left'], row['PA'], row['PlayResult'], row['KorBB'], row['OBP'], row['SLG'], row['AVG'])
+        update_stats(player_stats[batter]['stats_vs_left'], row['PlayResult'], row['OBP'], row['SLG'], row['AVG'], row['GameID'])
     elif row['PitcherThrows'] == 'Right':
-        update_stats(player_stats[batter]['stats_vs_right'], row['PA'], row['PlayResult'], row['KorBB'], row['OBP'], row['SLG'], row['AVG'])
+        update_stats(player_stats[batter]['stats_vs_right'], row['PlayResult'], row['OBP'], row['SLG'], row['AVG'], row['GameID'])
 
 
 # Calculate final stats (overall and splits)
 for batter, stats in player_stats.items():
     # Overall Stats
+    stats['games'] = len(stats['games'])
+
     if stats['at_bats'] > 0:
         stats['batting_average'] = stats['hits'] / stats['at_bats']
     else:
@@ -192,13 +191,6 @@ for batter, stats in player_stats.items():
     # print(f"  SLG: {stats['slugging']:.3f}")
 
 
-
-# Calculate rates
-for batter, stats in player_stats.items():
-    calculate_rates(stats)
-    calculate_rates(stats['stats_vs_left'])
-    calculate_rates(stats['stats_vs_right'])
-
 # Write Full Stats CSV
 df.to_csv('full_stats.csv', index=False)
 
@@ -206,7 +198,7 @@ df.to_csv('full_stats.csv', index=False)
 with open('hitter_stats.csv', mode='w', newline='') as file:
     writer = csv.writer(file)
     writer.writerow([
-        'Batter', 'Plate Appearances', 'Hits', 'Walks', 'Strikeouts',
+        'Batter', 'Games', 'Plate Appearances', 'Hits', 'Walks', 'Strikeouts',
         'Homeruns', 'Doubles', 'Triples', 'Singles', 'At-Bats',
         'Batting Average', 'On-Base Percentage', 'Slugging Percentage',
         'Plate Appearances vs Left', 'Hits vs Left', 'Walks vs Left', 'Strikeouts vs Left',
@@ -219,6 +211,7 @@ with open('hitter_stats.csv', mode='w', newline='') as file:
     for batter, stats in player_stats.items():
         writer.writerow([
             batter,
+            stats['games'],
             stats['plate_appearances'], stats['hits'], stats['walks'], stats['strikeouts'],
             stats['homeruns'], stats['doubles'], stats['triples'], stats['singles'], 
             stats['at_bats'], stats['batting_average'], stats['on_base_percentage'], stats['slugging'],
@@ -238,7 +231,9 @@ with open('hitter_stats.csv', mode='w', newline='') as file:
 
 # Write Hitter Tendencies CSV
 processor = CountAnalysis(tendencies)
-processor.write_data_to_csv('hitter_tendencies.csv')
+# processor.write_data_to_csv('hitter_tendencies.csv')
+
+print(processor.process_data)
 
 print("CSV files created: full_stats.csv, hitter_stats.csv, hitter_tendencies.csv")
 # print(player_stats)
