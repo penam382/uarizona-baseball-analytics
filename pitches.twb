@@ -1,0 +1,1458 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20243.24.1112.0850                               -->
+<workbook original-version='18.1' source-build='2024.3.1 (20243.24.1112.0850)' source-platform='mac' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <AnimationOnByDefault />
+    <MarkAnimation />
+    <ObjectModelEncapsulateLegacy />
+    <ObjectModelTableType />
+    <SchemaViewerObjectModel />
+    <SheetIdentifierTracking />
+    <WindowsPersistSimpleIdentifiers />
+  </document-format-change-manifest>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <datasources>
+    <datasource caption='pitch_data_for_tableau' inline='true' name='federated.0o2nayr1kyjqfr17fx9vm1xyksfs' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='pitch_data_for_tableau' name='textscan.01onc2j07qybss1chtz600a3phjn'>
+            <connection class='textscan' directory='/Users/marcopena/Documents/GitHub/uarizona-baseball-analytics' filename='pitch_data_for_tableau.csv' password='' server='' />
+          </named-connection>
+        </named-connections>
+        <relation connection='textscan.01onc2j07qybss1chtz600a3phjn' name='pitch_data_for_tableau.csv' table='[pitch_data_for_tableau#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+            <column datatype='real' name='PA' ordinal='0' />
+            <column datatype='integer' name='PitchofPA' ordinal='1' />
+            <column datatype='string' name='Pitcher' ordinal='2' />
+            <column datatype='real' name='Strikes' ordinal='3' />
+            <column datatype='real' name='Balls' ordinal='4' />
+            <column datatype='string' name='KorBB' ordinal='5' />
+            <column datatype='string' name='TaggedPitchType' ordinal='6' />
+            <column datatype='string' name='PlayResult' ordinal='7' />
+            <column datatype='real' name='RunsScored' ordinal='8' />
+            <column datatype='real' name='VertRelAngle' ordinal='9' />
+            <column datatype='real' name='HorzRelAngle' ordinal='10' />
+            <column datatype='real' name='SpinRate' ordinal='11' />
+            <column datatype='real' name='SpinAxis' ordinal='12' />
+            <column datatype='datetime' name='Tilt' ordinal='13' />
+            <column datatype='real' name='RelHeight' ordinal='14' />
+            <column datatype='real' name='RelSide' ordinal='15' />
+            <column datatype='real' name='Extension' ordinal='16' />
+            <column datatype='real' name='VertBreak' ordinal='17' />
+            <column datatype='real' name='InducedVertBreak' ordinal='18' />
+            <column datatype='real' name='HorzBreak' ordinal='19' />
+            <column datatype='real' name='PlateLocHeight' ordinal='20' />
+            <column datatype='real' name='PlateLocSide' ordinal='21' />
+            <column datatype='real' name='ExitSpeed' ordinal='22' />
+            <column datatype='real' name='RelSpeed' ordinal='23' />
+            <column datatype='string' name='PreviousPitch' ordinal='24' />
+            <column datatype='integer' name='called_strike' ordinal='25' />
+            <column datatype='integer' name='ooz' ordinal='26' />
+            <column datatype='real' name='Angle' ordinal='27' />
+            <column datatype='real' name='Direction' ordinal='28' />
+            <column datatype='real' name='Distance' ordinal='29' />
+            <column datatype='string' name='PitchCall' ordinal='30' />
+            <column datatype='string' name='TaggedHitType' ordinal='31' />
+            <column datatype='real' name='k' ordinal='32' />
+            <column datatype='real' name='bb' ordinal='33' />
+            <column datatype='real' name='bbspin' ordinal='34' />
+            <column datatype='integer' name='pitches' ordinal='35' />
+            <column datatype='real' name='zone' ordinal='36' />
+            <column datatype='real' name='izswing' ordinal='37' />
+            <column datatype='real' name='izmiss' ordinal='38' />
+            <column datatype='real' name='AVG' ordinal='39' />
+            <column datatype='real' name='OBP' ordinal='40' />
+            <column datatype='real' name='SLG' ordinal='41' />
+            <column datatype='real' name='swing' ordinal='42' />
+            <column datatype='real' name='whiff' ordinal='43' />
+            <column datatype='real' name='StadiumID' ordinal='44' />
+            <column datatype='integer' name='2B' ordinal='45' />
+            <column datatype='integer' name='3B' ordinal='46' />
+            <column datatype='integer' name='HR' ordinal='47' />
+            <column datatype='real' name='chase' ordinal='48' />
+            <column datatype='real' name='OutsOnPlay' ordinal='49' />
+            <column datatype='string' name='GameID' ordinal='50' />
+            <column datatype='string' name='PitcherThrows' ordinal='51' />
+            <column datatype='real' name='PositionAt110X' ordinal='52' />
+            <column datatype='real' name='PositionAt110Y' ordinal='53' />
+            <column datatype='real' name='PositionAt110Z' ordinal='54' />
+            <column datatype='boolean' name='is_single' ordinal='55' />
+            <column datatype='boolean' name='is_double' ordinal='56' />
+            <column datatype='boolean' name='is_triple' ordinal='57' />
+            <column datatype='boolean' name='is_home_run' ordinal='58' />
+            <column datatype='integer' name='pitch_category' ordinal='59' />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[pitch_data_for_tableau.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>PA</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[PA]</local-name>
+            <parent-name>[pitch_data_for_tableau.csv]</parent-name>
+            <remote-alias>PA</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[pitch_data_for_tableau.csv_5061B18F335249C69974302F135EE628]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>PitchofPA</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[PitchofPA]</local-name>
+            <parent-name>[pitch_data_for_tableau.csv]</parent-name>
+            <remote-alias>PitchofPA</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[pitch_data_for_tableau.csv_5061B18F335249C69974302F135EE628]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Pitcher</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Pitcher]</local-name>
+            <parent-name>[pitch_data_for_tableau.csv]</parent-name>
+            <remote-alias>Pitcher</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <object-id>[pitch_data_for_tableau.csv_5061B18F335249C69974302F135EE628]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Strikes</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Strikes]</local-name>
+            <parent-name>[pitch_data_for_tableau.csv]</parent-name>
+            <remote-alias>Strikes</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[pitch_data_for_tableau.csv_5061B18F335249C69974302F135EE628]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Balls</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Balls]</local-name>
+            <parent-name>[pitch_data_for_tableau.csv]</parent-name>
+            <remote-alias>Balls</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[pitch_data_for_tableau.csv_5061B18F335249C69974302F135EE628]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>KorBB</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[KorBB]</local-name>
+            <parent-name>[pitch_data_for_tableau.csv]</parent-name>
+            <remote-alias>KorBB</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <object-id>[pitch_data_for_tableau.csv_5061B18F335249C69974302F135EE628]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>TaggedPitchType</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[TaggedPitchType]</local-name>
+            <parent-name>[pitch_data_for_tableau.csv]</parent-name>
+            <remote-alias>TaggedPitchType</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <object-id>[pitch_data_for_tableau.csv_5061B18F335249C69974302F135EE628]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>PlayResult</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[PlayResult]</local-name>
+            <parent-name>[pitch_data_for_tableau.csv]</parent-name>
+            <remote-alias>PlayResult</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <object-id>[pitch_data_for_tableau.csv_5061B18F335249C69974302F135EE628]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>RunsScored</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[RunsScored]</local-name>
+            <parent-name>[pitch_data_for_tableau.csv]</parent-name>
+            <remote-alias>RunsScored</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[pitch_data_for_tableau.csv_5061B18F335249C69974302F135EE628]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>VertRelAngle</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[VertRelAngle]</local-name>
+            <parent-name>[pitch_data_for_tableau.csv]</parent-name>
+            <remote-alias>VertRelAngle</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[pitch_data_for_tableau.csv_5061B18F335249C69974302F135EE628]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>HorzRelAngle</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[HorzRelAngle]</local-name>
+            <parent-name>[pitch_data_for_tableau.csv]</parent-name>
+            <remote-alias>HorzRelAngle</remote-alias>
+            <ordinal>10</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[pitch_data_for_tableau.csv_5061B18F335249C69974302F135EE628]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>SpinRate</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[SpinRate]</local-name>
+            <parent-name>[pitch_data_for_tableau.csv]</parent-name>
+            <remote-alias>SpinRate</remote-alias>
+            <ordinal>11</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[pitch_data_for_tableau.csv_5061B18F335249C69974302F135EE628]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>SpinAxis</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[SpinAxis]</local-name>
+            <parent-name>[pitch_data_for_tableau.csv]</parent-name>
+            <remote-alias>SpinAxis</remote-alias>
+            <ordinal>12</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[pitch_data_for_tableau.csv_5061B18F335249C69974302F135EE628]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Tilt</remote-name>
+            <remote-type>134</remote-type>
+            <local-name>[Tilt]</local-name>
+            <parent-name>[pitch_data_for_tableau.csv]</parent-name>
+            <remote-alias>Tilt</remote-alias>
+            <ordinal>13</ordinal>
+            <local-type>datetime</local-type>
+            <aggregation>Hour</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[pitch_data_for_tableau.csv_5061B18F335249C69974302F135EE628]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>RelHeight</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[RelHeight]</local-name>
+            <parent-name>[pitch_data_for_tableau.csv]</parent-name>
+            <remote-alias>RelHeight</remote-alias>
+            <ordinal>14</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[pitch_data_for_tableau.csv_5061B18F335249C69974302F135EE628]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>RelSide</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[RelSide]</local-name>
+            <parent-name>[pitch_data_for_tableau.csv]</parent-name>
+            <remote-alias>RelSide</remote-alias>
+            <ordinal>15</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[pitch_data_for_tableau.csv_5061B18F335249C69974302F135EE628]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Extension</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Extension]</local-name>
+            <parent-name>[pitch_data_for_tableau.csv]</parent-name>
+            <remote-alias>Extension</remote-alias>
+            <ordinal>16</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[pitch_data_for_tableau.csv_5061B18F335249C69974302F135EE628]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>VertBreak</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[VertBreak]</local-name>
+            <parent-name>[pitch_data_for_tableau.csv]</parent-name>
+            <remote-alias>VertBreak</remote-alias>
+            <ordinal>17</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[pitch_data_for_tableau.csv_5061B18F335249C69974302F135EE628]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>InducedVertBreak</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[InducedVertBreak]</local-name>
+            <parent-name>[pitch_data_for_tableau.csv]</parent-name>
+            <remote-alias>InducedVertBreak</remote-alias>
+            <ordinal>18</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[pitch_data_for_tableau.csv_5061B18F335249C69974302F135EE628]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>HorzBreak</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[HorzBreak]</local-name>
+            <parent-name>[pitch_data_for_tableau.csv]</parent-name>
+            <remote-alias>HorzBreak</remote-alias>
+            <ordinal>19</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[pitch_data_for_tableau.csv_5061B18F335249C69974302F135EE628]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>PlateLocHeight</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[PlateLocHeight]</local-name>
+            <parent-name>[pitch_data_for_tableau.csv]</parent-name>
+            <remote-alias>PlateLocHeight</remote-alias>
+            <ordinal>20</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[pitch_data_for_tableau.csv_5061B18F335249C69974302F135EE628]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>PlateLocSide</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[PlateLocSide]</local-name>
+            <parent-name>[pitch_data_for_tableau.csv]</parent-name>
+            <remote-alias>PlateLocSide</remote-alias>
+            <ordinal>21</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[pitch_data_for_tableau.csv_5061B18F335249C69974302F135EE628]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>ExitSpeed</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[ExitSpeed]</local-name>
+            <parent-name>[pitch_data_for_tableau.csv]</parent-name>
+            <remote-alias>ExitSpeed</remote-alias>
+            <ordinal>22</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[pitch_data_for_tableau.csv_5061B18F335249C69974302F135EE628]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>RelSpeed</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[RelSpeed]</local-name>
+            <parent-name>[pitch_data_for_tableau.csv]</parent-name>
+            <remote-alias>RelSpeed</remote-alias>
+            <ordinal>23</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[pitch_data_for_tableau.csv_5061B18F335249C69974302F135EE628]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>PreviousPitch</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[PreviousPitch]</local-name>
+            <parent-name>[pitch_data_for_tableau.csv]</parent-name>
+            <remote-alias>PreviousPitch</remote-alias>
+            <ordinal>24</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <object-id>[pitch_data_for_tableau.csv_5061B18F335249C69974302F135EE628]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>called_strike</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[called_strike]</local-name>
+            <parent-name>[pitch_data_for_tableau.csv]</parent-name>
+            <remote-alias>called_strike</remote-alias>
+            <ordinal>25</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[pitch_data_for_tableau.csv_5061B18F335249C69974302F135EE628]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>ooz</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[ooz]</local-name>
+            <parent-name>[pitch_data_for_tableau.csv]</parent-name>
+            <remote-alias>ooz</remote-alias>
+            <ordinal>26</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[pitch_data_for_tableau.csv_5061B18F335249C69974302F135EE628]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Angle</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Angle]</local-name>
+            <parent-name>[pitch_data_for_tableau.csv]</parent-name>
+            <remote-alias>Angle</remote-alias>
+            <ordinal>27</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[pitch_data_for_tableau.csv_5061B18F335249C69974302F135EE628]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Direction</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Direction]</local-name>
+            <parent-name>[pitch_data_for_tableau.csv]</parent-name>
+            <remote-alias>Direction</remote-alias>
+            <ordinal>28</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[pitch_data_for_tableau.csv_5061B18F335249C69974302F135EE628]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Distance</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Distance]</local-name>
+            <parent-name>[pitch_data_for_tableau.csv]</parent-name>
+            <remote-alias>Distance</remote-alias>
+            <ordinal>29</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[pitch_data_for_tableau.csv_5061B18F335249C69974302F135EE628]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>PitchCall</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[PitchCall]</local-name>
+            <parent-name>[pitch_data_for_tableau.csv]</parent-name>
+            <remote-alias>PitchCall</remote-alias>
+            <ordinal>30</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <object-id>[pitch_data_for_tableau.csv_5061B18F335249C69974302F135EE628]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>TaggedHitType</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[TaggedHitType]</local-name>
+            <parent-name>[pitch_data_for_tableau.csv]</parent-name>
+            <remote-alias>TaggedHitType</remote-alias>
+            <ordinal>31</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <object-id>[pitch_data_for_tableau.csv_5061B18F335249C69974302F135EE628]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>k</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[k]</local-name>
+            <parent-name>[pitch_data_for_tableau.csv]</parent-name>
+            <remote-alias>k</remote-alias>
+            <ordinal>32</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[pitch_data_for_tableau.csv_5061B18F335249C69974302F135EE628]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>bb</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[bb]</local-name>
+            <parent-name>[pitch_data_for_tableau.csv]</parent-name>
+            <remote-alias>bb</remote-alias>
+            <ordinal>33</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[pitch_data_for_tableau.csv_5061B18F335249C69974302F135EE628]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>bbspin</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[bbspin]</local-name>
+            <parent-name>[pitch_data_for_tableau.csv]</parent-name>
+            <remote-alias>bbspin</remote-alias>
+            <ordinal>34</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[pitch_data_for_tableau.csv_5061B18F335249C69974302F135EE628]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>pitches</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[pitches]</local-name>
+            <parent-name>[pitch_data_for_tableau.csv]</parent-name>
+            <remote-alias>pitches</remote-alias>
+            <ordinal>35</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[pitch_data_for_tableau.csv_5061B18F335249C69974302F135EE628]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>zone</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[zone]</local-name>
+            <parent-name>[pitch_data_for_tableau.csv]</parent-name>
+            <remote-alias>zone</remote-alias>
+            <ordinal>36</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[pitch_data_for_tableau.csv_5061B18F335249C69974302F135EE628]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>izswing</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[izswing]</local-name>
+            <parent-name>[pitch_data_for_tableau.csv]</parent-name>
+            <remote-alias>izswing</remote-alias>
+            <ordinal>37</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[pitch_data_for_tableau.csv_5061B18F335249C69974302F135EE628]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>izmiss</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[izmiss]</local-name>
+            <parent-name>[pitch_data_for_tableau.csv]</parent-name>
+            <remote-alias>izmiss</remote-alias>
+            <ordinal>38</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[pitch_data_for_tableau.csv_5061B18F335249C69974302F135EE628]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>AVG</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[AVG]</local-name>
+            <parent-name>[pitch_data_for_tableau.csv]</parent-name>
+            <remote-alias>AVG</remote-alias>
+            <ordinal>39</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[pitch_data_for_tableau.csv_5061B18F335249C69974302F135EE628]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>OBP</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[OBP]</local-name>
+            <parent-name>[pitch_data_for_tableau.csv]</parent-name>
+            <remote-alias>OBP</remote-alias>
+            <ordinal>40</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[pitch_data_for_tableau.csv_5061B18F335249C69974302F135EE628]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>SLG</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[SLG]</local-name>
+            <parent-name>[pitch_data_for_tableau.csv]</parent-name>
+            <remote-alias>SLG</remote-alias>
+            <ordinal>41</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[pitch_data_for_tableau.csv_5061B18F335249C69974302F135EE628]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>swing</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[swing]</local-name>
+            <parent-name>[pitch_data_for_tableau.csv]</parent-name>
+            <remote-alias>swing</remote-alias>
+            <ordinal>42</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[pitch_data_for_tableau.csv_5061B18F335249C69974302F135EE628]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>whiff</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[whiff]</local-name>
+            <parent-name>[pitch_data_for_tableau.csv]</parent-name>
+            <remote-alias>whiff</remote-alias>
+            <ordinal>43</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[pitch_data_for_tableau.csv_5061B18F335249C69974302F135EE628]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>StadiumID</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[StadiumID]</local-name>
+            <parent-name>[pitch_data_for_tableau.csv]</parent-name>
+            <remote-alias>StadiumID</remote-alias>
+            <ordinal>44</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[pitch_data_for_tableau.csv_5061B18F335249C69974302F135EE628]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>2B</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[2B]</local-name>
+            <parent-name>[pitch_data_for_tableau.csv]</parent-name>
+            <remote-alias>2B</remote-alias>
+            <ordinal>45</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[pitch_data_for_tableau.csv_5061B18F335249C69974302F135EE628]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>3B</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[3B]</local-name>
+            <parent-name>[pitch_data_for_tableau.csv]</parent-name>
+            <remote-alias>3B</remote-alias>
+            <ordinal>46</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[pitch_data_for_tableau.csv_5061B18F335249C69974302F135EE628]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>HR</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[HR]</local-name>
+            <parent-name>[pitch_data_for_tableau.csv]</parent-name>
+            <remote-alias>HR</remote-alias>
+            <ordinal>47</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[pitch_data_for_tableau.csv_5061B18F335249C69974302F135EE628]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>chase</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[chase]</local-name>
+            <parent-name>[pitch_data_for_tableau.csv]</parent-name>
+            <remote-alias>chase</remote-alias>
+            <ordinal>48</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[pitch_data_for_tableau.csv_5061B18F335249C69974302F135EE628]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>OutsOnPlay</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[OutsOnPlay]</local-name>
+            <parent-name>[pitch_data_for_tableau.csv]</parent-name>
+            <remote-alias>OutsOnPlay</remote-alias>
+            <ordinal>49</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[pitch_data_for_tableau.csv_5061B18F335249C69974302F135EE628]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>GameID</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[GameID]</local-name>
+            <parent-name>[pitch_data_for_tableau.csv]</parent-name>
+            <remote-alias>GameID</remote-alias>
+            <ordinal>50</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <object-id>[pitch_data_for_tableau.csv_5061B18F335249C69974302F135EE628]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>PitcherThrows</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[PitcherThrows]</local-name>
+            <parent-name>[pitch_data_for_tableau.csv]</parent-name>
+            <remote-alias>PitcherThrows</remote-alias>
+            <ordinal>51</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <object-id>[pitch_data_for_tableau.csv_5061B18F335249C69974302F135EE628]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>PositionAt110X</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[PositionAt110X]</local-name>
+            <parent-name>[pitch_data_for_tableau.csv]</parent-name>
+            <remote-alias>PositionAt110X</remote-alias>
+            <ordinal>52</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[pitch_data_for_tableau.csv_5061B18F335249C69974302F135EE628]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>PositionAt110Y</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[PositionAt110Y]</local-name>
+            <parent-name>[pitch_data_for_tableau.csv]</parent-name>
+            <remote-alias>PositionAt110Y</remote-alias>
+            <ordinal>53</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[pitch_data_for_tableau.csv_5061B18F335249C69974302F135EE628]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>PositionAt110Z</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[PositionAt110Z]</local-name>
+            <parent-name>[pitch_data_for_tableau.csv]</parent-name>
+            <remote-alias>PositionAt110Z</remote-alias>
+            <ordinal>54</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[pitch_data_for_tableau.csv_5061B18F335249C69974302F135EE628]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>is_single</remote-name>
+            <remote-type>11</remote-type>
+            <local-name>[is_single]</local-name>
+            <parent-name>[pitch_data_for_tableau.csv]</parent-name>
+            <remote-alias>is_single</remote-alias>
+            <ordinal>55</ordinal>
+            <local-type>boolean</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[pitch_data_for_tableau.csv_5061B18F335249C69974302F135EE628]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>is_double</remote-name>
+            <remote-type>11</remote-type>
+            <local-name>[is_double]</local-name>
+            <parent-name>[pitch_data_for_tableau.csv]</parent-name>
+            <remote-alias>is_double</remote-alias>
+            <ordinal>56</ordinal>
+            <local-type>boolean</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[pitch_data_for_tableau.csv_5061B18F335249C69974302F135EE628]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>is_triple</remote-name>
+            <remote-type>11</remote-type>
+            <local-name>[is_triple]</local-name>
+            <parent-name>[pitch_data_for_tableau.csv]</parent-name>
+            <remote-alias>is_triple</remote-alias>
+            <ordinal>57</ordinal>
+            <local-type>boolean</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[pitch_data_for_tableau.csv_5061B18F335249C69974302F135EE628]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>is_home_run</remote-name>
+            <remote-type>11</remote-type>
+            <local-name>[is_home_run]</local-name>
+            <parent-name>[pitch_data_for_tableau.csv]</parent-name>
+            <remote-alias>is_home_run</remote-alias>
+            <ordinal>58</ordinal>
+            <local-type>boolean</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[pitch_data_for_tableau.csv_5061B18F335249C69974302F135EE628]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>pitch_category</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[pitch_category]</local-name>
+            <parent-name>[pitch_data_for_tableau.csv]</parent-name>
+            <remote-alias>pitch_category</remote-alias>
+            <ordinal>59</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[pitch_data_for_tableau.csv_5061B18F335249C69974302F135EE628]</object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='Exit Speed' datatype='real' name='[ExitSpeed]' role='measure' type='quantitative' />
+      <column caption='Game ID' datatype='string' name='[GameID]' role='dimension' type='nominal' />
+      <column caption='Horz Break' datatype='real' name='[HorzBreak]' role='measure' type='quantitative' />
+      <column caption='Horz Rel Angle' datatype='real' name='[HorzRelAngle]' role='measure' type='quantitative' />
+      <column caption='Induced Vert Break' datatype='real' name='[InducedVertBreak]' role='measure' type='quantitative' />
+      <column caption='Kor BB' datatype='string' name='[KorBB]' role='dimension' type='nominal' />
+      <column caption='Outs On Play' datatype='real' name='[OutsOnPlay]' role='measure' type='quantitative' />
+      <column caption='Pitch Call' datatype='string' name='[PitchCall]' role='dimension' type='nominal' />
+      <column caption='Pitcher Throws' datatype='string' name='[PitcherThrows]' role='dimension' type='nominal' />
+      <column caption='Pitchof PA' datatype='integer' name='[PitchofPA]' role='measure' type='quantitative' />
+      <column caption='Plate Loc Height' datatype='real' name='[PlateLocHeight]' role='measure' type='quantitative' />
+      <column caption='Plate Loc Side' datatype='real' name='[PlateLocSide]' role='measure' type='quantitative' />
+      <column caption='Play Result' datatype='string' name='[PlayResult]' role='dimension' type='nominal' />
+      <column caption='Previous Pitch' datatype='string' name='[PreviousPitch]' role='dimension' type='nominal' />
+      <column caption='Rel Height' datatype='real' name='[RelHeight]' role='measure' type='quantitative' />
+      <column caption='Rel Side' datatype='real' name='[RelSide]' role='measure' type='quantitative' />
+      <column caption='Rel Speed' datatype='real' name='[RelSpeed]' role='measure' type='quantitative' />
+      <column caption='Runs Scored' datatype='real' name='[RunsScored]' role='measure' type='quantitative' />
+      <column caption='Spin Axis' datatype='real' name='[SpinAxis]' role='measure' type='quantitative' />
+      <column caption='Spin Rate' datatype='real' name='[SpinRate]' role='measure' type='quantitative' />
+      <column caption='Stadium ID' datatype='real' name='[StadiumID]' role='dimension' type='ordinal' />
+      <column caption='Tagged Hit Type' datatype='string' name='[TaggedHitType]' role='dimension' type='nominal' />
+      <column caption='Tagged Pitch Type' datatype='string' name='[TaggedPitchType]' role='dimension' type='nominal' />
+      <column aggregation='Hour' datatype='datetime' name='[Tilt]' role='dimension' type='ordinal' />
+      <column caption='Vert Break' datatype='real' name='[VertBreak]' role='measure' type='quantitative' />
+      <column caption='Vert Rel Angle' datatype='real' name='[VertRelAngle]' role='measure' type='quantitative' />
+      <column caption='pitch_data_for_tableau.csv' datatype='table' name='[__tableau_internal_object_id__].[pitch_data_for_tableau.csv_5061B18F335249C69974302F135EE628]' role='measure' type='quantitative' />
+      <column caption='Bb' datatype='real' name='[bb]' role='measure' type='quantitative' />
+      <column caption='Bbspin' datatype='real' name='[bbspin]' role='measure' type='quantitative' />
+      <column caption='Called Strike' datatype='integer' name='[called_strike]' role='measure' type='quantitative' />
+      <column caption='Chase' datatype='real' name='[chase]' role='measure' type='quantitative' />
+      <column caption='Is Double' datatype='boolean' name='[is_double]' role='dimension' type='nominal' />
+      <column caption='Is Home Run' datatype='boolean' name='[is_home_run]' role='dimension' type='nominal' />
+      <column caption='Is Single' datatype='boolean' name='[is_single]' role='dimension' type='nominal' />
+      <column caption='Is Triple' datatype='boolean' name='[is_triple]' role='dimension' type='nominal' />
+      <column caption='Izmiss' datatype='real' name='[izmiss]' role='measure' type='quantitative' />
+      <column caption='Izswing' datatype='real' name='[izswing]' role='measure' type='quantitative' />
+      <column caption='K' datatype='real' name='[k]' role='measure' type='quantitative' />
+      <column caption='Ooz' datatype='integer' name='[ooz]' role='measure' type='quantitative' />
+      <column caption='Pitch Category' datatype='integer' name='[pitch_category]' role='measure' type='quantitative' />
+      <column caption='Pitches' datatype='integer' name='[pitches]' role='measure' type='quantitative' />
+      <column caption='Swing' datatype='real' name='[swing]' role='measure' type='quantitative' />
+      <column caption='Whiff' datatype='real' name='[whiff]' role='measure' type='quantitative' />
+      <column caption='Zone' datatype='real' name='[zone]' role='measure' type='quantitative' />
+      <column-instance column='[PlateLocSide]' derivation='None' name='[none:PlateLocSide:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[TaggedPitchType]' derivation='None' name='[none:TaggedPitchType:nk]' pivot='key' type='nominal' />
+      <column-instance column='[PlateLocSide]' derivation='Sum' name='[sum:PlateLocSide:qk]' pivot='key' type='quantitative' />
+      <layout dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='color' field='[none:TaggedPitchType:nk]&#10;[:Measure Names]' type='palette'>
+            <map-pri to='multiordinal_blue_10_0'>
+              <bucket>%null%</bucket>
+            </map-pri>
+            <map-pri to='multiordinal_gold_10_0'>
+              <bucket>&quot;Sinker&quot;</bucket>
+            </map-pri>
+            <map-pri to='multiordinal_green_10_0'>
+              <bucket>&quot;Fastball&quot;</bucket>
+            </map-pri>
+            <map-pri to='multiordinal_orange_10_0'>
+              <bucket>&quot;ChangeUp&quot;</bucket>
+            </map-pri>
+            <map-pri to='multiordinal_teal_10_0'>
+              <bucket>&quot;Slider&quot;</bucket>
+            </map-pri>
+          </encoding>
+          <encoding attr='color' field='[:Measure Names]' type='palette'>
+            <map to='#4e79a7'>
+              <bucket>&quot;[federated.0o2nayr1kyjqfr17fx9vm1xyksfs]&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;[federated.0o2nayr1kyjqfr17fx9vm1xyksfs].[none:PlateLocSide:qk]&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;[federated.0o2nayr1kyjqfr17fx9vm1xyksfs].[sum:PlateLocSide:qk]&quot;</bucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
+      </semantic-values>
+      <object-graph>
+        <objects>
+          <object caption='pitch_data_for_tableau.csv' id='pitch_data_for_tableau.csv_5061B18F335249C69974302F135EE628'>
+            <properties context=''>
+              <relation connection='textscan.01onc2j07qybss1chtz600a3phjn' name='pitch_data_for_tableau.csv' table='[pitch_data_for_tableau#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+                  <column datatype='real' name='PA' ordinal='0' />
+                  <column datatype='integer' name='PitchofPA' ordinal='1' />
+                  <column datatype='string' name='Pitcher' ordinal='2' />
+                  <column datatype='real' name='Strikes' ordinal='3' />
+                  <column datatype='real' name='Balls' ordinal='4' />
+                  <column datatype='string' name='KorBB' ordinal='5' />
+                  <column datatype='string' name='TaggedPitchType' ordinal='6' />
+                  <column datatype='string' name='PlayResult' ordinal='7' />
+                  <column datatype='real' name='RunsScored' ordinal='8' />
+                  <column datatype='real' name='VertRelAngle' ordinal='9' />
+                  <column datatype='real' name='HorzRelAngle' ordinal='10' />
+                  <column datatype='real' name='SpinRate' ordinal='11' />
+                  <column datatype='real' name='SpinAxis' ordinal='12' />
+                  <column datatype='datetime' name='Tilt' ordinal='13' />
+                  <column datatype='real' name='RelHeight' ordinal='14' />
+                  <column datatype='real' name='RelSide' ordinal='15' />
+                  <column datatype='real' name='Extension' ordinal='16' />
+                  <column datatype='real' name='VertBreak' ordinal='17' />
+                  <column datatype='real' name='InducedVertBreak' ordinal='18' />
+                  <column datatype='real' name='HorzBreak' ordinal='19' />
+                  <column datatype='real' name='PlateLocHeight' ordinal='20' />
+                  <column datatype='real' name='PlateLocSide' ordinal='21' />
+                  <column datatype='real' name='ExitSpeed' ordinal='22' />
+                  <column datatype='real' name='RelSpeed' ordinal='23' />
+                  <column datatype='string' name='PreviousPitch' ordinal='24' />
+                  <column datatype='integer' name='called_strike' ordinal='25' />
+                  <column datatype='integer' name='ooz' ordinal='26' />
+                  <column datatype='real' name='Angle' ordinal='27' />
+                  <column datatype='real' name='Direction' ordinal='28' />
+                  <column datatype='real' name='Distance' ordinal='29' />
+                  <column datatype='string' name='PitchCall' ordinal='30' />
+                  <column datatype='string' name='TaggedHitType' ordinal='31' />
+                  <column datatype='real' name='k' ordinal='32' />
+                  <column datatype='real' name='bb' ordinal='33' />
+                  <column datatype='real' name='bbspin' ordinal='34' />
+                  <column datatype='integer' name='pitches' ordinal='35' />
+                  <column datatype='real' name='zone' ordinal='36' />
+                  <column datatype='real' name='izswing' ordinal='37' />
+                  <column datatype='real' name='izmiss' ordinal='38' />
+                  <column datatype='real' name='AVG' ordinal='39' />
+                  <column datatype='real' name='OBP' ordinal='40' />
+                  <column datatype='real' name='SLG' ordinal='41' />
+                  <column datatype='real' name='swing' ordinal='42' />
+                  <column datatype='real' name='whiff' ordinal='43' />
+                  <column datatype='real' name='StadiumID' ordinal='44' />
+                  <column datatype='integer' name='2B' ordinal='45' />
+                  <column datatype='integer' name='3B' ordinal='46' />
+                  <column datatype='integer' name='HR' ordinal='47' />
+                  <column datatype='real' name='chase' ordinal='48' />
+                  <column datatype='real' name='OutsOnPlay' ordinal='49' />
+                  <column datatype='string' name='GameID' ordinal='50' />
+                  <column datatype='string' name='PitcherThrows' ordinal='51' />
+                  <column datatype='real' name='PositionAt110X' ordinal='52' />
+                  <column datatype='real' name='PositionAt110Y' ordinal='53' />
+                  <column datatype='real' name='PositionAt110Z' ordinal='54' />
+                  <column datatype='boolean' name='is_single' ordinal='55' />
+                  <column datatype='boolean' name='is_double' ordinal='56' />
+                  <column datatype='boolean' name='is_triple' ordinal='57' />
+                  <column datatype='boolean' name='is_home_run' ordinal='58' />
+                  <column datatype='integer' name='pitch_category' ordinal='59' />
+                </columns>
+              </relation>
+            </properties>
+          </object>
+        </objects>
+      </object-graph>
+    </datasource>
+  </datasources>
+  <worksheets>
+    <worksheet name='Sheet 1'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='pitch_data_for_tableau' name='federated.0o2nayr1kyjqfr17fx9vm1xyksfs' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0o2nayr1kyjqfr17fx9vm1xyksfs'>
+            <column caption='Rel Height' datatype='real' name='[RelHeight]' role='measure' type='quantitative' />
+            <column caption='Rel Side' datatype='real' name='[RelSide]' role='measure' type='quantitative' />
+            <column-instance column='[RelHeight]' derivation='None' name='[none:RelHeight:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[RelSide]' derivation='None' name='[none:RelSide:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='refline'>
+            <format attr='fill-above' id='refline0' value='#00000000' />
+            <format attr='fill-below' id='refline0' value='#00000000' />
+            <format attr='line-visibility' id='refline0' value='on' />
+            <format attr='line-pattern-only' id='refline0' value='dashed' />
+            <format attr='stroke-color' id='refline0' value='#00000089' />
+            <format attr='fill-above' id='refline1' value='#00000000' />
+            <format attr='fill-below' id='refline1' value='#00000000' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane id='10' selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <reference-line axis-column='[federated.0o2nayr1kyjqfr17fx9vm1xyksfs].[none:RelHeight:qk]' enable-instant-analytics='true' formula='constant' id='refline1' label-type='automatic' scope='per-pane' value='0.0' value-column='[federated.0o2nayr1kyjqfr17fx9vm1xyksfs].[none:RelHeight:qk]' z-order='1' />
+            <style>
+              <style-rule element='mark'>
+                <format attr='shape' value='circle' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.0o2nayr1kyjqfr17fx9vm1xyksfs].[none:RelHeight:qk]</rows>
+        <cols>[federated.0o2nayr1kyjqfr17fx9vm1xyksfs].[none:RelSide:qk]</cols>
+      </table>
+      <simple-id uuid='{11DF76B0-AFF0-4EC3-8C06-FBCA2313DB78}' />
+    </worksheet>
+  </worksheets>
+  <windows source-height='30'>
+    <window class='worksheet' maximized='true' name='Sheet 1'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.0o2nayr1kyjqfr17fx9vm1xyksfs].[none:PitchCall:nk]</field>
+            <field>[federated.0o2nayr1kyjqfr17fx9vm1xyksfs].[none:PlateLocSide:qk]</field>
+            <field>[federated.0o2nayr1kyjqfr17fx9vm1xyksfs].[none:RelHeight:qk]</field>
+            <field>[federated.0o2nayr1kyjqfr17fx9vm1xyksfs].[none:RelSide:qk]</field>
+            <field>[federated.0o2nayr1kyjqfr17fx9vm1xyksfs].[none:TaggedPitchType:nk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{06C5375B-5CE4-4DAD-A7EE-28A6800846AD}' />
+    </window>
+  </windows>
+  <thumbnails>
+    <thumbnail height='384' name='Sheet 1' width='384'>
+      iVBORw0KGgoAAAANSUhEUgAAAYAAAAGACAYAAACkx7W/AAAACXBIWXMAAA7DAAAOwwHHb6hk
+      AAAgAElEQVR4nOzdd3xc533n+8+ZMwWdKARAEATAArAAJFjEKoqSSFGyKUuUbFOyJVvNm3Wy
+      KZvsvb6bzW7i6+y+dpNNcnO9WW/iNMf2SrZEyZLYRYpFFHsVCLCBnQDRe512znn2DxBDgqRk
+      YYDBGer83q+XXjZnAJzfnPPM8z31eTSllEIIIYTjuOwuQAghhD0kAIQQwqEkAIQQwqEkAIQQ
+      wqHiOgBM0yTaa9TBYBDLska5ouGxLItgMGhrDeFwGMMwbK0BIBAI2F0CgUAg6vY0GuKhPUD8
+      bAu72d0eYKCPC4VCti0/rgPA7o0jRo9sy/gRD9siHmoQcR4AQgghYkcCQAghHEoCQAghHEoC
+      QAghHEoCQAghHEoCQAghHEoCQAghHEoCQAghHEoCQAghHEoCQAghHEoCQAghHEoCQAghHEoC
+      QAghHMod6wVYlsXRo0epr68nOzubhx56CE3TAOjq6mLPnj0opXj88cdJSUmJdTlCCBsppbCU
+      orM3QNDUSEvyomlapE8QYyvmAXDp0iWCwSDPPPPMXeNe79mzh2XLlgGwa9cunnnmmViXI4Sw
+      iVKKGy3d/O/tlVyobcXlcjF7Sg7femIOOenJEgI2iHkAXL58mZSUFHbv3k1paSn5+fnAQGMI
+      hULk5OSgaVpkogzLsiITuViWRTgcjmq5t/8dO9ldx+C469Gux9FimiZ+v9/WGizLsn0iErvb
+      A9i3Ldp7Avz5GwfJz0rhN5+ah6kUO45d5S9/eZD/8MJSkhM8Y1rPSCacGi1KKZRSmKZpy/Jj
+      HgDBYJDCwkLy8vJ47733+Pa3v43P50Mp9bkSPyEhIarlhkIhPB6PrXsVSinC4TBer9e2GgzD
+      QNM0dF23rQYYmH0p2m05WoLBID6fz7blx0N7APu2xf5Dl0n0efi/vvkgyjRISEigvDif//D3
+      OzlxsZknFk0b03rsbg8wsENgmiYez9iG36CYB0BOTg5er5fMzExycnIIhUK4XK5I5+z3+4d0
+      0i6XC5dr4Nr04FSGI+nE7Q4Au2sYJDXc8uvquHOvcLTqdnJ7sCxFTVMX0/Iz8XncBMyBHZOU
+      RC+FueOoaeqypS67lhkvNcQ8AObPn8/GjRs5d+4cbrebpKQkNmzYwNe+9jUWLVrE+++/j2ma
+      rF69OtaliC8IpRSmpej1h/C4XST5Ru9IzzAtzlxt5uj5OgzTYn5xHktK8+Oik7ifaRpkpydz
+      paEDw7x1CiwYNmju6GNm4Xgbq3OumAdAYmIizz//fORwS9M0vva1rwFQVFQUuSbgdse8FPEF
+      oJTifE0rb+0+Q21zNz6PzvI5BXx1xSySRngO2bQsfrX3LNuOXKJkUhYet4t/3HyCQNjgkblF
+      EgIjoGkaK+dPZl/ldd7+6CwPlubh7gmz7egl/MEwD84ukPVrgzHpdTVN+9RzjtLxi89LKcWV
+      +g7+6s1DPDAjj68sK6GrL8iGfedp6/bz288uwq1H92iLUooLtW1sOXSRf/fcUsqLc9HQuNrY
+      wX/9+T5Ki7LJyUge5U/kLIW54/jdry3mJ1sr2HroImgwITOF31+3lOz0JLvLcyTpfcV9QwHv
+      7TvPrKLxfPfpB9BdA3uM0yZm8Mf/tIcvLZrGjBGcSjh5oYHC3HHMmZaLfvM6VGHOOHTdxfma
+      VgmAEdI0jXnFE/jvv7Waq3WtJCYkMHF8Kj6PLnv/NpEngcV9wzQtrjd1MXtKDrpLizxANHF8
+      KumpCdQ0d414GZoGd3ZFY9U1KaUwTJO6lm4u1LbR3R+0/TbF0aZpGkk+D1Pz0pk6MYMEr9tx
+      nf/grZ9jtW2VUoQNk9rmLi7eaKPXH4osW44AxH3D5dLISE2goa1nyOt9/jA9/UEyUxNH9PcX
+      lOSx/ehlqq40M2daDhoatc3dGKYV84uUSilau/r5h00nOXOtGV3T8HndPP9oGY8tnBI5IhH3
+      N6UU1xs7OXT2Bv2BMNMnZTKvOBeP5/PdFh/N8hrbe/nxhuNcqmtH0zSSEzy8uHoOK8qLJADu
+      xVKKlo4+rjV2kuhzM21iJkkJ9j5TIMClaXx5cTH/uOkEUydmMHtqDv2BMG/uOk1eZiqzJmdH
+      /bc1TWN6QRZPLi3hh+8cZkZBFh63zrnrrbz0pbkxP0cdDJv8z3eP4na5+M/fWUlKopfKy038
+      YmcVack+2+9EUkoRDJtcqe+gqy9AQfY4Jo5PidyyLX49pRT7Kmv45y2fMHF8KimJXg6ermV6
+      QRa/97UlI76J4V78IYO/Xn+I7HHJ/Jd/tYokn5vj1Q3889ZPyEhNlAC4k2VZbD50kfc+Poeu
+      uwgbFllpifz2s4uYlp9x34aAZVl09wUxLEV6SkLkFMr9RNM0lszKp73bz88+ODVwaGtaTJmQ
+      zr/9+mISvSNrzrruYt2jpcwozOLY+XoMw+JffWU+y8omxXxdXaht42pDJ3/1bx4nN3NgTKyc
+      jGRutHSz7chFFs2ciK7bs72UUjS09fJ37x/jWlMXCV43wZDB4wun8o1Vs/F67H3I8H7R0tnH
+      v2z9hBdWz+axBQNHdfWt3fy31/ex/eglnl0xc1SfObGU4ui5Ohrb+/ijb60gIzUBTdN4cmkK
+      Vxs72Xr4ogTAnY5XN/CrvWf5108/QPnUXIJhg3c/PscP3znMn333MVKT7H1yMBptXf38YtcZ
+      Ki83YSrF5Nx0Xl0zjyl56fddCOi6iyeXlbCsbBJ1rd0k+bwU5KThHaULiW7dxbziCcwrnhB5
+      bSzWUWtXP6mJXsal3LpbzqVpFOSkcfJCA4ZloUd5h9NIBcMmf7fhGMmJXv7it1aTkujlcl0H
+      f/v+MTLTEnlyacl9147scPpqCx6Pzsr5k/G4B0IzLyuF5WWTOHy2jrUPzUAf5npUSmFZCtdt
+      O3RKKZrae/n59koqLjUSCBn8r/eO8sqX51GQk4bLpVGQncb+yhq5CHw7y1LsOHaZB2cXsHx2
+      AWnJPrLTk/n2E+X4g2EqLjbaXeKwBUIGf73+MB29AX73a4v5999cTnZGMn/2+n4a23vtLi8q
+      Lk0ja1wS5dMmUDwpE98oX0gcvLg8lqNUThyfSndfkKaO3sgFQsuyqK5pY2JWKp47Ov+RXkgc
+      7Djau/1ca+ykPxD+1L91taGDa41dvPyluUzITCE1ycfc4lzWLC1m98mrhAx7xrG535iWha5p
+      uO5oU7ruwhzm+FCDty3//28f5o/+cRf/450jnLzQQF1rNx09Af7yzYOEDJOvPzIL3eXCHzT4
+      7784QFuXH9O0qK5tY1JOmhwB3E4pRVdfgNI7ziX7PG7Skn109to7kFg0Tl5soq0nwF99+2HS
+      Uwf2LmcWjecH//IR2w5f4rUn58neWxwozs/kgRl5/PVbh3l+ZSnpKQkcO1/P8ep6/vCF5UP2
+      7kJhk08uNnLxRhvjUhJYWjqJ7PSkYW3HHn+In39wioNnakFBgtfNukdLeWLRtLuepejuC5Lg
+      dZNyc+jmQdnpyfT6w4QNC589Q9ncV8omZ/PzDyo5eq6eZWUD13Q6egIcOnuDpaUFdwXDp1FK
+      ceJCA3/zzhHKp+WSk57Mx6eu89En13C7XaQmekn0efjBa0tI8Lo5f72V5s4+evqDvLX7NB63
+      zvnrLfy/rz4iAXA7l0ujOD+TystNfGVZCd6bh2l1rd00d/QzdWKGzRUOX21zNxPHp5KafGsA
+      Mt2lUTIpk2uNnVhKDfuwU4w+t+7iu08/wPo9Z/iXbRWEDZMJman8wbqlzCwaj6ZpKDUw/MX/
+      fPcol260U5A7jq7eAJsOVPM7X1vM3Gm5nysEDNPin7dWUN/Wyx++sJzs9CTOXGvhFztPk+B1
+      s3L+5CF/Z1J2GsGwweUb7cwrGTg1ZlqKiouNFOSkjfjay0gNXguqaxnY+83LSiE3Y2B4acWt
+      23jt3tHJy0rlhdWz+fuNx9lfdZ3URB+nrzWTlZbIUw9O/9z1hQ2Ln22r4MmlJTwyr4g//ene
+      yEB6x8/XkzUukaaOPvoCYVKTfPze15fwxs4q9lZc46OK65QUZPL/vLCcognpEgC30zSNtctn
+      8Kc/3cv/ePsIS0rz6fWHIxfhRvKQkV1yMpI5cLoWf9AgJXEgBKyb47LnpKd87r0OEXvJiV5e
+      WTOPdY+WEgybjEv24dZdQzqGDQeqae3s57/+61XkZCRjGBa/+vgc/7jpJP/tu6sYl/zrR/ms
+      b+vl5IUG/uSVRyiZlImmaeRlpdLZE2Dr4Yssn1OAz3Ora8jLSuGJhdP4uw3H+fKSYnLSk6m4
+      1MgnFxv53jeX4XLZe3dSe7eff9x8kjNXm/F4dAzDYtWCKUzISuFCbRvJCR6Wzy5kemGWre1d
+      u3kXW0HOwPn3vkCYNYun8dCcgsh38/No6eyjtdvPsrJJ7K+sITXJx6tr5lHX2s3Hp66zaOJE
+      zte0se/UddY9WkpqkpfvPDmPmqZOiidm8vKX50balQTAHSZkpvAfv72C9XvO8Oau03g9blaU
+      F7J2+Yyohxmw0wPTc9m4/zw/2foJax+cgcfj4kBVLRdr2/njV2bbvlckhnJpGqlJPlLv8V4w
+      bHLsXB1fWlzMhMyUgWG+vS7WLCnmw+NXuHSjnQdmTPy1y2jv9uP1uMnJuDUJi6ZpFE1IZ8ex
+      ywRDxpAAcLlcPL+yjMzURHadvEqvP0RBThrf++YyZhaOt7UNGabFP205SV8gzJ9+ZyUZqQmc
+      udbCD98+TKLXwwMz8qhv7eW/vbGPl54oZ/UDU22t1+XSmD0lh9lTclAKlBoYDno4NXk9OhrQ
+      FwjT2N5L/vhUvB6d/kAYl0vj0XmTOXK2jpMXG1hcmo/ucrH75FVaOvv57WcXRS5AgzwIdhft
+      5p0X/+75pQRCBrrLhe8+vs0tLcnHHzy3hJ9sPcV/+qfdAKSnJPC7X1/MtPvwlJaTDTwprO5q
+      j7ruQndpQ0bZ/CzZ6UmEwgb1rT2MS/ZFTi9dqmsnMy2JBO/dJ/S9Hp01S4t5bOEUwoZFotc9
+      5M4Tu9S39VB1pZkfvPYoU/LSAbjR3I3ucjEuxcd3n34An0dnX2UN/7KtgjlTcpiQda94HTu3
+      QheimQcmMy2Rsik5vPvxOSZlp1F5uYnGtl7e+egs84onkJ+dRmqSj/rWXv7jPwx857PHJfFv
+      v76ESdlpQ/6WBMA9aJqGrmkkJ9g7ccdomTwhnR+89ihNHb2EDYu8rJQv7CP4Axfygxw7X0dH
+      T4Di/AzmTM29L4/e7uTzuimdPJ59lTUsKysg0edGqYHzvpalPvc1qrzMFB6cXcDfbTjOi6tn
+      k5uRwqnLTWw/epnffPoBPO57rytN0/B53HF1wberN4BHd0XucTcti+PV9cwsHE9tSxfBsEFS
+      godlsyfxy12nOXut5TMDQClFR2+AY+fq6O4PUjIpi9mTs9HvOBVnJ5em8a+fWsBfvXWQ7ccu
+      4w+G+Xc/2s64FB9PLJ7G3288gWla/PlvPkYobGIpRV7WvcdckgBwCK9HpyBnnN1lxJRSiura
+      Nn749mFg4Ehn86ELlBZl87tfXcyn9Gv3DQ147tEy/uyNffzJP+9m9pQcWrv9VF5u4pUvzWX8
+      uM/3tLLLpfHqmnms332Gf9h4kpBhkJ6SyL/6ynyWjsFDb6NpQlYqloLLdR2RoUA0Depbe8hN
+      T77j3LoaePNTKKU4fbWZv3nnCB63Tlqyj40HLjC/ZAK/tXYhib742GnSNI3s9CT+82uPUnGp
+      iZrmLk5faeZKQwd/9/5xSiZl8e9fXB45TfhZJADEF0ZfIMzfbzjOopkTeWH1HHwenab2Pv7y
+      zYO8v/88X19RYneJIzL4xf+Tlx9hx7HLXKprZ1yyjz98YTmlk7OH1Tkl+jy8/OW5fPXhWfQF
+      QmSkJt6Xo3KOT0tizZJi/nHzSRrbe5mYlYructHS1cc3VpWhu1wYpsW+UzUEwyZlnzFcSHd/
+      kB9vOM7D8ybz3KOleHQXda09/MUvD7D18EW+/sisMfxkn03TNBJ8HpaWTWJJaT5ff3gW7T0D
+      8zxnpibe9WAYDAwLYZoWST5P5H0JAPGFcbWhg/aeAGuXzyDp5nmKvKwUvrx4GpsPXeQrS6Zi
+      87TEI6ZpGplpiXxjVRnq5g5ttJ22pmmkJftIS77/nm4f5HJpfO3hWaQketl5/Aq9/hDZGcmU
+      Tc5h/Z4zfHKxkV5/kGuNXbz65bmfOaT3hdo2+oMGax+cTsLNW1sLctJYvXAq+05dZ+3yGXE5
+      7MXAnN8a2en3/mz+YJh3Pz7P4bM3CIVNpuSl841Vs5mSJ7eBii+QYNjErWtD7nKAgb3dsGFi
+      qeE9bRnPBp5StruK+OD16HxlWQmrF04lEDJITvBgmBaHz97g/PVWcjOTeemJcqblZ35mWAZD
+      Jh7dhfuOc4VJPg+hsBl5erq7P0gobAwMphZH1wbuxTAtfrzhBNeaOlm7fAYpiV4On73Bn7+x
+      n+/Lg2Dii2TyhHSUGpjY5dH5k9GAUNjkwOlaSiZlkXiPu1tGw2DHoGmarffEO5mmaSR43ZE9
+      d49b59F5k3l03uQhP/NZpuVnEAybnLrUxLKyScDAUCoHT9cysyibQMjgHzaf5MT5egzLIi8r
+      lZeeKGfO1Jy4DYHzNa2cuNDAH764nJbOPtq7+/ny4mJ6+kNs3F8tASC+OLLSEvnmY7P56bYK
+      qq40kZOeTNXVZjp7AvzHl1aMeueslKKpo4+NB6q5UNtGapKPxxdOZcnNe6+FvYbbKU/ITGHd
+      I7P4uw3HOXmhgfSUBCqvNOEPhPmNpxbwN786Qq8/zO9+fTGpiV4OnbnB//fWIf745RWUTMqK
+      0acYmasNHbg0jR++fXjgTiagszdA1rgkevqDsQ8Av9/Pvn370DSNlJQUli5dGtkwjY2NVFZW
+      omka+fn5lJaWxroc8QWmaRqrH5hKbkYyHx6/wplrLZTkZ/KVZdPJTk8iGAyO2rKUUtS39vBf
+      //c+xqcn8eDsAtp7/Pz9xhPUt/XwtRWz5GjgPqNpGk8uK6GjN8C7H5/D69ZRwOTccXxysYHz
+      NW388Pe+FDnXXjwpk7ZuPxv2V/N/f2NZXB4FpCX56OkP8vTy6QRCJgdP194chrqHqWNxDaC5
+      uRmv18uCBQvumjzi/PnzlJSUkJWVhccTRzcXi/uWy6Uxt3gCc6blopTCFaMRPZWCX+09x8Tx
+      qXzvmw9GHs4qn5rLj947yrLSSeTf8dDN/WpwDKKrDZ2YlsWUvIzIA2TxTClFjz/EtYYOTEt9
+      rrqvN3ax++RVvrGqjIfmFBI2LDYdrObn2yvJy0oh47ZZ53SXi5JJmXz0yTVMS+G2ab6GzzL4
+      cOCxm8+KfOfJ+bR29fP2R2e42tgZ+wBoamrCNE3a29uZOHHikJXf0dHBuHHj8Hq95OXlAQwZ
+      4lYpRSgUimq5pjlw0cbuWZQsyxrVPc/hsm4OM2tG88jhKNdh53qAgXUQbXu6UzBsUl3bylNL
+      i9GUSSg0sH5LJo4jwaNzobaF8WlD766Jh/YAw98Wp6+28NMPKunuC6JpAw+kfWv1bBbPnBj1
+      heixWA9VV1r46fZKevqDaIDP6+Glx2ezcEbezadwh7YHpWD70YtMnjCOZx4sQb95BPfS6jLO
+      XmuhrctPW1cv6TfvmlJKca2hg6y0BIxwCNMY/soYbBOxmh+4zx8gKcFDY3sviV43b3xYiVKK
+      wpw0brT0xD4Apk+fTl1dHfX19ezfv58XX3wxciSwZMkS2tvbOXfuHJWVlaxZswbLsiKdlmVZ
+      UR8ZKKVwu922TllnWRaGYdh6dGMYxs3bxOy9fW0k23I0a3C7R+lhHs1FgtdNf8gc8rlU0CRk
+      WKQkJdz1eeOhPQzW8XlraGzv5ccbT/Lo/Mk8sWgauktjf1UtP9l6igmZqRRPyox5DdFoaOvh
+      x5tOsmrBFB5fOBWXS2N/ZQ3/tLWC3MwUpuVn3lWDZSlaOvspmpBOgu/WA2RpupsJmSmcudbC
+      P2z6hOdXlpKU4OH4+XqOVzfwvW8sw+uNbtSAwXGAYrUuZk3OxbTO4PO4+TfPLiIl0UNWWhJ/
+      +/4xSidnxz4AUlJSKCsrA6CmpgbTNCOdcm5uLhMnTqSsrIxf/OIXAOi6HumsBjuvaL6wA3dk
+      uGyfs3SwDjuXb3cNg+yuYXA9jEYAeD0aK8oL2X7sCvNL8ijMHUfYMHlvXzVpST5mFo6/5+e9
+      n7aFUorDZ+tIS0lg3SOl+G7eYfPk0hJOXWri48oaSgqyol6fsVoPSikOnakjIzWRrz8yKzKw
+      3VeWTafiUhP7KmspnpR116Q/mqaYlDOOy3UdWIrI8CHd/QEa2np54bHZnL3Wyp/+9GPQBs6v
+      f/fpB5g9LTfqUUYHz3jEal1Mm5jBmiUlbNhfTcWlRiZmpbJ+z1mCYZPyaRNiHwAnTpzg+vXr
+      uN1uUlIGJpFev349zz33HNu2bSMcDhMIBJgxY0asSxFiVH15SQl1rb38yT/vITs9iZ7+EF6P
+      zh+sWzKs4X3jWXu3n6y0xCHPVuiugSeS23v8kYfR4k17z8269U+v+06DwzV//yd7+PuNx1k5
+      fwrBsMHGA9VkpCawZkkxzzw0k9aufgIhg9yM5LgfU8vlcvHtJ8oxLcXmgxfwenRmFo1nztQc
+      dhy7HPsAWLJkCQsXLiQcDuPzDVyAef755wF46qmnCIVCMT0EEiIWBu87/621D7BqwWQu1bWT
+      luRjfkkeqXfMnHU/m5afwdHzdXT0+MlMG7gA2h8IU13bxkNzCuKy84eBPd+TFxro7A2QcXMm
+      vL5AmAu1bTwyt+hT687LSuGPvvUQ/7Ktgj97Yz8uTWPO1Bx++9lFJPo8aJrGhMyUMfwktwY4
+      vNHSTaLXzaTs4c2B7dZdvPylcjJSE/jgyCUu17XT3NHHi6tno6lYXX0YBYZhoOvRjU8SDAbx
+      eDy2XwMYDD67hMPhgTE/3PY+8uH3+0lMTPz1PxhDgUAgshNih3hoDzC8bdEfCPHnbxwgbJqR
+      6SJ3n7xGV2+AP3nl4SF3xcSqhmj0+UP82Rv7sSzF44umRsbE7+kP8ScvryA9NfFT24NSCtNS
+      dPT4cesu0pJ9MbubzDRNTNP81GsIlqXYdfIKb+0+Q9iwMC2Lwpxx/JtnFzIpO21YNSml6A+G
+      6e0PkZbsGzh6kQCInXj4wksA3CIBMGA420IpRUdPgHf2nqXiYiOWpSidnM03VpUNmVAmljVE
+      Y7Dutz86y6lLjVhKUTY5m+dX3qrbrvaglCJsWFyqa6exvYec9CRmFGbfNYQJwCcXGvjhO4f5
+      1uPlzC+ZQCBk8M5H56ht7uK//MbKEQ9ZLwEQQ/HwhZcAuEUCYMBwt4VSCsXAoGJKDYyNM5JB
+      6KKpIRq/rm672kNnj5//9f4xzl9vJSXRS09/iPLiXH772UVDrh1ZSvHnb+wnPTmB33p2YeRC
+      c3d/kH/7P7bxm08/wLLZBSOqRYaCEEJ8Jk3T0OC+myApHuu2LMVPtlXQFwjz57+5mnHJXpra
+      e/nbDSd5fUcl3137QKSjV9bAfMelRdlD7jJK8nlIT0mgtbt/xPXYfz+aEEI4REevn2Pn63lx
+      9Rwmjk8l0eehICeNF1fP5uDpWnr6bj0c53JpFOWO4+z1FgzDjNwy2tLZN/C8Qm76iOuRABBC
+      iDHSHwgDkH7HkBQZqQkYloU/GI68pmkazzw0k8t1Hfx44wlOXmjg41PX+ctfHqR8Wi6lReNH
+      XI8EgBBCjJHs9GRSk7x8cnHgwjQMXKs4Xt1A9rgkMtKGXhcpyEnjD19cTltXP3/7/jF+sfM0
+      s6fm8DtfXYT7HheNh0uuAQghxBjxeXRefGwOP91WQUtXP4U5aVy80cbhs/X89rML8d7RqWua
+      RsmkTP7Tyw/T2x/E7dZJSvAwWpetJQCEEGKMaJrGw3OLSErwsPnQBY6fryc7PYk/eG4Jc4sn
+      3POOJE3TcOsa6VE+c/FZJACEEGIMuVwai2ZOZMH0PIKhMC4NEnz2PD0uASCEEGNscK9e87oj
+      I4LaQS4CCyGEQ0kACCGEQ0kACCGEQ0kACCGEQ0kACCGEQ0kACCGEQ0kACCGEQ0kACCGEQ0kA
+      CCGEQ0kACCGEQ8V8KIju7m7ee+89UlNTSUtLY9WqVZFpGhsbG9m1axdKKdasWUNWVlasyxFC
+      CHFTzAOgqamJOXPmsGDBgrve279/P2vXrkXTNLZt28Zzzz0X63KEEELcFPMA6Ojo4Pr163R1
+      dTF79myys7MBItObpaamRv4NYJomlmUBtybRjoZlWZG/Yye76xhcr9Gux9FimiZ+v9/WGizL
+      IhAI2F6D3e0yHrZFvNQw+P2wy2A/aJqmLcuPeQDMnz+fmTNn0tfXx6ZNm3jllVfQ9YFJDwY/
+      /O0j4blcriH/9nqjGyY1GAzi8Xgip5vsMBhgPp/PthrC4fDAyINuewd+9fv9JCaO/njmwxEI
+      BPD5fLaNvBgP7QHiY1vEQw12twcYCCHTNPF67Zm4fkyOADIzM0lJScHr9aKUore3l5SUFNxu
+      N11dXWiaFgkFTdMiG8TuPSUhhPgii3kAdHV18dFHH6GUYvbs2bhcLj7++GOefPJJVqxYwQcf
+      fBC5CCyEEGLsaGoMToLdvog7D7cG37vXYZhhGOi6LqeARkBOAd1i9yF/PLQHiI9tEQ812N0e
+      wAGngODenfvneU8IIUTsyINgQgjhUBIAQgjhUBIAQgjhUBIAQgjhUBIAQgjhUBIAQgjhUBIA
+      QgjhUBIAQgjhUBIAQgjhUBIAQgjhUBIAQgjhUBIAQgjhUBIAQgjhUBIAQgjhUBIAQgjhUBIA
+      QgjhUBIAQgjhUBIAQgjhUGM2UWwoFELTNDweT+Q10zQJhUIDhbjdQ94TQggRW2MSAOFwmNdf
+      f53S0lKWLl0aeb2yspJLly6RnJzMpEmTKC8vH4tyhBBCMEYBcOjQIYqLizFNc8jrLS0tPP74
+      46Snp49FGUIIIW4T8wBoamqip6eHefPmce3atSHvmabJjh070DSNhx9+mNzcXPG+EkYAACAA
+      SURBVEzTxDAMAJRShMPhqJZrWRaWZY20/BGzuw6lFEDU63G0mKaJ3++3tQbLsggEArbXYHe7
+      jIdtES81DH4/7KKUQil1187xWNFUDNeAZVn87Gc/o6CggGAwSGtrK2vXriUjI2PIz/X39/Or
+      X/2Kl156acjrhmGg6zqapg172cFgEI/Hg8tl33Vuy7IIh8P4fD7bagiHw2iahts9Zpd77snv
+      95OYmGhrDYFAAJ/PF1V7Gg3x0B4gPrZFPNRgd3uAgRAyTROv12vL8mPaK2iaxrPPPothGDQ3
+      N6PrOklJSdTU1FBQUMDp06cpKirC7/fbtgKEEMKpYh4Ag3v7Pp+P1NRUvF4vdXV1FBQUkJSU
+      xIEDB9A0jTVr1sSyFCGEEHcYs/MCaWlppKWlAbBs2TIApk2bxrRp08aqBCGEELeRB8GEEMKh
+      JACEEMKhJACEEMKhJACEEMKhJACEEMKhJACEEMKhJACEEMKhJACEEMKhJACEEMKhJACEEMKh
+      JACEEMKhJACEEMKhJACEEMKhJACEEMKhJACEEMKhJACEEMKhJACEEMKhJACEEMKhJACEEMKh
+      JACEEMKhxiwAmpub6erqGvKaZVlcunSJK1euoJQaq1KEEEIwRgHQ3d3NO++8Q1VV1ZDXDx8+
+      TG1tLZcvX+b48eNjUYoQQoib3LFegGVZ7N27l4ceeoienp7I60opamtrWbduHS6XizfffJNF
+      ixbd8/ejoZTCNE1bjywsy8KyLEzTtLUGTdNsrQFubY94qEHTNFuWb1lWXK0HqcHe9gD29xEx
+      D4ALFy6QlZVFVlbWXQHgcrnQdR0g8r+maWIYxpCficZgx2dnACilbG/og+vBbnavh8Eaot2h
+      GM3lx8N6kBrsbw9g/05BTAPAsiyOHDlCWloaV65cobOzk+LiYnJzc9E0LfJlcLlckRWg63ok
+      DAzDQNf1qDowpRQejyfqABkNg43L6/XaVkM4HEbTNNzumGf9ZzJN09b1AAPbw+Px2HoEAPa2
+      B4iPbREPNdjdHmBgPdi5LmLaK7hcLl555RUA6urquHbtGjk5ORw4cIDly5eTn5/PwYMHMQyD
+      KVOmxLIUIYQQdxiz3cLx48eTkpICQFFREQAPPvgg1dXVaJrGjBkzxqoUIYQQjGEA+Hw+fD4f
+      AJMmTQIGjhBmzZo1ViUIIYS4jTwIJoQQDiUBIIQQDiUBIIQQDiUBIIQQDiUBIIQQDiUBIIQQ
+      DiUBIIQQDiUBIIQQDiUBIIQQDiUBIIQQDiUBIIQQDiUBIIQQDiUBIIQQDiUBIIQQDiUBIIQQ
+      DiUBIIQQDiUBIIQQDiUBIIQQDiUBIIQQDhXzOYGVUnR0dBAIBJgwYQIu163MCYfD9PX1AQNz
+      BicmJsa6HCGEEDfFPACqqqpoaGggKSmJXbt28a1vfSsSAidOnKChoYG0tDTy8vIoLS2NdTlC
+      CCFuinkAlJeXU15eTjAYpKamBqVU5L2Ojg4eeeQRMjIy0DTtnr+vlBryO5/X4O9ZlhV17SMV
+      LzUAttYwyO4aBrdHNO1pNJdv93oA+7dFPNRgd3u4vQa71kVUAXD27Fl6e3tZvHgxAD/5yU/4
+      zne+c8+ftSyLHTt2cPbsWVavXj3kFFBycjJ79+4lEAiwaNEiiouLMU0TwzCAgZXzacHw61iW
+      RTgcjvr3R8Pghg2Hw7bVYJommqbZ/mWzez0M1hAKhWxrE/HQHiB+tkU81GBnexiswc4AGnYA
+      1NbWsmfPHnp7e+no6KC/v5/Lly9/6s+7XC4ef/xxli5dysaNG5k5cyZerxeAhx9+GBi4FvDm
+      m29SXFyMruvoug6AYRjouh7VBgoGg3g8niGBM9YGG7nP57OthsEQdLtjfrD3mSzLsnU9wEAH
+      7PP5bPvCx0N7GKxDarC/PcDADpppmpE+cawNu3c0TZNwOIxhGIRCIRITE/ne9773qT9/6tQp
+      6uvrCQaDkT37yspKlFLs27eP2tparly5QlJSUvSfQgghxLANe7dw8uTJ/M7v/A719fWRDj0Y
+      DH7qzxcWFnL27FkMw+Cpp57C4/Hg8XgAKCsr49y5c7jdbp5++ukoP4IQQohoaCqKE1CHDh3i
+      Zz/7GSUlJQBMmzaNZ599dtSLk1NAIxcvp4D8fr/tt/kGAgE5BUR8bIt4qMHu9gD2nwKKqlfQ
+      dZ0nn3yStWvXjnY9QgghxsiwAsAwDP76r/+a3t5eampqOHXqFAAzZszg+eefj0mBQgghYmNY
+      AaDrOq+99tpdtxTafUgrhBBi+IYVAJqmkZ2dzY0bN/jRj34UuX9V13WWL1/Ok08+aev5NCGE
+      EJ9fVNcAbty4wYoVK1i5ciVVVVXU19dTUVHB/PnzmThx4mjXKIQQIgaiukXG5/Nx6dIlLMui
+      r6+P7u5uCgsLIwO7CSGEiH9RBUB5eTnjx4/n+9//PocPH+bZZ58lNzeXSZMmjXZ9QgghYmRY
+      zwEopWhqaiI9PZ2Ojo7I6z6fj8zMzFEvTp4DGDl5DuAWu+/7jof2APGxLeKhBrvbA9xnzwEo
+      pdiwYQOPPvoo69evj7wut4EKIcT9J6ongWEgwWtra8nPz8cwDMaNGzfatckRwCiQI4Bb7N7j
+      i4f2APGxLeKhBrvbA9h/BBBV71hbW8v3v/99/uZv/ob+/n5+/OMfj3ZdQgghYiyq3cKTJ0/y
+      zW9+k8rKSnw+H11dXaNdlxBCiBiLKgAWL17Mj370I9ra2rh48SLz588f7bqEEELEWFQBkJeX
+      xx/90R9RW1tLUlIShYWFo12XEEKIGBt2APzsZz/j9OnTQ14rKyvj1VdfHa2ahBBCjIFhB8C6
+      detYu3Ytu3btwuVysXLlysgEL0IIIe4fww6A5ORkkpOTSUpKQtd1MjIyYlGXEEKIGBt2AOzc
+      uZNr165x4cIFXC4XtbW1FBUV8fjjj8eiPiGEEDEy7AAoLCwkJSWF2bNnR16TowAhhLj/DDsA
+      pk+fHos6hBBCjLGYjw/Q09PD6dOnCQQCzJkzh/Hjx0feMwyD48ePo2kaixYtsnXYBiGEcJph
+      zwn8F3/xFwSDwSGvz5w5kxdeeOGev9PS0kJeXh5JSUls2rSJl19+GV3XAfjoo4/IycnBNE32
+      7t3LypUro/wYQgghhmvYcwJ/97vf5c7x4z5rIKMpU6ZgGAatra0kJiZGBl5SStHW1saqVavQ
+      NI233nor8vrtDMMYTokRlmVhGIatAz0ppSIDgNnFNE00TbtrvY41pZSt6wFuDcZmV5uIh/Yw
+      WIfUcKuPsLsGO9vEsOcEHj9+PKFQiLfeeovTp0/z+7//+xw5coSnnnrqnr+jlGLPnj2cO3eO
+      Bx98cEgAuFyuyGmfwf+1LAvTNCP/fySjWGqaFhdzFNtZw+Cynb4eBsXDacZ4WA9SQ3zUMNhH
+      2VVHVL3rvn37SElJobi4mLS0NI4dO/apAeByuXjiiSd4/PHH+eUvf8mcOXNISEjA5XJFEtjl
+      ckU6fV3XI6eIRjIctGma6Lpu+3DQIw2xkVJKxcVw0OFw2PYaRtKeRkM8tAeIj20RDzXY3R6A
+      SL9n17qIaqlJSUnU1NQQCASoqKj4zE52//79kTHQTdPE7XazdetWnnzySUpKSti6dSuGYTBn
+      zpyoP4QQQojhi2pCGNM02bFjB0ePHiUtLY1vf/vbZGdn3/Nnw+Ew7e3tGIZBdnY2Ho+Hvr4+
+      UlJSUErR0tISObV0ZxLLhDAjJxPC3GL3BCDx0B4gPrZFPNRgd3sA+yeEGXYAWJZFRUUFbreb
+      OXPmEAwG2bx5M+vWrRv14iQARk4C4Ba7v/Dx0B4gPrZFPNRgd3sA+wNg2L3C+++/T2VlJbqu
+      c/r0aY4fP85zzz0Xi9qEEELE0LAD4Ny5c/ze7/0eHo+HV199lT/+4z+WCWGEEOI+NOwA6O/v
+      Z+PGjei6TlJSEtXV1fT29vLwww/Hoj4hhBAxMuwA+MY3vkFLSwsAr732GgDp6emjW5UQQoiY
+      G3YAlJeXx6IOIYQQY8z+xyKFEELYQgJACCEcSgJACCEcSgJACCEcSgJACCEcSgJACCEcSgJA
+      CCEcSgJACCEcSgJACCEcSgJACCEcSgJACCEcSgJACCEcSgJACCEcSgJACCEcKuYTxVqWRX19
+      Pa2trUyZMoVx48ZF3uvr66O+vh6AtLQ0cnNzY12OEEKIm2J+BHD69Gmqq6vxeDy89957mKYZ
+      ea+iooKGhgb8fj+hUCjWpQghhLhNzI8AysrK0HWdcDjMyZMnUUpF3uvq6mLhwoWMHz8el+ve
+      WXR7YAyHZVmYpollWVH9/mhQSmFZFoZh2FaDZVlommZrDTCwLuKhhmjb02gt3+72MFiH1HCr
+      j7C7BjvbRMwDQNd12tra2LJlCw899BC6rkfemzBhAseOHaO9vZ2ysjIWLFiAaZqRlaGUwuVy
+      oWnasJerlBoSNnYYrMHOOgaXH806jEUddtcwGIh2GNwZiYf1IDUMsLM9gP19RMwDoK2tjfff
+      f5/nn3+elJSUISt7/vz5LFiwAKUUb7zxBgsWLEDX9UhIGIaBrutRbSDLsnC73Z96ZDEWLMtC
+      KYXH47GtBgBN03C7Y76pP5NhGLavB9M08Xg8tgZAOBy2fT3Ew7aIhxrsbg+DNQzWYYeY9wpH
+      jhyhoKCAy5cvAzBnzhwOHDjAihUr+PDDD8nJyaG/v5/MzMxYlyKEEOI2MQ+AxYsX093dHfm3
+      pmmUlJSgaRorVqzg+vXrJCcns3Tp0liXIoQQ4jYxD4Dx48czfvz4Ia/l5eUBkJiYyMyZM2Nd
+      ghBCiHuQB8GEEMKhJACEEMKhJACEEMKhJACEEMKhJACEEMKhJACEEMKhJACEEMKhJACEEMKh
+      JACEEMKhJACEEMKhJACEEMKhJACEEMKhJACEEMKhJACEEMKhJACEEMKhJACEEMKhJACEEMKh
+      JACEEMKhJACEEMKhJACEEMKhYj4pfCAQ4Pjx47S1tTFz5kymT5+OpmkA+P1+9u7di6ZprFy5
+      Eq/XG+tyhBBC3BTzI4ArV64wceJEHnvsMY4cOYJpmpH3du/ezaxZs5g+fTo7d+6MdSlCCCFu
+      E/MjgNLSUgBaW1txuVy4XAOZo5Sit7eXwsJCNE3j6NGjkdeVUpH/HwqFolquaZoopSJHG3ZQ
+      SmFZFsFg0LYaLMsCGBK8dtVh53qAgXUQbXsaDfHQHiA+tkU81GB3e4BbbWKwzxtrMQ8ApRRV
+      VVWcPXuWp59+ekgAuFyuSAc9+L+WZUU6Lcuy8Hg8US/X7XZHlmcHy7IwDCPqzzAaDMNA0zR0
+      XbetBhjZthzNGtxut207BfHQHgbrkBriowbTNNE0zbY6Yh4AV69e5dKlS6xbtw63+9biXC5X
+      ZA/f5XJFOn1d1yOd1WDnFc0XVtO0IUccdhmsw87l213DILtrGFwPdh4VyraInxoGvxt2nyUY
+      3Bm2Q8wD4PTp0/T19bFx40YAnn76ad577z2ef/555s6dy/r16zFNk4cffjjWpQghhLiNpuw6
+      +XRTMBhE07R73gFkGAa6rkeV0MFgEI/HY/spoHA4jM/ns62GcDiMpmlDjr7s4Pf7SUxMtLWG
+      QCCAz+ez9RSQ3e0B4mNbxEMNdrcHGDgFZJqmbXdA2tsrgO1fBiGEcCr7TwQKIYSwhQSAEEI4
+      lASAEEI4lASAEEI4lASAEEI4lASAEEI4lASAEEI4lASAEEI4lASAEEI4lASAEEI4lASAEEI4
+      lASAEEI4lASAEEI4lASAEEI4lASAEEI4lASAEEI4lASAEEI4lASAEEI4lASAEEI4VMznBLYs
+      i8rKSmpqali7du2Q9y5fvsyJEyfwer0UFRUxf/78WJcjhBDippgHQG1tLYZh4Pf773rv2rVr
+      rFy5kszMTDRNi3UpQgghbhPzACgqKqKoqIirV6/e9V5XVxcnTpwgKyuL8vJyfD4flmVhWRYw
+      cPQQDoejWu7tf8dOdtehlAKIej2OFtM077kTMJYsyyIQCNheg93tMh62RbzUMPj9sItSCqUU
+      pmnasvyYB8Bn+fKXv0wgEKCxsZENGzbw/PPPA0SOBjRNIyEhIaqjg2AwiMfjweWy7zLHYID5
+      fD7bagiHw2iahttt66bG7/eTmJhoaw2BQACfz2fb0WY8tAeIj20RDzXY3R5gIIRM08Tr9dqy
+      /DHvHZVS9Pf3o5TC7/eTkZFBSUlJZA/V5XKh6zq6rstpISGEiKGY7xZWV1dTXV1NV1cXGzdu
+      5NFHH2Xv3r089dRTnDt3joaGBkzTZNmyZbEuRQghxG00ZfNJsMHzofc6VWMYRtRHAnIKaICc
+      ArrF7kP+eGgPEB/bIh5qsLs9gP2ngOztFbh3xy+EECL2pPcVQgiHkgAQQgiHkgAQQgiHkgAQ
+      QgiHkgAQQgiHkgAQQgiHkgAQQgiHkgAQQgiHkgAQQgiHkgAQQgiHkgAQQgiHkgAQQgiHkgAQ
+      QgiHkgAQQgiHkgAQQgiHkgAQQgiHkgAQQgiHkgAQQgiHkgAQQgiHGpMAUEoRDAbv+V5fXx/9
+      /f3YPDe9EEI4Tswnhe/t7WX37t10dHTwyiuvDHmvurqaU6dOYZomS5cuZcqUKbEuRwghxE0x
+      PwLw+/0sXbqUpKSku947deoUzzzzDOvWrePIkSOxLkUIIcRtYn4EkJ2dfc/XLctC0zR8Ph8A
+      LtdAFpmmiWEYwMCpo3A4HNVyLcvCsqyofnc02V3H4Km1aNfjaDFNE7/fb2sNlmURCARsr8Hu
+      dhkP2yJearD71LNSCqUUpmnasvyYB8Cn0TQt8uHhVkel6zq6rgNgGAa6rqNp2rD/fjAYxOPx
+      RILFDpZlEQ6HIyFnh3A4jKZpuN22bWpg4EgwMTHR1hoCgQA+ny+q9jQa4qE9QHxsi3iowe72
+      AAMhZJomXq/XluXHvFcIhUKEQiHC4TC9vb0kJiZSV1dHYWEhycnJXLt2DaUUqampsS5FCCHE
+      bWK+e3zjxg2OHj1KRkYGR48exe/3U1dXB8DKlSu5cOECFy9e5LHHHot1KUIIIW6jKbtPgn0G
+      OQU0cnIK6Ba7D/njoT1AfGyLeKjB7vYA9p8CkgfBhBDCoSQAhBDCoSQAhBDCoSQAhBDCoSQA
+      hBDCoSQAhBDCoSQAhBDCoSQAhBDCoSQAhBDCoSQAhBDCoSQAhBDCoSQAhBDCoSQAhBDCoSQA
+      hBDCoSQAhBDCoSQAhBDCoSQAhBDCoSQAhBDCoSQAhBDCocZkoljTNLEsC7fbPWT+TaUUlmUB
+      oGmarfP3CiGE08Q8AHp6eti8eTMul4sZM2Ywd+7cSAicPXuWqqoqEhISKCoqYv78+bEuRwgh
+      xE0xD4ATJ06wbNkyCgsL+eUvf8mcOXPQdR2A+vp6nnjiCTIzM2NdhhBCiDvEPAC6urqYMGEC
+      LpeLpKQkTNOMBEAgEODjjz8mISGBpUuXkp6ejmmamKYJDJwiCofDUS3XsqzI6SU72V2HUgog
+      6vU4WkzTxO/321qDZVkEAgHba7C7XcbDtoiXGga/H3ZRSqGUivR5Yy3mAeByuSINXik15BrA
+      mjVrMAyDrq4utm7dyosvvojL5YpcCzBNE6/XO+R3Pq9gMIjH47H1uoJlWYTDYXw+n201hMNh
+      NE3D7R6Tyz2fyu/3k5iYaGsNgUAAn88XVXsaDfHQHiA+tkU81GB3ewAiO7xer9eW5ce8d8zJ
+      yeHSpUsEg0H6+/vRdZ329naUUty4cQOv10taWlokiTVNi/wnhBAidmK+W7hgwQJ27NjBuXPn
+      WLlyJTBwXWD16tV0dnZy7NgxAJ544olYlyKEEOI2mrL7JNhnMAwDXdflFNAIyCmgW+w+5I+H
+      9gDxsS3ioQa72wM44BSQEEKI+CQBIIQQDiUBIIQQDiUBIIQQDiUBIIQQDiUBIIQQDiUBIIQQ
+      DiUBIIQQDiUBIIQQDiUBIIQQDiUBIIQQDiUBIIQQDvWFDYBoB5ETQgin+MIGgBBCiM923wRA
+      X18fmzdv5sCBA3dN49bY2Mi7777LuXPngIFhpPfs2cOOHTsiUyE2NDTw7rvvUl1dDQwMw7pj
+      xw4+/PBD26dLFEIIO8Q8APr7+3nrrbd44403OHfu3JDOu6GhgTfeeIPXX3+d1tbWT/0bSil+
+      9atfUV5eTiAQ4OjRo5H3QqEQ7733HqtWreLw4cM0NTXx4Ycfkp6ezqRJk9i0aRPhcJh3332X
+      VatWcfDgQZqbm9m0aRP5+flMmDCBbdu2xXQdCCFEPIp5ABw/fpyFCxfyzW9+kxMnTgyZEPvA
+      gQM888wzfPWrX2XPnj2f+jeCwSC6rlNYWMgjjzwS2YsHaG5uZurUqaSnp/Poo49y5swZGhsb
+      mTdvHqWlpXR1ddHQ0MD06dNJT09n+fLlVFdX097eTllZGWVlZZEpKoUQwkliHgCdnZ3k5+ej
+      6zrJycmYpgkM7NUrpUhJSSE5OfkzO2DTNPF4PAC43e4hIRIKhSIzCyUnJ9Pf34/L5YpcAHa5
+      XPj9fpKTkwFITEwkFApFZgqzc8YwIYSwU8x7P03TIp27UmrInTmDIfDreL1e+vv7UUrR3d09
+      ZCq51NRU2tvbgYFTStnZ2WiaRjAYjEy3lpWVRVNTEzBwxJCRkYFpmliWRSgUkknohRCOFPOJ
+      YsePH8+1a9coLi6mv78fXdfp6ekhNTUVt9tNZ2fnr52z1uPxUFBQwNtvv017eztf+cpXqKmp
+      oaamhuXLl9PT08PmzZu5du0av/Ebv0FSUhJvvvkmHo+HuXPnkpmZSXd3N5s3b6a2tpZXX30V
+      Xdf5+c9/jqZplJeXx3o1CCFE3In5pPDBYJBt27bh9/tZunQpRUVFbN++nTVr1tDW1sbOnTtR
+      SrFmzRrGjRs35HdvnxTesiza29tJSEggOTkZy7KwLAuPx4NpmrS0tJCRkYHP50MpRXt7O5qm
+      kZGRgaZpGIZBW1sb6enpkZ/p6upCKUV6enpMjgDiYRJwmRT+FrsnAY+H9gDxsS3ioQa72wPY
+      Pyl8zAMAiJzmudeK/qz3bg+A4RrJ746WePjCSwDcYvcXPh7aA8THtoiHGuxuD2B/AIxJr/BZ
+      K/jXrfzGxsaolhkPAaCUwjCMyAVsOxiGgaZp6LpuWw0wcCRod8cXCoXweDy2BsDtNzTYJR62
+      RTzUEAqFbOt4B9ndJsbkCGA4TNPEMAzg14fD/eDOC99Sg7PJehgg6+EWO9eFvecF7kHX9VHZ
+      W7U7WQcFg0Fb9zKUUoTDYdv3dOxeDzCwc6GUsvV0WDysh3A4jK7rtt4CHQ/rIR7aA9i7LuQm
+      eCGEcCgJACGEcKi4uwYghBBibMgRgBBCOJQEgBBCONQXIgD6+vpobW2NDDR3u1AoRHNzM6FQ
+      CBi4O6i1tTXy79ESDodpbW3F7/ff9Z7f76evr4++vj6UUpimGfl3MBgctRr8fj+tra13zW+g
+      lIosz+/3R8Zgam9vv2e9I2GaJm1tbfT29t7zfcuy6O3tjdRwe12jqaenh7a2tiEDB96ur68v
+      0l5M07znehuJX9cebl9erNqDUorOzk46OzvvGnPr9u00+N5gzff6HkXrs9qDZVl0dHRE1pFl
+      WWPeHpRS9Pf309HREVkPg+1h8Hb00RIKhWhtbb3nNlZKDfnMhmFE1sVo9lX9/f1DtrH+gx/8
+      4Aej9tdtcOnSJY4cOUJnZycHDhygvLw8ck9tR0cHGzZsIBQK0dbWxsSJE9m8eTMtLS0cPHiQ
+      WbNmjcotYMFgkC1bttDd3c2RI0cYN24c6enpwEBjev311+no6KC2tpb8/HwuXLjAgQMHaGpq
+      IhAIMGHChBHX0NzczK5du+jp6WHfvn1Mnz49cgtsR0cHb7/9Np2dnbS1tVFQUMC+ffu4cuUK
+      J06cID8/n6SkpBHXALBlyxba29upqqoiFArd9dkOHjzIjh07WLRoEU1NTWzYsIH29nba29sp
+      LCwclRrOnDlDRUUFra2tHD9+nLKysiH3Wbe3t/PjH/+YyZMnk5aWxjvvvENXVxdHjhxh1qxZ
+      I74NORAIsHXrVrq7uzl8+DBZWVmkpaUB0NTUxK5du+jt7eXjjz9m5syZnDt3jkOHDtHU1EQw
+      GByV9gBw6NAhLl++TE1NDVeuXGHatGmRYVU++OADWltbqaqqwjAMMjIyeOutt+jt7aWqqooZ
+      M2aMyr3pmzdvpqOjg8rKSkzTJDc3FxjoDN988006Ozs5cuQIOTk59Pb2snHjRtrb2+ns7KSg
+      oGDEyweoqqri1KlTtLa2cuLECUpLSyOf7eOPP+bMmTPU1NRw48YNpkyZwvr16+np6Rm19gDQ
+      29vLtm3b6Onp4cCBA+Tn50dGKA4Gg3zwwQfs2LGDZcuWAXD48GEqKyupr6/Hsiyys7NHXMP1
+      69c5cOAAnZ2d7Nu3jzlz5oC6z1mWFfnv9ddfV6FQKPLeli1bVFtbmzJNU1mWpTo6OtSmTZuU
+      ZVnq7Nmz6tixY6New9mzZ9Xhw4cj73V1damtW7dG3ldKqd27d6umpqbIv0e7hi1btqimpqbI
+      e+fOnVMVFRWR5Q2uK8uyVENDg9qxY8eo19HY2Ki2bt065L3m5ma1ceNG9dZbbynLslRFRYU6
+      d+7cqK6H22swTVO9/vrrKhwOD3lv/fr1aufOneratWuRz29Zljp+/Lg6e/bsqC3fsixVVVWl
+      jh49es/3BrfTzp07VUtLS0zWg1JKBYNB9cYbbwzZ/oP/NTc3q02bNqnKykr1ySefKMuy1ObN
+      m1V7e/uo1WBZlqqrq1MffPBB5HXDMFR/f/+Q7+KJEyfUhQsXYtYeDMO4qz309vYqy7JUKBRS
+      v/jFL1RdXZ3auXOnsixLHTlyRFVXV49qDYN/9/Tp00NqaGpqUuvXr4+8tmnTpkhto+X2Gt58
+      803V39+v4u5BsM9DKRUZxtnr9fLRRx9RVVXFwoULhzz41dzczO7duzEMg/z8/MjEMZqmkZeX
+      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
+    </thumbnail>
+  </thumbnails>
+</workbook>

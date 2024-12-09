@@ -1,6 +1,7 @@
 import sqlite3
 import pandas as pd
 
+
 # Step 1: Query the database
 def query_database():
     conn = sqlite3.connect('/Users/marcopena/Documents/GitHub/uarizona-baseball-analytics/baseball_analytics.db')
@@ -64,40 +65,32 @@ def process_plate_appearances(df):
         hit_type=('TaggedHitType', 'last')
     ).reset_index()
 
-# Step 6: Calculate hit positions
-def calculate_hit_positions(df):
-    """
-    Determines the hit position based on angle and distance.
-    """
-    def determine_position(angle, distance):
-        if distance < 90:
-            if -45 <= angle <= -15:
-                return "Third Base"
-            elif -15 < angle < 0:
-                return "Up The Middle"
-            elif 0 <= angle < 15:
-                return "Second Base"
-            elif 15 <= angle <= 45:
-                return "First Base"
-            elif -90 <= angle < -45:
-                return "Shortstop"
-            elif 45 < angle <= 90:
-                return "Second Base"
-        elif distance >= 90:
-            if -45 <= angle <= -15:
-                return "Left Field"
-            elif -15 < angle < 15:
-                return "Center Field"
-            elif 15 <= angle <= 45:
-                return "Right Field"
-            elif -90 <= angle < -45:
-                return "Left-Center Field"
-            elif 45 < angle <= 90:
-                return "Right-Center Field"
-        return "Foul Territory"
-    
-    df['HitPosition'] = df.apply(lambda row: determine_position(row['Angle'], row['Distance']), axis=1)
-    return df
+
+# Step 3: Calculate player stats
+def calculate_player_stats(df):
+    # Overall stats grouped by batter
+    stats = df.groupby('Batter').agg(
+        games=('GameID', 'nunique'),
+        plate_appearances=('PA', 'sum'),
+        hits=('AVG', lambda x: (x == 1).sum()),
+        at_bats=('AVG', lambda x: (x >= 0).sum()),
+        walks=('KorBB', lambda x: (x == 'Walk').sum()),
+        strikeouts=('KorBB', lambda x: (x == 'Strikeout').sum()),
+        singles=('is_single', 'sum'),
+        doubles=('is_double', 'sum'),
+        triples=('is_triple', 'sum'),
+        homeruns=('is_home_run', 'sum'),
+        # Batting average: hits / at-bats (only if at-bats > 0)
+        batting_average=('AVG', lambda x: (x == 1).sum() / (x >= 0).sum() if (x >= 0).sum() > 0 else 0),  
+        # For each batter:
+        #   - Count hits: (x == 1).sum()
+        #   - Count at-bats: (x >= 0).sum()
+        #   - Compute batting average: hits / at-bats if at-bats > 0, otherwise return 0.
+
+        on_base_percentage=('OBP', 'mean'),
+        slugging=('SLG', 'mean')
+    )
+    return stats
 
 if __name__ == "__main__":
     # Query data
@@ -111,9 +104,6 @@ if __name__ == "__main__":
 
     # Summarize plate appearances
     pa_summary = process_plate_appearances(data_with_count_type)
-
-    # Calculate hit positions
-    updated_data = calculate_hit_positions(data_with_count_type)
 
     # Export results
     tendencies_df.to_csv("tendencies.csv", index=False)

@@ -396,32 +396,6 @@
       <layout dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
       <style>
         <style-rule element='mark'>
-          <encoding attr='color' field='[none:PitchCall:nk]' type='palette'>
-            <map to='#59a14f'>
-              <bucket>&quot;InPlay&quot;</bucket>
-            </map>
-            <map to='#e15759'>
-              <bucket>&quot;FoulBallFieldable&quot;</bucket>
-            </map>
-            <map to='#e15759'>
-              <bucket>&quot;FoulBallNotFieldable&quot;</bucket>
-            </map>
-            <map to='#edc948'>
-              <bucket>%null%</bucket>
-            </map>
-            <map to='#edc948'>
-              <bucket>&quot;BallCalled&quot;</bucket>
-            </map>
-            <map to='#edc948'>
-              <bucket>&quot;HitByPitch&quot;</bucket>
-            </map>
-            <map to='#edc948'>
-              <bucket>&quot;StrikeCalled&quot;</bucket>
-            </map>
-            <map to='#edc948'>
-              <bucket>&quot;StrikeSwinging&quot;</bucket>
-            </map>
-          </encoding>
           <encoding attr='color' field='[none:TaggedPitchType:nk]' type='palette'>
             <map to='#4e79a7'>
               <bucket>&quot;Fastball&quot;</bucket>
@@ -469,6 +443,32 @@
             </map>
             <map to='times'>
               <bucket>%null%</bucket>
+            </map>
+          </encoding>
+          <encoding attr='color' field='[none:PitchCall:nk]' type='palette'>
+            <map to='#59a14f'>
+              <bucket>&quot;InPlay&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;FoulBallFieldable&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;FoulBallNotFieldable&quot;</bucket>
+            </map>
+            <map to='#edc948'>
+              <bucket>%null%</bucket>
+            </map>
+            <map to='#edc948'>
+              <bucket>&quot;BallCalled&quot;</bucket>
+            </map>
+            <map to='#edc948'>
+              <bucket>&quot;HitByPitch&quot;</bucket>
+            </map>
+            <map to='#edc948'>
+              <bucket>&quot;StrikeCalled&quot;</bucket>
+            </map>
+            <map to='#edc948'>
+              <bucket>&quot;StrikeSwinging&quot;</bucket>
             </map>
           </encoding>
         </style-rule>
@@ -1413,8 +1413,8 @@
         <devicelayout auto-generated='true' name='Phone'>
           <size maxheight='3050' minheight='3050' sizing-mode='vscroll' />
           <zones>
-            <zone h='100000' id='45' type-v2='layout-basic' w='100000' x='0' y='0'>
-              <zone h='99112' id='44' param='vert' type-v2='layout-flow' w='98666' x='667' y='444'>
+            <zone h='100000' id='49' type-v2='layout-basic' w='100000' x='0' y='0'>
+              <zone h='99112' id='48' param='vert' type-v2='layout-flow' w='98666' x='667' y='444'>
                 <zone fixed-size='280' h='16056' id='27' is-fixed='true' name='0-0 Count Strikezone' w='33333' x='750' y='778'>
                   <layout-cache has-max-size-h='true' maxheight='923' minheight='923' type-h='scalable' type-w='fixed' />
                   <zone-style>
@@ -1956,7 +1956,7 @@
           <zoom type='entire-view' />
         </viewpoint>
       </viewpoints>
-      <active id='6' />
+      <active id='-1' />
       <simple-id uuid='{F0154D8B-3C05-4E3B-B50F-D30EAD11608F}' />
     </window>
   </windows>
