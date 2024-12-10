@@ -1,0 +1,5 @@
+TaggedPitchType,total_pitches,swings,whiffs,chases,whiff_percentage,chase_percentage
+ChangeUp,8,8.0,6.0,6.0,75.0,75.0
+Fastball,2,2.0,1.0,1.0,50.0,50.0
+Sinker,12,12.0,4.0,4.0,33.33,33.33
+Slider,8,8.0,7.0,6.0,87.5,75.0
