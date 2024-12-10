@@ -217,7 +217,7 @@ def display_pitcher_stats_table(stats, rows=20):
     Displays a table-like chart for pitcher statistics.
     """
     # Extract the necessary columns
-    table_data = stats[['Pitcher', 'games', 'innings_pitched', 'hits', 'runs_allowed', 'walks', 'strikeouts', 'WHIP', 'AVG']].head(rows)
+    table_data = stats[['Pitcher', 'games', 'hits', 'runs_allowed', 'walks', 'strikeouts', 'WHIP', 'AVG']].head(rows)
     
     # Create the figure and axis
     fig, ax = plt.subplots(figsize=(12, 6))
@@ -245,26 +245,143 @@ def display_pitcher_stats_table(stats, rows=20):
 
 def calculate_pitcher_stats(df):
     """
-    Calculates statistics for each pitcher, including WHIP.
+    Calculates statistics for each pitcher, excluding innings pitched.
     """
     # Ensure data consistency
     df['Walks'] = df['KorBB'].apply(lambda x: 1 if x == 'Walk' else 0)  # Count Walks
     df['Hits'] = df['PlayResult'].apply(lambda x: 1 if x in ['Single', 'Double', 'Triple', 'HomeRun'] else 0)  # Count Hits
-    df['InningsPitched'] = df['OutsOnPlay'] / 3  # Convert Outs to Innings
 
     stats = df.groupby('Pitcher').agg(
         games=('GameID', 'nunique'),
-        innings_pitched=('InningsPitched', 'sum'),
         hits=('Hits', 'sum'),
         runs_allowed=('RunsScored', 'sum'),
         walks=('Walks', 'sum'),
         strikeouts=('KorBB', lambda x: (x == 'Strikeout').sum()),
         WHIP=('Pitcher', lambda x: (df.loc[x.index, 'Walks'].sum() + df.loc[x.index, 'Hits'].sum()) /
-                                  df.loc[x.index, 'InningsPitched'].sum() if df.loc[x.index, 'InningsPitched'].sum() > 0 else 0),
+                                  max(df.loc[x.index, 'OutsOnPlay'].sum() / 3, 1) if df.loc[x.index, 'OutsOnPlay'].sum() > 0 else 0),
         AVG=('AVG', 'mean')  # Batting average against
     )
     stats = stats.reset_index()
+
+    # Round WHIP and AVG to 3 decimal places
+    stats['WHIP'] = stats['WHIP'].round(3)
+    stats['AVG'] = stats['AVG'].round(3)
+
     return stats
+
+
+
+
+
+def calculate_pitcher_metrics(df):
+    metrics = df.groupby('TaggedPitchType').agg(
+        total_pitches=('TaggedPitchType', 'count'),           # Total number of pitches
+        whiffs=('whiff', 'sum'),                              # Total whiffs
+        chases=('chase', 'sum'),                              # Total chases
+        total_hits=('PlayResult', lambda x: (x.isin(['Single', 'Double', 'Triple', 'HomeRun'])).sum())  # Total hits
+    ).reset_index()
+
+    # Add calculated percentages
+    metrics['whiff_rate'] = (metrics['whiffs'] / metrics['total_pitches']) * 100
+    metrics['chase_rate'] = (metrics['chases'] / metrics['total_pitches']) * 100
+    metrics['hit_rate'] = (metrics['total_hits'] / metrics['total_pitches']) * 100
+
+    return metrics
+
+# Display pitcher metrics as a table-like chart
+def display_pitcher_metrics_chart(metrics):
+    # Format percentages to two decimal places
+    metrics['whiff_rate'] = metrics['whiff_rate'].round(2)
+    metrics['chase_rate'] = metrics['chase_rate'].round(2)
+    metrics['hit_rate'] = metrics['hit_rate'].round(2)
+
+    # Select columns to display
+    columns = ['TaggedPitchType', 'total_pitches', 'whiff_rate', 'chase_rate', 'hit_rate']
+
+    # Prepare data for the table
+    table_data = metrics[columns].values
+    column_headers = ['Pitch Type', 'Total Pitches', 'Whiff %', 'Chase %', 'Hit %']
+
+    # Create the figure
+    fig, ax = plt.subplots(figsize=(10, 4))
+    ax.axis('tight')
+    ax.axis('off')
+
+    # Create the table
+    table = ax.table(
+        cellText=table_data,
+        colLabels=column_headers,
+        cellLoc='center',
+        loc='center'
+    )
+    table.auto_set_font_size(False)
+    table.set_fontsize(10)
+    table.auto_set_column_width(col=list(range(len(columns))))
+
+    plt.title("Pitcher Metrics by Pitch Type", fontsize=14, pad=10)
+    plt.show()
+
+
+
+def calculate_pitch_metrics(df):
+    metrics = df.groupby('TaggedPitchType').agg(
+        total_pitches=('TaggedPitchType', 'count'),           # Total number of pitches
+        sits=('RelSpeed', lambda x: f"{x.quantile(0.1):.0f}-{x.quantile(0.9):.0f}"),  # Narrower speed range (10th-90th percentile)
+        top_speed=('RelSpeed', 'max'),                       # Top speed
+        avg_spin_rate=('SpinRate', 'mean'),                  # Average spin rate
+        carry_sink=('InducedVertBreak', 'mean'),             # Carry or sink
+        ext=('Extension', 'mean'),                           # Average extension
+        rel_height=('RelHeight', 'mean'),                    # Average release height
+        rel_side=('RelSide', 'mean')                         # Average release side
+    ).reset_index()
+
+    # Rename columns for clarity and style
+    metrics.rename(columns={
+        'TaggedPitchType': 'Pitch Type',
+        'total_pitches': 'X',
+        'sits': 'Sits',
+        'top_speed': 'Top',
+        'avg_spin_rate': 'Spin',
+        'carry_sink': 'Carry/Sink',
+        'ext': 'Ext',
+        'rel_height': 'RelH',
+        'rel_side': 'RelSide'
+    }, inplace=True)
+
+    # Round numerical values for clarity
+    numerical_cols = ['Spin', 'Carry/Sink', 'Ext', 'RelH', 'RelSide']
+    metrics[numerical_cols] = metrics[numerical_cols].round(1)
+    metrics['Top'] = metrics['Top'].round(1)
+
+
+    return metrics
+
+# Display Formatted Table
+def display_formatted_metrics_table(metrics):
+    # Select columns to display
+    columns = ['Pitch Type', 'X', 'Sits', 'Top', 'Spin', 'Carry/Sink', 'RelH', 'RelSide', 'Ext']
+    table_data = metrics[columns].values
+    column_headers = columns
+
+    # Create the figure
+    fig, ax = plt.subplots(figsize=(12, 4))
+    ax.axis('tight')
+    ax.axis('off')
+
+    # Create the table
+    table = ax.table(
+        cellText=table_data,
+        colLabels=column_headers,
+        cellLoc='center',
+        loc='center'
+    )
+    table.auto_set_font_size(False)
+    table.set_fontsize(10)
+    table.auto_set_column_width(col=list(range(len(columns))))
+
+    plt.title("Pitch Metrics by Type", fontsize=14, pad=10)
+    plt.show()
+
 
 
 
@@ -273,25 +390,30 @@ def calculate_pitcher_stats(df):
 if __name__ == "__main__":
     df = load_data()
     count_type_column = add_count_type_column(df)
-
-    # print_count_type_debug(df)
+    
     save_data_to_csv(df)
 
-    # metrics = calculate_metrics(df)
-    # print("Pitch Effectiveness Metrics:")
-    # print(metrics)
+    metrics = calculate_metrics(df)
 
-    # plot_release_points(df)
-    # plot_vertical_vs_horizontal_break(df)
-    # plot_spin_rate_vs_spin_axis(df)
+    plot_release_points(df)
+    plot_vertical_vs_horizontal_break(df)
+    plot_spin_rate_vs_spin_axis(df)
 
     # Display the table-like chart
     display_count_type_table_scrollable(count_type_column)
 
+    # Calculate pitcher stats
+    pitcher_stats = calculate_pitcher_stats(df)
 
-    # # Calculate pitcher stats
-    # pitcher_stats = calculate_pitcher_stats(df)
-
-    # # Display or save results
+    # Display or save results
     # print(pitcher_stats.head())
-    # display_pitcher_stats_table(pitcher_stats, rows=30)
+    display_pitcher_stats_table(pitcher_stats, rows=30)
+
+    pitcher_metrics = calculate_pitcher_metrics(df)
+    display_pitcher_metrics_chart(pitcher_metrics)
+
+
+    pitcher_stats = calculate_pitch_metrics(df)
+
+    # Display formatted metrics table
+    display_formatted_metrics_table(pitcher_stats)

@@ -952,6 +952,7 @@
       <column-instance column='[__tableau_internal_object_id__].[pitch_data_for_tableau.csv_5061B18F335249C69974302F135EE628]' derivation='Count' name='[__tableau_internal_object_id__].[cnt:pitch_data_for_tableau.csv_5061B18F335249C69974302F135EE628:qk]' pivot='key' type='quantitative' />
       <column-instance column='[TaggedPitchType]' derivation='Count' name='[cnt:TaggedPitchType:qk]' pivot='key' type='quantitative' />
       <column-instance column='[Balls]' derivation='None' name='[none:Balls:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[PA]' derivation='None' name='[none:PA:qk]' pivot='key' type='quantitative' />
       <column-instance column='[PitchCall]' derivation='None' name='[none:PitchCall:nk]' pivot='key' type='nominal' />
       <column-instance column='[PlateLocHeight]' derivation='None' name='[none:PlateLocHeight:qk]' pivot='key' type='quantitative' />
       <column-instance column='[PlateLocSide]' derivation='None' name='[none:PlateLocSide:qk]' pivot='key' type='quantitative' />
@@ -1051,6 +1052,9 @@
             </map>
             <map to='#4e79a7'>
               <bucket>&quot;[federated.0o2nayr1kyjqfr17fx9vm1xyksfs].[sum:Strikes:qk]&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;[federated.0o2nayr1kyjqfr17fx9vm1xyksfs].[none:PA:qk]&quot;</bucket>
             </map>
             <map to='#59a14f'>
               <bucket>&quot;[federated.0o2nayr1kyjqfr17fx9vm1xyksfs].[sum:PA:qk]&quot;</bucket>
@@ -1413,8 +1417,8 @@
         </view>
         <style>
           <style-rule element='axis'>
-            <encoding attr='space' class='0' field='[federated.0o2nayr1kyjqfr17fx9vm1xyksfs].[none:PlateLocSide:qk]' field-type='quantitative' max='5.0396453737900497' min='-4.4308202250200308' range-type='fixed' scope='cols' type='space' />
-            <encoding attr='space' class='0' field='[federated.0o2nayr1kyjqfr17fx9vm1xyksfs].[none:PlateLocHeight:qk]' field-type='quantitative' max='4.8687232304542096' min='0.060423010894404106' range-type='fixed' scope='rows' type='space' />
+            <encoding attr='space' class='0' field='[federated.0o2nayr1kyjqfr17fx9vm1xyksfs].[none:PlateLocSide:qk]' field-type='quantitative' max='6.3548917028571656' min='-4.7310191018399159' range-type='fixed' scope='cols' type='space' />
+            <encoding attr='space' class='0' field='[federated.0o2nayr1kyjqfr17fx9vm1xyksfs].[none:PlateLocHeight:qk]' field-type='quantitative' max='5.5180373344137879' min='-0.11044912172653532' range-type='fixed' scope='rows' type='space' />
           </style-rule>
         </style>
         <panes>
@@ -1477,8 +1481,8 @@
         </view>
         <style>
           <style-rule element='axis'>
-            <encoding attr='space' class='0' field='[federated.0o2nayr1kyjqfr17fx9vm1xyksfs].[none:PlateLocSide:qk]' field-type='quantitative' max='5.4161615311348266' min='-5.7517351790884028' range-type='fixed' scope='cols' type='space' />
-            <encoding attr='space' class='0' field='[federated.0o2nayr1kyjqfr17fx9vm1xyksfs].[none:PlateLocHeight:qk]' field-type='quantitative' max='4.7749159582923948' min='-0.8951959959218263' range-type='fixed' scope='rows' type='space' />
+            <encoding attr='space' class='0' field='[federated.0o2nayr1kyjqfr17fx9vm1xyksfs].[none:PlateLocSide:qk]' field-type='quantitative' max='5.6744117678950712' min='-5.4904854850537035' range-type='fixed' scope='cols' type='space' />
+            <encoding attr='space' class='0' field='[federated.0o2nayr1kyjqfr17fx9vm1xyksfs].[none:PlateLocHeight:qk]' field-type='quantitative' max='4.9731747475114245' min='-0.69541433637283856' range-type='fixed' scope='rows' type='space' />
           </style-rule>
         </style>
         <panes>
@@ -1526,12 +1530,24 @@
             <column-instance column='[TaggedPitchType]' derivation='None' name='[none:TaggedPitchType:nk]' pivot='key' type='nominal' />
             <column-instance column='[RelSpeed]' derivation='Sum' name='[sum:RelSpeed:qk]' pivot='key' type='quantitative' />
           </datasource-dependencies>
+          <filter class='categorical' column='[federated.0o2nayr1kyjqfr17fx9vm1xyksfs].[none:PitchCall:nk]'>
+            <groupfilter function='union' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
+              <groupfilter function='member' level='[none:PitchCall:nk]' member='&quot;BallCalled&quot;' />
+              <groupfilter function='member' level='[none:PitchCall:nk]' member='&quot;FoulBallNotFieldable&quot;' />
+              <groupfilter function='member' level='[none:PitchCall:nk]' member='&quot;InPlay&quot;' />
+              <groupfilter function='member' level='[none:PitchCall:nk]' member='&quot;StrikeCalled&quot;' />
+              <groupfilter function='member' level='[none:PitchCall:nk]' member='&quot;StrikeSwinging&quot;' />
+            </groupfilter>
+          </filter>
+          <slices>
+            <column>[federated.0o2nayr1kyjqfr17fx9vm1xyksfs].[none:PitchCall:nk]</column>
+          </slices>
           <aggregation value='true' />
         </view>
         <style>
           <style-rule element='axis'>
-            <encoding attr='space' class='0' field='[federated.0o2nayr1kyjqfr17fx9vm1xyksfs].[none:PlateLocSide:qk]' field-type='quantitative' max='6.1540311843929141' min='-7.8481627037020472' range-type='fixed' scope='cols' type='space' />
-            <encoding attr='space' class='0' field='[federated.0o2nayr1kyjqfr17fx9vm1xyksfs].[none:PlateLocHeight:qk]' field-type='quantitative' max='6.5066849062179282' min='-0.60244307107024953' range-type='fixed' scope='rows' type='space' />
+            <encoding attr='space' class='0' field='[federated.0o2nayr1kyjqfr17fx9vm1xyksfs].[none:PlateLocSide:qk]' field-type='quantitative' max='6.1131547561042918' min='-7.4965712525529771' range-type='fixed' scope='cols' type='space' />
+            <encoding attr='space' class='0' field='[federated.0o2nayr1kyjqfr17fx9vm1xyksfs].[none:PlateLocHeight:qk]' field-type='quantitative' max='6.4011683286582457' min='-0.5086977040949644' range-type='fixed' scope='rows' type='space' />
           </style-rule>
         </style>
         <panes>
@@ -1557,34 +1573,6 @@
         <cols>[federated.0o2nayr1kyjqfr17fx9vm1xyksfs].[none:PlateLocSide:qk]</cols>
       </table>
       <simple-id uuid='{84F1F54D-72BE-4549-8D10-879FAC80BA89}' />
-    </worksheet>
-    <worksheet name='Sheet 5'>
-      <table>
-        <view>
-          <datasources>
-            <datasource caption='pitch_data_for_tableau' name='federated.0o2nayr1kyjqfr17fx9vm1xyksfs' />
-          </datasources>
-          <datasource-dependencies datasource='federated.0o2nayr1kyjqfr17fx9vm1xyksfs'>
-            <column datatype='string' name='[CountType]' role='dimension' type='nominal' />
-            <column caption='Kor BB' datatype='string' name='[KorBB]' role='dimension' type='nominal' />
-            <column-instance column='[CountType]' derivation='None' name='[none:CountType:nk]' pivot='key' type='nominal' />
-            <column-instance column='[KorBB]' derivation='None' name='[none:KorBB:nk]' pivot='key' type='nominal' />
-          </datasource-dependencies>
-          <aggregation value='true' />
-        </view>
-        <style />
-        <panes>
-          <pane id='1' selection-relaxation-option='selection-relaxation-allow'>
-            <view>
-              <breakdown value='auto' />
-            </view>
-            <mark class='Automatic' />
-          </pane>
-        </panes>
-        <rows />
-        <cols>([federated.0o2nayr1kyjqfr17fx9vm1xyksfs].[none:CountType:nk] / [federated.0o2nayr1kyjqfr17fx9vm1xyksfs].[none:KorBB:nk])</cols>
-      </table>
-      <simple-id uuid='{2120EC25-A4DA-48AF-812D-077FC6AF8E41}' />
     </worksheet>
   </worksheets>
   <windows source-height='30'>
@@ -1645,7 +1633,7 @@
       </cards>
       <simple-id uuid='{9F068BA1-564C-493F-BC25-DF06F8ABD6B7}' />
     </window>
-    <window class='worksheet' name='Pitches to LHH'>
+    <window class='worksheet' maximized='true' name='Pitches to LHH'>
       <cards>
         <edge name='left'>
           <strip size='160'>
@@ -1702,29 +1690,6 @@
         </edge>
       </cards>
       <simple-id uuid='{1E1FC683-C5A6-4380-8013-CEB9835B6892}' />
-    </window>
-    <window class='worksheet' maximized='true' name='Sheet 5'>
-      <cards>
-        <edge name='left'>
-          <strip size='160'>
-            <card type='pages' />
-            <card type='filters' />
-            <card type='marks' />
-          </strip>
-        </edge>
-        <edge name='top'>
-          <strip size='2147483647'>
-            <card type='columns' />
-          </strip>
-          <strip size='2147483647'>
-            <card type='rows' />
-          </strip>
-          <strip size='31'>
-            <card type='title' />
-          </strip>
-        </edge>
-      </cards>
-      <simple-id uuid='{17AE6214-0591-4217-AB3F-F8FBA3B30622}' />
     </window>
   </windows>
 </workbook>

@@ -1,1 +1,0 @@
--- SQL script to create tables and import data
